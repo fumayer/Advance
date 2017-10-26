@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black_cc000000">
+
+    <ImageView
+        android:id="@+id/read_bookmark_guide"
+        android:layout_width="@dimen/width_536"
+        android:layout_height="@dimen/height_520"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_read_bookmark_guide" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/read_bookmark_guide"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/height_76"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/icon_guide_close" />
+
+</RelativeLayout>

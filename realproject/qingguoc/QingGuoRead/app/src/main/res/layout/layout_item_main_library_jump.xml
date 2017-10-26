@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/library_jump"
+    android:layout_width="@dimen/width_208"
+    android:layout_height="@dimen/height_56"
+    android:background="@drawable/background_library_shadow"
+    android:elevation="@dimen/height_10"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/library_jump_image"
+            android:layout_width="@dimen/width_48"
+            android:layout_height="@dimen/height_48"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_main_library_jump_finish" />
+
+        <TextView
+            android:id="@+id/library_jump_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_black_444444"
+            android:textSize="@dimen/text_size_32"
+            tools:text="留存榜" />
+    </LinearLayout>
+</RelativeLayout>

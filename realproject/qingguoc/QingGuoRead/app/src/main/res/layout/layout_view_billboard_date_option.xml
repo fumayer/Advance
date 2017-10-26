@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/width_360"
+    android:layout_height="wrap_content"
+    android:background="@drawable/icon_popup_window_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/billboard_date_option_week"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_88"
+        android:gravity="start|center_vertical"
+        android:text="@string/billboard_week"
+        android:textColor="@color/color_black_444444"
+        android:textSize="@dimen/text_size_30" />
+
+    <TextView
+        android:id="@+id/billboard_date_option_year"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_88"
+        android:gravity="start|center_vertical"
+        android:text="@string/billboard_year"
+        android:textColor="@color/color_black_444444"
+        android:textSize="@dimen/text_size_30" />
+</LinearLayout>
