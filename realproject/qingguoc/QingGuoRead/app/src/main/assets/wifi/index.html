@@ -1,0 +1,111 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>WiFi 传书</title>
+
+    <link rel="stylesheet" type="text/css" href="/pagecontent.css">
+    <link rel="shortcut icon" type="image/x-icon" media="all" href="/favicon.png">
+
+    <script type="text/javascript" src="/jquery.js"></script>
+    <script type="text/javascript" src="/jquery.modal.js"></script>
+    <script type="text/javascript" src="/filehandler.js"></script>
+</head>
+<body>
+
+<table cellpadding="0" cellspacing="0" class="frameTable">
+    <thead>
+    <tr>
+        <td class="top_content">
+
+            <!-- top table contents -->
+            <div class="link_button">
+            </div>
+            <table cellpadding="0" cellspacing="0">
+            </table>
+
+        </td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+
+        <!-- left table contents -->
+        <td class="left_content">
+            <div id="filesContent">
+                <div style="background:#4d91d0;height: 32px;line-height:32px;border-top-left-radius: 12px;border-top-right-radius: 12px;font-size: 14px;padding: 0 12px;">
+                    您设备上的文件列表
+                </div>
+                <table cellpadding="0" cellspacing="0" class="filesTable">
+                    <thead>
+                    <tr>
+                        <td class="hi"></td>
+                        <td class="hn">文件名</td>
+                        <td class="hm">修改日期</td>
+                        <td class="hs">大小</td>
+                        <td class="he" style="width:60px; text-align:center;">操作</td>
+                        <td class="hl"></td>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    %%FileItemLoop%%
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- <div class="copyright"><p>Copyright &copy; 2012 iMoreApps Inc. All Rights Reserved.</p></div>-->
+
+        </td>
+
+        <!-- right table contents -->
+        <td class="right_content">
+            <div class="right-logo"><img src="/right_logo.png" style="width:350px;height:150px;">
+            </div>
+            <div id="file-uploader">
+                <div class="qq-uploader">
+                    <div class="qq-upload-drop-area" style="display: inline-block;"><span></span>
+                    </div>
+                    <div class="qq-upload-button" style="position: relative; overflow: hidden; direction: ltr;">
+                        <img src="/webupload.png" width="16" height="16">
+                        <input multiple="multiple" type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;height:142px;">
+                    </div>
+                </div>
+            </div>
+        </td>
+
+
+    </tr>
+    </tbody>
+</table>
+
+
+<!-- upload file script -->
+<script>        
+	function createUploader(){
+		var uploader = new qq.FileUploader({
+			element: document.getElementById('file-uploader')
+		});
+	}
+	window.onload = createUploader;
+
+</script>
+
+
+<!-- modal content -->
+<div id="modal-content">
+    <div id="modal-title"></div>
+    <div id="modal-text"></div>
+    <form name="input" action="" method="post">
+        <div id="modal-field"></div>
+        <input type="hidden" name="ID" id="ID">
+        <input type="submit" name="submitButton" id="submitButton">
+    </form>
+</div>
+
+
+<div>
+    <object id="ClCache" click="sendMsg" host="" width="0" height="0"></object>
+</div>
+</body>
+</html>
