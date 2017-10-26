@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <RelativeLayout
+        android:id="@+id/shelf_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_98">
+
+        <include
+            android:id="@+id/shelf_title"
+            layout="@layout/layout_view_shelf_title"
+            android:visibility="visible" />
+
+        <include
+            android:id="@+id/shelf_selected"
+            layout="@layout/layout_view_shelf_selected"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/shelf_slide_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/width_76"
+        android:layout_marginRight="@dimen/width_76"
+        android:layout_marginTop="@dimen/height_98"
+        android:src="@drawable/icon_shelf_slide_more"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/shelf_bottom"
+        layout="@layout/layout_view_shelf_delete"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_98"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <com.quduquxie.base.widget.helper.CustomSwipeRefreshLayout
+        android:id="@+id/shelf_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/shelf_bottom"
+        android:layout_below="@id/shelf_head">
+
+        <FrameLayout
+            android:id="@+id/shelf_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.quduquxie.base.widget.helper.CustomSwipeRefreshLayout>
+
+    <ViewStub
+        android:id="@+id/shelf_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/shelf_head"
+        android:layout="@layout/layout_view_shelf_empty" />
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <include
+        android:id="@+id/main_bottom"
+        layout="@layout/layout_view_main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_98"
+        android:layout_alignParentBottom="true" />
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_bottom" />
+
+
+    <ViewStub
+        android:id="@+id/main_shelf_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/layout_view_shelf_guide"/>
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_90"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/book_detail_chapter_update"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_54"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/height_16"
+        android:layout_marginTop="@dimen/height_16"
+        android:background="@drawable/icon_book_update_count"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/book_detail_chapter_update_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/width_8"
+            android:layout_marginRight="@dimen/width_8"
+            android:text="@string/zero"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_36" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/chapter_serialize"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/width_24" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/book_detail_chapter_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/width_24"
+        android:layout_marginStart="@dimen/width_24"
+        android:background="@drawable/icon_book_update_state"
+        android:gravity="center_vertical"
+        android:text="@string/chapter_new"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/text_size_22" />
+
+    <TextView
+        android:id="@+id/book_detail_chapter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/width_16"
+        android:layout_marginRight="@dimen/width_16"
+        android:layout_toEndOf="@id/book_detail_chapter_message"
+        android:layout_toLeftOf="@id/book_detail_chapter_update"
+        android:layout_toRightOf="@id/book_detail_chapter_message"
+        android:layout_toStartOf="@id/book_detail_chapter_update"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_black_3e3e3e"
+        android:textSize="@dimen/text_size_26"
+        tools:text="@string/default_message" />
+</RelativeLayout>
