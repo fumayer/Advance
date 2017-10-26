@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/literature_write_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/literature_write_util_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_98"
+        android:layout_alignParentBottom="true">
+
+        <include
+            layout="@layout/layout_view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_0.5"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.quduquxie.creation.write.widget.CustomHorizontalScrollView
+                    android:id="@+id/literature_write_util_punctuation_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/literature_write_util_punctuation_comma"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/width_28"
+                            android:layout_marginRight="@dimen/width_28"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_literature_write_punctuation_comma" />
+
+                        <ImageView
+                            android:id="@+id/literature_write_util_punctuation_period"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/width_28"
+                            android:layout_marginRight="@dimen/width_28"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_literature_write_punctuation_period" />
+
+                        <ImageView
+                            android:id="@+id/literature_write_util_punctuation_exclamation_mark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/width_28"
+                            android:layout_marginRight="@dimen/width_28"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_literature_write_punctuation_exclamation_mark" />
+
+                        <ImageView
+                            android:id="@+id/literature_write_util_punctuation_question_mark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/width_28"
+                            android:layout_marginRight="@dimen/width_28"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_literature_write_punctuation_question_mark" />
+
+                        <ImageView
+                            android:id="@+id/literature_write_util_punctuation_colon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/width_28"
+                            android:layout_marginRight="@dimen/width_28"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_literature_write_punctuation_colon" />
+
+                        <ImageView
+                            android:id="@+id/literature_write_util_punctuation_double_quotation_marks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/width_28"
+                            android:layout_marginRight="@dimen/width_28"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_literature_write_punctuation_double_quotation_marks" />
+
+                        <ImageView
+                            android:id="@+id/literature_write_util_punctuation_stop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/width_28"
+                            android:layout_marginRight="@dimen/width_28"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_literature_write_punctuation_stop" />
+
+                        <ImageView
+                            android:id="@+id/literature_write_util_punctuation_semicolon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/width_28"
+                            android:layout_marginRight="@dimen/width_28"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_literature_write_punctuation_semicolon" />
+                    </LinearLayout>
+                </com.quduquxie.creation.write.widget.CustomHorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/literature_write_util_punctuation_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end|center_vertical"
+                    android:contentDescription="@string/app_name"
+                    android:paddingLeft="@dimen/width_32"
+                    android:paddingStart="@dimen/width_32"
+                    android:paddingRight="@dimen/width_6"
+                    android:paddingEnd="@dimen/width_6"
+                    android:src="@drawable/icon_punctuation_more" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="@dimen/width_1"
+                android:layout_height="match_parent"
+                android:background="@color/color_white_d8d8d8" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/width_16"
+                android:layout_marginRight="@dimen/width_16"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/literature_write_util_automatic_typesetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/width_12"
+                    android:layout_marginRight="@dimen/width_12"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_literature_write_automatic" />
+
+                <ImageView
+                    android:id="@+id/literature_write_util_cursor_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/width_12"
+                    android:layout_marginRight="@dimen/width_12"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_literature_write_cursor_left" />
+
+                <ImageView
+                    android:id="@+id/literature_write_util_cursor_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/width_12"
+                    android:layout_marginRight="@dimen/width_12"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_literature_write_cursor_right" />
+
+                <ImageView
+                    android:id="@+id/literature_write_util_keyboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/width_12"
+                    android:layout_marginRight="@dimen/width_12"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_literature_write_keyboard_up" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include
+            layout="@layout/layout_view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_0.5"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/literature_write_util_view"
+        android:fillViewport="true"
+        android:scrollbarSize="@dimen/width_6"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbarThumbVertical="@drawable/background_scroll_bar"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/literature_write_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_88"
+                android:layout_marginLeft="@dimen/width_32"
+                android:layout_marginRight="@dimen/width_32">
+
+                <LinearLayout
+                    android:id="@+id/literature_write_title_limit_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/width_10"
+                    android:layout_marginStart="@dimen/width_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/literature_write_title_length"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_black_191919"
+                        android:textSize="@dimen/text_size_22" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/slash"
+                        android:textColor="@color/color_black_191919"
+                        android:textSize="@dimen/text_size_22" />
+
+                    <TextView
+                        android:id="@+id/literature_write_title_limit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_black_191919"
+                        android:textSize="@dimen/text_size_22" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/literature_write_title_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_88"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@id/literature_write_title_limit_view"
+                    android:layout_toStartOf="@id/literature_write_title_limit_view"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/chapter_title"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textCapSentences|textAutoCorrect"
+                    android:maxEms="20"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:textColor="@color/color_black_191919"
+                    android:textColorHint="@color/color_gray_9b9b9b"
+                    android:textSize="@dimen/text_size_28" />
+
+                <include
+                    layout="@layout/layout_view_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_0.5"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/literature_write_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/literature_write_title"
+                android:layout_marginBottom="@dimen/height_24"
+                android:layout_marginTop="@dimen/height_24"
+                android:layout_marginLeft="@dimen/width_32"
+                android:layout_marginRight="@dimen/width_32"
+                android:background="@null"
+                android:gravity="start|top"
+                android:hint="@string/chapter_content"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="textMultiLine|textCapSentences|textNoSuggestions"
+                android:maxLines="1000"
+                android:minLines="8"
+                android:textColor="@color/color_black_191919"
+                android:textColorHint="@color/color_gray_9b9b9b"
+                android:textSize="@dimen/text_size_28"/>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

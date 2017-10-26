@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/catalog_navigation_view"
+    android:layout_width="@dimen/width_32"
+    android:layout_height="match_parent"
+    android:layout_gravity="end"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <RelativeLayout
+        android:id="@+id/catalog_navigation_first"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/height_4"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/catalog_navigation_index_first"
+            android:layout_width="@dimen/width_4"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/color_blue_0094d5"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/catalog_navigation_second"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/height_4"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/catalog_navigation_index_second"
+            android:layout_width="@dimen/width_4"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/color_white_d8d8d8"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/catalog_navigation_third"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/height_4"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/catalog_navigation_index_third"
+            android:layout_width="@dimen/width_4"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/color_white_d8d8d8"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/catalog_navigation_fourth"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/height_4"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/catalog_navigation_index_fourth"
+            android:layout_width="@dimen/width_4"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/color_white_d8d8d8"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/catalog_navigation_fifth"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/height_4"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/catalog_navigation_index_fifth"
+            android:layout_width="@dimen/width_4"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/color_white_d8d8d8"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/catalog_navigation_sixth"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/height_4"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/catalog_navigation_index_sixth"
+            android:layout_width="@dimen/width_4"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/color_white_d8d8d8"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/catalog_navigation_seven"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/height_4"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/catalog_navigation_index_seven"
+            android:layout_width="@dimen/width_4"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/color_white_d8d8d8"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/catalog_navigation_eight"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/height_4"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/catalog_navigation_index_eight"
+            android:layout_width="@dimen/width_4"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/color_white_d8d8d8"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/catalog_navigation_ninth"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/height_4"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/catalog_navigation_index_ninth"
+            android:layout_width="@dimen/width_4"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/color_white_d8d8d8"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/catalog_navigation_tenth"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/height_4"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/catalog_navigation_index_tenth"
+            android:layout_width="@dimen/width_4"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/color_white_d8d8d8"
+            android:contentDescription="@string/app_name" />
+    </RelativeLayout>
+</LinearLayout>

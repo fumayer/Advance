@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/width_32"
+    android:paddingRight="@dimen/width_32">
+
+    <ImageView
+        android:id="@+id/user_dynamic_avatar"
+        android:layout_width="@dimen/width_62"
+        android:layout_height="@dimen/width_62"
+        android:layout_marginBottom="@dimen/height_32"
+        android:layout_marginEnd="@dimen/width_16"
+        android:layout_marginRight="@dimen/width_16"
+        android:layout_marginTop="@dimen/width_32"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/icon_avatar_default" />
+
+    <TextView
+        android:id="@+id/user_dynamic_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/user_dynamic_avatar"
+        android:layout_toRightOf="@id/user_dynamic_avatar"
+        android:layout_toEndOf="@id/user_dynamic_avatar"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_black_191919"
+        android:textSize="@dimen/text_size_26"
+        tools:text="@string/default_name" />
+
+    <TextView
+        android:id="@+id/user_dynamic_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/user_dynamic_avatar"
+        android:layout_toRightOf="@id/user_dynamic_avatar"
+        android:layout_toEndOf="@id/user_dynamic_avatar"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_gray_686868"
+        android:textSize="@dimen/text_size_24"
+        tools:text="@string/default_message" />
+
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/setting_other_options_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_black_252424"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/height_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_98"
+            android:layout_marginLeft="@dimen/width_32"
+            android:layout_marginRight="@dimen/width_32"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/setting_other_options_brightness_down"
+                android:layout_width="@dimen/width_32"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_brightness_down" />
+
+            <SeekBar
+                android:id="@+id/setting_other_options_brightness_progress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:progressDrawable="@drawable/background_progress"
+                android:splitTrack="false"
+                android:thumb="@drawable/icon_progress_thumb" />
+
+            <ImageView
+                android:id="@+id/setting_other_options_brightness_up"
+                android:layout_width="@dimen/width_32"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_brightness_down" />
+
+            <Button
+                android:id="@+id/setting_other_options_brightness_follow"
+                android:layout_width="@dimen/width_172"
+                android:layout_height="@dimen/height_58"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/width_10"
+                android:layout_marginStart="@dimen/width_10"
+                android:background="@drawable/selector_dark_radio_button"
+                android:text="@string/follow_system"
+                android:textColor="@color/selector_dark_setting_text"
+                android:textSize="@dimen/text_size_30" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/setting_other_options_background"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_116"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/setting_other_options_background_first"
+                android:layout_width="@dimen/width_70"
+                android:layout_height="@dimen/height_70"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/width_18"
+                android:layout_marginLeft="@dimen/width_32"
+                android:layout_marginRight="@dimen/width_18"
+                android:layout_marginStart="@dimen/width_32"
+                android:background="@drawable/selector_background_first"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/setting_other_options_background_second"
+                android:layout_width="@dimen/width_70"
+                android:layout_height="@dimen/height_70"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/width_25"
+                android:layout_marginRight="@dimen/width_25"
+                android:background="@drawable/selector_background_second"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/setting_other_options_background_third"
+                android:layout_width="@dimen/width_70"
+                android:layout_height="@dimen/height_70"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/width_25"
+                android:layout_marginRight="@dimen/width_25"
+                android:background="@drawable/selector_background_third"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/setting_other_options_background_fourth"
+                android:layout_width="@dimen/width_70"
+                android:layout_height="@dimen/height_70"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/width_25"
+                android:layout_marginRight="@dimen/width_25"
+                android:background="@drawable/selector_background_fourth"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/setting_other_options_background_fifth"
+                android:layout_width="@dimen/width_70"
+                android:layout_height="@dimen/height_70"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/width_25"
+                android:layout_marginRight="@dimen/width_25"
+                android:background="@drawable/selector_background_fifth"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/setting_other_options_background_sixth"
+                android:layout_width="@dimen/width_70"
+                android:layout_height="@dimen/height_70"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/width_32"
+                android:layout_marginLeft="@dimen/width_18"
+                android:layout_marginRight="@dimen/width_32"
+                android:layout_marginStart="@dimen/width_18"
+                android:background="@drawable/selector_background_sixth"
+                android:button="@null" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/setting_other_options_change_mode"
+        android:layout_width="@dimen/width_70"
+        android:layout_height="@dimen/height_70"
+        android:layout_above="@id/setting_other_options_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/height_40"
+        android:layout_marginEnd="@dimen/width_32"
+        android:layout_marginRight="@dimen/width_32"
+        android:background="@drawable/light_reading_mode"
+        android:contentDescription="@string/app_name" />
+</RelativeLayout>

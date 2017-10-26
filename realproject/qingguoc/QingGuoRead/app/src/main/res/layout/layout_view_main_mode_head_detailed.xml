@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_view_filler_16" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_106">
+
+        <TextView
+            android:id="@+id/main_mode_head_detailed_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/width_32"
+            android:layout_marginStart="@dimen/width_32"
+            android:layout_marginTop="@dimen/height_14"
+            android:textColor="@color/color_black_444444"
+            android:textSize="@dimen/text_size_32"
+            tools:text="@string/default_name" />
+
+        <TextView
+            android:id="@+id/main_mode_head_detailed_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/height_16"
+            android:layout_marginLeft="@dimen/width_32"
+            android:layout_marginRight="@dimen/width_32"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_black_3e3e3e"
+            android:textSize="@dimen/text_size_26"
+            tools:text="@string/default_message" />
+
+
+        <TextView
+            android:id="@+id/main_mode_head_detailed_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/width_32"
+            android:layout_marginRight="@dimen/width_32"
+            android:layout_marginTop="@dimen/height_20"
+            android:text="@string/more"
+            android:textColor="@color/color_blue_0094d5"
+            android:textSize="@dimen/text_size_24" />
+    </RelativeLayout>
+</LinearLayout>
