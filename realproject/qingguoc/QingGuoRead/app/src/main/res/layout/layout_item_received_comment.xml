@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/received_comment_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/received_comment_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_72"
+        android:layout_marginLeft="@dimen/width_32"
+        android:layout_marginRight="@dimen/width_32"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:textColor="@color/color_black_191919"
+        android:textSize="@dimen/text_size_24"
+        tools:text="@string/default_message" />
+
+    <include
+        layout="@layout/layout_view_dotted_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_2"
+        android:layout_marginLeft="@dimen/width_32"
+        android:layout_marginRight="@dimen/width_32" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/received_comment_avatar"
+            android:layout_width="@dimen/width_62"
+            android:layout_height="@dimen/width_62"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/width_32"
+            android:layout_marginLeft="@dimen/width_32"
+            android:layout_marginStart="@dimen/width_32"
+            android:layout_marginRight="@dimen/width_16"
+            android:layout_marginEnd="@dimen/width_16"
+            android:layout_marginTop="@dimen/width_32"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_avatar_default" />
+
+        <TextView
+            android:id="@+id/received_comment_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/received_comment_avatar"
+            android:layout_toRightOf="@id/received_comment_avatar"
+            android:layout_toEndOf="@id/received_comment_avatar"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_black_191919"
+            android:textSize="@dimen/text_size_26"
+            tools:text="@string/default_name" />
+
+        <TextView
+            android:id="@+id/received_comment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/received_comment_avatar"
+            android:layout_toRightOf="@id/received_comment_avatar"
+            android:layout_toEndOf="@id/received_comment_avatar"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_gray_686868"
+            android:textSize="@dimen/text_size_22"
+            tools:text="@string/default_message" />
+
+        <ImageView
+            android:id="@+id/received_comment_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/received_comment_avatar"
+            android:layout_marginLeft="@dimen/width_12"
+            android:layout_marginRight="@dimen/width_12"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="@dimen/width_20"
+            android:paddingRight="@dimen/width_20"
+            android:src="@drawable/icon_discuss" />
+
+    </RelativeLayout>
+
+    <com.quduquxie.communal.widget.expand.ExpandExpressionTextView
+        android:id="@+id/received_comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/height_30"
+        android:layout_marginLeft="@dimen/width_32"
+        android:layout_marginRight="@dimen/width_32"
+        android:gravity="center|start"
+        app:expandExpressionIconSize="@dimen/width_28"
+        app:expandExpressionMaxLines="4"
+        app:expandExpressionPromptText="@string/read_more"
+        app:expandExpressionPromptTextColor="#366590"
+        app:expandExpressionTextColor="#191919"
+        app:expandExpressionTextSize="@dimen/text_size_28"
+        tools:text="@string/default_name" />
+
+    <include layout="@layout/layout_view_divider" />
+</LinearLayout>

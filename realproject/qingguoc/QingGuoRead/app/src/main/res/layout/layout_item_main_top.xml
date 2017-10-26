@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_720"
+    android:layout_gravity="center_horizontal"
+    android:clipChildren="false">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_top"
+        android:layout_width="@dimen/width_678"
+        android:layout_height="@dimen/height_720"
+        android:layout_centerInParent="true"
+        android:clipChildren="false"
+        android:overScrollMode="never" />
+</RelativeLayout>

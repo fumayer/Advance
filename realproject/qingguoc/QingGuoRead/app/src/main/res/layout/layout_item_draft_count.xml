@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/draft_count_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_88"
+    android:layout_marginBottom="@dimen/height_16"
+    android:layout_marginTop="@dimen/height_16"
+    android:background="@color/color_white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/width_32"
+        android:layout_marginRight="@dimen/width_32"
+        android:text="@string/draft_list"
+        android:textColor="@color/color_black_191919"
+        android:textSize="@dimen/text_size_28" />
+
+    <TextView
+        android:id="@+id/draft_count_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/width_32"
+        android:layout_marginRight="@dimen/width_32"
+        android:background="@drawable/icon_blue_count_circle"
+        android:gravity="center"
+        android:text="@string/zero"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/text_size_20" />
+</RelativeLayout>

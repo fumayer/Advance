@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/comment_commend_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/height_20"
+        android:paddingTop="@dimen/height_20"
+        android:layout_marginTop="@dimen/height_12"
+        android:layout_marginBottom="@dimen/height_12">
+
+        <ImageView
+            android:id="@+id/comment_commend_image"
+            android:layout_width="@dimen/width_44"
+            android:layout_height="@dimen/height_44"
+            android:layout_marginLeft="@dimen/width_12"
+            android:layout_marginRight="@dimen/width_12"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_commend_normal" />
+
+        <TextView
+            android:id="@+id/comment_commend_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/color_gray_686868"
+            android:textSize="@dimen/text_size_24"
+            tools:text="@string/default_name" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/comment_reply"
+        android:layout_width="@dimen/width_84"
+        android:layout_height="@dimen/height_84"
+        android:layout_marginBottom="@dimen/height_12"
+        android:layout_marginEnd="@dimen/width_12"
+        android:layout_marginLeft="@dimen/width_12"
+        android:layout_marginRight="@dimen/width_12"
+        android:layout_marginStart="@dimen/width_12"
+        android:layout_marginTop="@dimen/height_12"
+        android:contentDescription="@string/app_name"
+        android:paddingBottom="@dimen/height_20"
+        android:paddingLeft="@dimen/width_20"
+        android:paddingRight="@dimen/width_20"
+        android:paddingTop="@dimen/height_20"
+        android:src="@drawable/icon_reply" />
+</LinearLayout>

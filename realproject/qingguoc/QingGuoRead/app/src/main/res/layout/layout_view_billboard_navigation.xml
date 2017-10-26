@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/width_144"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:maxLines="1"
+    android:paddingLeft="@dimen/width_20"
+    android:paddingRight="@dimen/width_20"
+    android:textColor="@color/selector_billboard_navigation"
+    android:textSize="@dimen/text_size_30" />

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/read_end_recommend_prompt"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_88"
+    android:layout_marginTop="@dimen/height_30"
+    android:layout_marginBottom="@dimen/height_40"
+    android:layout_marginLeft="@dimen/width_32"
+    android:layout_marginRight="@dimen/width_32"
+    android:background="@drawable/icon_button_background"
+    android:gravity="center"
+    android:paddingBottom="@dimen/height_10"
+    android:paddingLeft="@dimen/width_32"
+    android:paddingRight="@dimen/width_32"
+    android:paddingTop="@dimen/height_10"
+    android:text="@string/recommend_prompt"
+    android:textColor="@color/theme_primary"
+    android:textSize="@dimen/text_size_30" />

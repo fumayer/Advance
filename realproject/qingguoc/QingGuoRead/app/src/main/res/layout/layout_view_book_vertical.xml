@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/book_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/height_12"
+    android:paddingTop="@dimen/height_4">
+
+    <ImageView
+        android:id="@+id/book_vertical_cover"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_246"
+        android:background="@drawable/icon_book_shadow"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_default"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/book_vertical_name"
+        android:layout_alignStart="@+id/book_vertical_name" />
+
+    <TextView
+        android:id="@+id/book_vertical_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/book_vertical_cover"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/height_14"
+        android:ellipsize="middle"
+        android:lineSpacingExtra="@dimen/line_spacing_extra_4"
+        android:maxLines="2"
+        android:paddingEnd="@dimen/width_8"
+        android:paddingLeft="@dimen/width_8"
+        android:paddingRight="@dimen/width_8"
+        android:paddingStart="@dimen/width_8"
+        android:textColor="@color/color_black_191919"
+        android:textSize="@dimen/text_size_24"
+        tools:text="@string/default_name" />
+
+    <TextView
+        android:id="@+id/book_vertical_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/book_vertical_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/height_4"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingEnd="@dimen/width_8"
+        android:paddingLeft="@dimen/width_8"
+        android:paddingRight="@dimen/width_8"
+        android:paddingStart="@dimen/width_8"
+        android:textColor="@color/color_gray_9b9b9b"
+        android:textSize="@dimen/text_size_24"
+        tools:text="@string/default_name" />
+</RelativeLayout>
