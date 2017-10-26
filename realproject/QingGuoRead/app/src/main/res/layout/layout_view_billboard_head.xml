@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_98">
+
+    <ImageView
+        android:id="@+id/billboard_back"
+        android:layout_width="@dimen/width_80"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="@dimen/width_12"
+        android:layout_marginRight="@dimen/width_12"
+        android:paddingLeft="@dimen/width_20"
+        android:paddingRight="@dimen/width_20"
+        android:src="@drawable/selector_back" />
+
+    <TextView
+        android:id="@+id/billboard_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/color_black_3e3e3e"
+        android:textSize="@dimen/text_size_38"
+        tools:text="@string/default_name" />
+
+    <LinearLayout
+        android:id="@+id/billboard_date"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/width_12"
+        android:layout_marginRight="@dimen/width_12"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/width_20"
+        android:paddingRight="@dimen/width_20">
+
+        <TextView
+            android:id="@+id/billboard_date_option"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_blue_0094d5"
+            android:textSize="@dimen/text_size_34"
+            tools:text="@string/default_name" />
+
+        <ImageView
+            android:id="@+id/billboard_date_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/width_10"
+            android:layout_marginStart="@dimen/width_10"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/selector_open" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_0.5"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

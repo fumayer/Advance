@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_98"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_view_communal_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white_f9f9f9"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/main_bottom_shelf"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/height_6"
+            android:paddingTop="@dimen/height_16">
+
+            <ImageView
+                android:layout_width="@dimen/width_44"
+                android:layout_height="@dimen/height_44"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/selector_main_shelf" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="@string/shelf"
+                android:textColor="@color/selector_main_tab"
+                android:textSize="@dimen/text_size_22" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/main_bottom_selected"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/height_6"
+            android:paddingTop="@dimen/height_16">
+
+            <ImageView
+                android:layout_width="@dimen/width_44"
+                android:layout_height="@dimen/height_44"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/selector_main_selected" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="@string/selected"
+                android:textColor="@color/selector_main_tab"
+                android:textSize="@dimen/text_size_22" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/main_bottom_literature"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/height_6"
+            android:paddingTop="@dimen/height_16">
+
+            <ImageView
+                android:layout_width="@dimen/width_44"
+                android:layout_height="@dimen/height_44"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/selector_main_literature" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="@string/literature"
+                android:textColor="@color/selector_main_tab"
+                android:textSize="@dimen/text_size_22" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/main_bottom_store"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/height_6"
+            android:paddingTop="@dimen/height_16">
+
+            <ImageView
+                android:layout_width="@dimen/width_44"
+                android:layout_height="@dimen/height_44"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/selector_main_store" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="@string/store"
+                android:textColor="@color/selector_main_tab"
+                android:textSize="@dimen/text_size_22" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/main_bottom_mine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/height_6"
+            android:paddingTop="@dimen/height_16">
+
+            <ImageView
+                android:id="@+id/main_bottom_mine_image"
+                android:layout_width="@dimen/width_44"
+                android:layout_height="@dimen/height_44"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/selector_main_mine" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:text="@string/mine"
+                android:textColor="@color/selector_main_tab"
+                android:textSize="@dimen/text_size_22" />
+
+            <ImageView
+                android:id="@+id/main_bottom_mine_count"
+                android:layout_width="@dimen/width_16"
+                android:layout_height="@dimen/height_16"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@id/main_bottom_mine_image"
+                android:layout_toRightOf="@id/main_bottom_mine_image"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_mine_comment_count"
+                tools:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

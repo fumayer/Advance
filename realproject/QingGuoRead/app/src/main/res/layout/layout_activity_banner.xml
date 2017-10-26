@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/banner_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/banner_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_476"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_default" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_0.5"
+                android:background="@color/theme_primary" />
+
+            <LinearLayout
+                android:id="@+id/banner_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/width_32"
+                android:layout_marginRight="@dimen/width_32"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/layout_view_banner_head" />
+</FrameLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_gray_efefef"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_avatar_photo_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_98"
+        android:background="@color/color_white"
+        android:gravity="center"
+        android:text="@string/avatar_photo_gallery"
+        android:textColor="@color/color_black_3a3a3a" />
+
+    <include layout="@layout/layout_view_divider" />
+
+    <TextView
+        android:id="@+id/dialog_avatar_camera"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_98"
+        android:background="@color/color_white"
+        android:gravity="center"
+        android:text="@string/avatar_camera"
+        android:textColor="@color/theme_primary" />
+
+    <TextView
+        android:id="@+id/dialog_avatar_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_98"
+        android:layout_marginTop="@dimen/height_16"
+        android:background="@color/color_white"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/color_black_3a3a3a" />
+</LinearLayout>

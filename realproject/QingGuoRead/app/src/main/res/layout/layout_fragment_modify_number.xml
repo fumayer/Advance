@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_88"
+        android:layout_marginLeft="@dimen/width_32"
+        android:layout_marginRight="@dimen/width_32"
+        android:layout_marginTop="@dimen/height_10">
+
+        <ImageView
+            android:id="@+id/modify_number_password_visible"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="@dimen/width_10"
+            android:paddingRight="@dimen/width_10"
+            android:src="@drawable/icon_password_invisible" />
+
+        <RelativeLayout
+            android:id="@+id/modify_number_password_clear"
+            android:layout_width="@dimen/width_90"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/width_32"
+            android:layout_marginRight="@dimen/width_32"
+            android:layout_toLeftOf="@id/modify_number_password_visible"
+            android:layout_toStartOf="@id/modify_number_password_visible"
+            android:visibility="invisible">
+
+            <View
+                android:id="@+id/modify_number_password_clear_divider"
+                android:layout_width="@dimen/width_0.5"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/height_10"
+                android:layout_marginTop="@dimen/height_10"
+                android:background="@color/color_white_d8d8d8" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/width_32"
+                android:layout_marginRight="@dimen/width_32"
+                android:layout_toLeftOf="@id/modify_number_password_clear_divider"
+                android:layout_toStartOf="@id/modify_number_password_clear_divider"
+                android:contentDescription="@string/app_name"
+                android:paddingLeft="@dimen/width_10"
+                android:paddingRight="@dimen/width_10"
+                android:src="@drawable/icon_delete" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/modify_number_password_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@id/modify_number_password_clear"
+            android:layout_toStartOf="@id/modify_number_password_clear"
+            android:background="@null"
+            android:hint="@string/input_password"
+            android:inputType="textPassword"
+            android:maxEms="18"
+            android:maxLength="18"
+            android:maxLines="1"
+            android:minEms="6"
+            android:textColor="@color/color_black_191919"
+            android:textColorHint="@color/color_gray_9b9b9b"
+            android:textSize="@dimen/text_size_30" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_view_divider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_88"
+        android:layout_marginLeft="@dimen/width_32"
+        android:layout_marginRight="@dimen/width_32">
+
+        <ImageView
+            android:id="@+id/modify_telephone_number_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="@dimen/width_10"
+            android:paddingRight="@dimen/width_10"
+            android:src="@drawable/icon_delete"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/modify_telephone_number_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/modify_telephone_number_clear"
+            android:layout_toStartOf="@id/modify_telephone_number_clear"
+            android:background="@null"
+            android:hint="@string/input_telephone_number"
+            android:inputType="number"
+            android:maxEms="11"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:textColor="@color/color_black_191919"
+            android:textColorHint="@color/color_gray_9b9b9b"
+            android:textSize="@dimen/text_size_30" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_view_divider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_88"
+        android:layout_marginLeft="@dimen/width_32"
+        android:layout_marginRight="@dimen/width_32">
+
+        <TextView
+            android:id="@+id/modify_number_obtain_verification_code"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="@string/obtain_verification_code"
+            android:textColor="@color/color_gray_9b9b9b"
+            android:textSize="@dimen/text_size_26" />
+
+        <RelativeLayout
+            android:id="@+id/modify_number_verification_code_clear"
+            android:layout_width="@dimen/width_90"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/width_32"
+            android:layout_marginRight="@dimen/width_32"
+            android:layout_toLeftOf="@id/modify_number_obtain_verification_code"
+            android:layout_toStartOf="@id/modify_number_obtain_verification_code"
+            android:visibility="invisible">
+
+            <View
+                android:id="@+id/modify_number_verification_code_clear_divider"
+                android:layout_width="@dimen/width_0.5"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/height_10"
+                android:layout_marginTop="@dimen/height_10"
+                android:background="@color/color_white_d8d8d8" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                android:paddingLeft="@dimen/width_10"
+                android:paddingRight="@dimen/width_10"
+                android:src="@drawable/icon_delete" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/modify_number_verification_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/modify_number_verification_code_clear"
+            android:layout_toStartOf="@id/modify_number_verification_code_clear"
+            android:background="@null"
+            android:hint="@string/verification_code"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="@color/color_black_191919"
+            android:textColorHint="@color/color_gray_9b9b9b"
+            android:textSize="@dimen/text_size_30" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_view_divider" />
+
+    <TextView
+        android:id="@+id/modify_number_complete"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_88"
+        android:layout_marginBottom="@dimen/height_40"
+        android:layout_marginLeft="@dimen/width_32"
+        android:layout_marginRight="@dimen/width_32"
+        android:layout_marginTop="@dimen/height_40"
+        android:background="@drawable/icon_button_background"
+        android:gravity="center"
+        android:text="@string/complete"
+        android:textColor="@color/selector_user_button_text"
+        android:textSize="@dimen/text_size_36" />
+</LinearLayout>

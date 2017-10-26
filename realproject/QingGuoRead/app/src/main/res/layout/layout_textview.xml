@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:singleLine="true"
+    android:paddingLeft="@dimen/width_32"
+    android:paddingRight="@dimen/width_32"
+    android:gravity="center"
+    android:textSize="@dimen/text_size_28"
+    android:textColor="@drawable/selector_slide_title_gray" />

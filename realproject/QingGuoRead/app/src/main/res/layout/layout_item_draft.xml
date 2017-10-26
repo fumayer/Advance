@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draft_content"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_216">
+
+    <TextView
+        android:id="@+id/draft_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/width_32"
+        android:layout_marginRight="@dimen/width_32"
+        android:layout_marginTop="@dimen/height_40"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_black_191919"
+        android:textSize="@dimen/text_size_28"
+        tools:text="@string/default_message" />
+
+    <TextView
+        android:id="@+id/draft_word_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/width_32"
+        android:layout_marginRight="@dimen/width_32"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_gray_9b9b9b"
+        android:textSize="@dimen/text_size_26"
+        tools:text="@string/default_name" />
+
+    <TextView
+        android:id="@+id/draft_create_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/height_40"
+        android:layout_marginLeft="@dimen/width_32"
+        android:layout_marginRight="@dimen/width_32"
+        android:textColor="@color/color_gray_9b9b9b"
+        android:textSize="@dimen/text_size_26"
+        tools:text="@string/default_name" />
+
+    <include
+        layout="@layout/layout_view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_0.5"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

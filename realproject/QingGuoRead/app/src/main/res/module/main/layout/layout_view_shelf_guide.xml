@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black_99000000">
+
+    <ImageView
+        android:id="@+id/shelf_guide_book_date"
+        android:layout_width="@dimen/width_720"
+        android:layout_height="@dimen/height_260"
+        android:layout_marginTop="@dimen/height_88"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/icon_shelf_guide_book_date" />
+
+    <ImageView
+        android:id="@+id/shelf_guide_slide"
+        android:layout_width="@dimen/width_558"
+        android:layout_height="@dimen/height_542"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/height_200"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/icon_shelf_guide_slide"/>
+
+    <ImageView
+        android:id="@+id/shelf_guide_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_shelf_guide_delete"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/shelf_guide_close"
+        android:layout_width="@dimen/width_72"
+        android:layout_height="@dimen/height_72"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/height_94"
+        android:src="@drawable/icon_guide_close" />
+
+</RelativeLayout>

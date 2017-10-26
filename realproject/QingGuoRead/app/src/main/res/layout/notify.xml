@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <ImageView
+        android:id="@+id/notify_icon_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/width_28"
+        android:layout_marginRight="@dimen/width_20"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/icon_notification" />
+
+    <TextView
+        android:id="@+id/notify_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/width_28"
+        android:layout_alignTop="@id/notify_icon_iv"
+        android:layout_toRightOf="@id/notify_icon_iv"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/text_size_26" />
+
+    <TextView
+        android:id="@+id/notify_text_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/notify_icon_iv"
+        android:layout_marginRight="@dimen/width_28"
+        android:layout_toRightOf="@id/notify_icon_iv"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_gray_a6a6a6"
+        android:textSize="@dimen/text_size_22" />
+
+    <TextView
+        android:id="@+id/notify_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/notify_icon_iv"
+        android:layout_marginLeft="@dimen/width_10"
+        android:layout_marginRight="@dimen/width_28"
+        android:maxLines="1"
+        android:textColor="@color/color_gray_a6a6a6"
+        android:textSize="@dimen/text_size_20"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/page_turn_anim1"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/page_turn_anim2"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/page_turn_anim3"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/page_turn_anim4"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/page_turn_anim5"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/page_turn_anim6"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/page_turn_anim7"
+        android:duration="60" />
+</animation-list>

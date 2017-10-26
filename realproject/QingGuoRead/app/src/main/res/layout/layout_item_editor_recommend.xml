@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editor_recommend_content"
+    android:layout_width="@dimen/width_204"
+    android:layout_height="@dimen/height_452"
+    android:layout_gravity="center"
+    android:layout_marginLeft="@dimen/width_16"
+    android:layout_marginRight="@dimen/width_16"
+    android:background="@drawable/background_shadow"
+    android:elevation="@dimen/height_6"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/editor_recommend_cover"
+        android:layout_width="@dimen/width_204"
+        android:layout_height="@dimen/height_288"
+        android:background="@drawable/background_fillet"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_cover_default" />
+
+    <ImageView
+        android:id="@+id/editor_recommend_avatar"
+        android:layout_width="@dimen/width_80"
+        android:layout_height="@dimen/height_80"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/height_248"
+        android:background="@drawable/background_avatar"
+        android:elevation="@dimen/height_4"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_avatar_default" />
+
+    <TextView
+        android:id="@+id/editor_recommend_author"
+        android:layout_width="@dimen/width_204"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editor_recommend_avatar"
+        android:layout_marginLeft="@dimen/width_10"
+        android:layout_marginRight="@dimen/width_10"
+        android:layout_marginTop="@dimen/height_20"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:textColor="@color/color_black_191919"
+        android:textSize="@dimen/text_size_26"
+        tools:text="@string/default_name" />
+
+    <TextView
+        android:id="@+id/editor_recommend_name"
+        android:layout_width="@dimen/width_204"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/height_32"
+        android:layout_marginLeft="@dimen/width_10"
+        android:layout_marginRight="@dimen/width_10"
+        android:ellipsize="middle"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:textColor="@color/color_black_191919"
+        android:textSize="@dimen/text_size_26"
+        tools:text="@string/default_name" />
+</RelativeLayout>

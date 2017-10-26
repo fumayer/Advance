@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_efefef"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/scanning_files_count"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_104"
+        android:gravity="center"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/text_size_32" />
+
+    <TextView
+        android:id="@+id/scanning_files_txt_count"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_104"
+        android:layout_marginLeft="@dimen/width_4"
+        android:layout_marginRight="@dimen/width_4"
+        android:gravity="center"
+        android:textColor="@color/color_black"
+        android:textSize="@dimen/text_size_28" />
+
+    <TextView
+        android:id="@+id/scanning_files_stop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_98"
+        android:background="@color/color_white"
+        android:gravity="center"
+        android:text="停止扫描"
+        android:textColor="@color/theme_primary"
+        android:textSize="@dimen/text_size_34" />
+</LinearLayout>

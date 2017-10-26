@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shelf_book"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/height_16"
+    android:paddingTop="@dimen/height_16">
+
+    <FrameLayout
+        android:layout_width="@dimen/width_164"
+        android:layout_height="@dimen/height_230"
+        android:layout_gravity="center"
+        android:background="@drawable/background_shadow"
+        android:elevation="@dimen/height_10">
+
+        <ImageView
+            android:id="@+id/shelf_book_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_cover_default" />
+
+        <ImageView
+            android:id="@+id/shelf_book_state"
+            android:layout_width="@dimen/width_32"
+            android:layout_height="@dimen/height_38"
+            android:layout_gravity="top|end"
+            android:layout_marginEnd="@dimen/width_8"
+            android:layout_marginRight="@dimen/width_8"
+            android:contentDescription="@string/app_name"
+            tools:src="@drawable/icon_book_finish"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/shelf_book_check"
+            android:layout_width="@dimen/width_50"
+            android:layout_height="@dimen/height_50"
+            android:layout_gravity="top|end"
+            android:contentDescription="@string/app_name"
+            tools:src="@drawable/icon_shelf_delete_selected"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/shelf_book_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_book_background_default" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/shelf_book_name"
+        android:layout_width="@dimen/width_164"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/height_20"
+        android:ellipsize="middle"
+        android:lineSpacingExtra="@dimen/line_spacing_extra_4"
+        android:maxLines="2"
+        android:textColor="@color/color_black_191919"
+        android:textSize="@dimen/text_size_24"
+        tools:text="@string/default_name" />
+
+    <TextView
+        android:id="@+id/shelf_book_chapter"
+        android:layout_width="@dimen/width_164"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/height_14"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_gray_686868"
+        android:textSize="@dimen/text_size_24"
+        tools:text="@string/default_name" />
+</LinearLayout>

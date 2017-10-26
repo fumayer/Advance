@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_90"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/book_detail_user_avatar"
+        android:layout_width="@dimen/width_54"
+        android:layout_height="@dimen/height_54"
+        android:layout_marginBottom="@dimen/height_16"
+        android:layout_marginLeft="@dimen/width_24"
+        android:layout_marginStart="@dimen/width_24"
+        android:layout_marginTop="@dimen/height_16"
+        android:background="@drawable/background_avatar"
+        android:elevation="@dimen/height_6"
+        android:src="@drawable/icon_avatar_default" />
+
+    <TextView
+        android:id="@+id/book_detail_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/width_10"
+        android:layout_marginLeft="@dimen/width_24"
+        android:layout_marginRight="@dimen/width_10"
+        android:layout_marginStart="@dimen/width_24"
+        android:layout_toEndOf="@id/book_detail_user_avatar"
+        android:layout_toLeftOf="@+id/book_detail_user_message"
+        android:layout_toRightOf="@id/book_detail_user_avatar"
+        android:layout_toStartOf="@+id/book_detail_user_message"
+        android:textColor="@color/color_black_3e3e3e"
+        android:textSize="@dimen/text_size_26"
+        tools:text="@string/default_name" />
+
+    <TextView
+        android:id="@+id/book_detail_user_message"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_32"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/width_24"
+        android:layout_marginRight="@dimen/width_24"
+        android:background="@drawable/icon_book_detailed_message"
+        android:gravity="center_vertical"
+        android:text="@string/author_say_something"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/text_size_24" />
+</RelativeLayout>

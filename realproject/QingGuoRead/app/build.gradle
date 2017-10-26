@@ -1,0 +1,254 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+//格式化打完完成后APK名称中的时间
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC+8"))
+}
+
+def configuration = rootProject.ext.configuration
+def libraries = rootProject.ext.libraries;
+
+android {
+    compileSdkVersion configuration.compileVersion
+    buildToolsVersion configuration.buildToolsVersion
+
+    defaultConfig {
+        applicationId configuration.package
+
+        minSdkVersion configuration.minSDK
+        targetSdkVersion configuration.targetSDK
+
+        versionCode configuration.version_code
+        versionName configuration.version_name
+
+        // dex突破65535的限制
+        multiDexEnabled true
+
+        //for use support vectorDrawables
+        vectorDrawables.useSupportLibrary = true
+
+        // 默认渠道和应用名称
+        manifestPlaceholders = [CHANNEL_NAME: 'quduquxie_test', APP_NAME: '青果阅读']
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+
+            res.srcDirs = [
+                    'src/main/res',
+                    'src/main/res/module',
+                    'src/main/res/module/main',
+                    'src/main/res/module/cover',
+                    'src/main/res/module/splash',
+                    'src/main/res/module/reading',
+                    'src/main/res/module/catalog',
+                    'src/main/res/module/communal',
+            ]
+        }
+
+        instrumentTest.setRoot('tests')
+
+        debug.setRoot('build-types/debug')
+
+        release.setRoot('build-types/release')
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    signingConfigs {
+        release {
+            storeFile file(STORE_FILE)
+            storePassword STORE_PASSWORD
+            keyAlias STORE_KEY_ALIAS
+            keyPassword STORE_KEY_PASSWORD
+        }
+
+        //指定名叫release的一个签名对象，下面会动态根据配置文件设置属性
+        releaseConfig
+
+        debug {
+            // No debug config
+        }
+    }
+
+    buildTypes {
+        release {
+            //如果签名配置不为空 则设置签名信息
+            if (signingConfigs.release != null) {
+                signingConfig signingConfigs.release
+            }
+            minifyEnabled true
+            //设置压缩对齐
+            zipAlignEnabled true
+            //移除无用的资源文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //指定签名包得输入文件名称
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        def fileName = "quduquxie_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+
+        debug {
+            versionNameSuffix "-debug"
+            //设置压缩对齐
+            zipAlignEnabled false
+            //移除无用的资源文件
+            shrinkResources false
+            //设置是否混淆
+            minifyEnabled false
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    productFlavors {
+        //自身渠道
+        qg0000_001 {
+            manifestPlaceholders = [CHANNEL_NAME: 'qg0000_001', APP_NAME: '青果阅读']
+        }
+
+//        //百度应用中心
+//        qg0001_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0001_001', APP_NAME: '青果阅读']
+//        }
+//
+//        //360手机助手
+//        qg0002_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0002_001', APP_NAME: '青果阅读']
+//        }
+//
+//        //腾讯应用中心
+//        qg0003_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0003_001', APP_NAME: '青果阅读']
+//        }
+//
+//        //小米软件商店
+//        qg0004_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0004_001', APP_NAME: '青果阅读']
+//        }
+//
+//        //豌豆荚
+//        qg0005_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0005_001', APP_NAME: '青果阅读']
+//        }
+//
+//        //安卓市场
+//        qg0006_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0006_001', APP_NAME: '青果阅读']
+//        }
+//
+//        //91助手
+//        qg0007_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0007_001', APP_NAME: '青果阅读']
+//        }
+//
+//        //pp助手
+//        qg0008_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0008_001', APP_NAME: '青果阅读']
+//        }
+//
+//        //联想乐商店
+//        qg0009_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0009_001', APP_NAME: '青果阅读']
+//        }
+//
+//        //华为市场
+//        qg0010_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0010_001', APP_NAME: '青果阅读']
+//        }
+//
+//        //魅族开发者
+//        qg0011_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0011_001', APP_NAME: '青果阅读']
+//        }
+//
+//        //可可应用商店
+//        qg0012_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0012_001', APP_NAME: '青果阅读']
+//        }
+//
+//        //搜狗手机助手
+//        qg0013_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0013_001', APP_NAME: '青果阅读']
+//        }
+//
+//        //乐视应用中心
+//        qg0014_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0014_001', APP_NAME: '青果阅读']
+//        }
+//
+//        //vivo应用市场
+//        qg0015_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0015_001', APP_NAME: '青果阅读']
+//        }
+//
+//        //锤子应用市场
+//        qg0016_001 {
+//            manifestPlaceholders = [CHANNEL_NAME: 'qg0016_001', APP_NAME: '青果阅读']
+//        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //for sdk aar
+    compile(name: 'feedbackSdk', ext: 'aar')
+    compile(name: 'sdk-release', ext: 'aar')
+    //Android
+    compile 'com.android.support:multidex:1.0.1'
+    compile "com.android.support:design:${libraries.supportVersion}"
+    compile "com.android.support:percent:${libraries.supportVersion}"
+    compile "com.android.support:support-v4:${libraries.supportVersion}"
+    compile "com.android.support:appcompat-v7:${libraries.supportVersion}"
+    compile "com.android.support:recyclerview-v7:${libraries.supportVersion}"
+    compile "com.android.support:support-annotations:${libraries.annotations}"
+
+    //Retrofit
+    compile "com.squareup.retrofit2:retrofit:${libraries.retrofit}"
+    compile "com.squareup.retrofit2:adapter-rxjava2:${libraries.retrofit}"
+    compile "com.squareup.retrofit2:converter-gson:${libraries.retrofit}"
+    compile "com.squareup.retrofit2:converter-scalars:${libraries.retrofit}"
+    //RxJava
+    compile "io.reactivex.rxjava2:rxjava:${libraries.rxjava2}"
+    //RxAndroid
+    compile "io.reactivex.rxjava2:rxandroid:${libraries.rxandroid2}"
+    //Butterknife
+    compile "com.jakewharton:butterknife:${libraries.butterknife}"
+    compile "com.jakewharton:butterknife-compiler:${libraries.butterknife}"
+    //Dagger
+    compile "com.google.dagger:dagger:${libraries.dagger}"
+    apt "com.google.dagger:dagger-compiler:${libraries.dagger}"
+    //Gson
+    compile "com.google.code.gson:gson:${libraries.gson}"
+    //glide
+    compile "com.github.bumptech.glide:glide:${libraries.glide}"
+    //Logger
+    compile "com.orhanobut:logger:${libraries.logger}"
+    //Other
+    compile "com.jonathanfinerty.once:once:${libraries.once}"
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.nineoldandroids:library:2.4.0'
+}
