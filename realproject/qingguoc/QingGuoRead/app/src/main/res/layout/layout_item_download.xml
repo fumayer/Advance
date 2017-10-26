@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_118">
+
+    <TextView
+        android:id="@+id/download_serial_number"
+        android:layout_width="@dimen/width_78"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:textColor="@color/theme_primary"
+        android:textSize="@dimen/text_size_28"
+        tools:text="@string/zero" />
+
+    <ImageView
+        android:id="@+id/download_state"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/width_14"
+        android:layout_marginRight="@dimen/width_14"
+        android:paddingLeft="@dimen/width_18"
+        android:paddingRight="@dimen/width_18"
+        android:src="@drawable/icon_download_book_stop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@id/download_serial_number"
+        android:layout_toLeftOf="@id/download_state"
+        android:layout_toRightOf="@id/download_serial_number"
+        android:layout_toStartOf="@id/download_state">
+
+        <TextView
+            android:id="@+id/download_book_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/height_24"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_black_191919"
+            android:textSize="@dimen/text_size_28"
+            tools:text="@string/default_name" />
+
+        <ProgressBar
+            android:id="@+id/download_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_white_f4f5f7"
+            android:max="100"
+            android:maxHeight="@dimen/height_8"
+            android:minHeight="@dimen/height_6"
+            android:progressDrawable="@drawable/background_download_progress"
+            tools:progress="60" />
+
+        <TextView
+            android:id="@+id/download_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/download_progress"
+            android:layout_marginBottom="@dimen/height_16"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/text_size_24"
+            tools:text="@string/default_name" />
+
+    </RelativeLayout>
+</RelativeLayout>

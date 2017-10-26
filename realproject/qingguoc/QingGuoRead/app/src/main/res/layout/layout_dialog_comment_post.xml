@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/comment_post_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black_66000000"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/comment_post_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/comment_post_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/comment_post_input_view"/>
+
+            <LinearLayout
+                android:id="@+id/comment_post_input_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_white_f6f6f6"
+                android:orientation="vertical">
+
+                <com.quduquxie.communal.widget.expression.ExpressionEditText
+                    android:id="@+id/comment_post_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/height_0"
+                    android:layout_marginLeft="@dimen/width_32"
+                    android:layout_marginRight="@dimen/width_32"
+                    android:layout_marginTop="@dimen/height_20"
+                    android:background="@drawable/background_comment_input"
+                    android:gravity="center_vertical"
+                    android:maxHeight="@dimen/height_220"
+                    android:minHeight="@dimen/height_40"
+                    android:paddingBottom="@dimen/height_20"
+                    android:paddingLeft="@dimen/width_14"
+                    android:paddingRight="@dimen/width_14"
+                    android:paddingTop="@dimen/width_20"
+                    android:textColor="@color/color_black"
+                    app:expressionAlignType="1"
+                    app:expressionSize="@dimen/text_size_28"
+                    tools:text="@string/default_message" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_90">
+
+                    <ImageView
+                        android:id="@+id/comment_post_option"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/width_32"
+                        android:layout_marginRight="@dimen/width_32"
+                        android:contentDescription="@string/app_name"
+                        android:padding="@dimen/width_20"
+                        android:src="@drawable/icon_comment_input_expression" />
+
+                    <TextView
+                        android:id="@+id/comment_post_sent"
+                        android:layout_width="@dimen/width_110"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/width_32"
+                        android:layout_marginRight="@dimen/width_32"
+                        android:background="@drawable/selector_comment_input_send"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/width_20"
+                        android:paddingRight="@dimen/width_20"
+                        android:text="@string/send"
+                        android:textColor="@color/selector_color_comment_input_send"
+                        android:textSize="@dimen/text_size_28" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/comment_post_expression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_white"
+            android:visibility="gone" />
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

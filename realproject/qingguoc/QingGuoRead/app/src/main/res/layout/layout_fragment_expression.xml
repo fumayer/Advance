@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.quduquxie.widget.CircleIndicator
+        android:id="@+id/expression_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_20"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/height_10"
+        android:layout_marginTop="@dimen/height_10"
+        app:ci_animator="@animator/indicator_animator"
+        app:ci_animator_reverse="@animator/indicator_animator_reverse"
+        app:ci_drawable="@drawable/black_radius_square"
+        app:ci_height="@dimen/height_8"
+        app:ci_margin="@dimen/width_12"
+        app:ci_width="@dimen/width_20" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/expression_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/expression_indicator"/>
+
+</RelativeLayout>

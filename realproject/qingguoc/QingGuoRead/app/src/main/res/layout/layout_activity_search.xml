@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <RelativeLayout
+        android:id="@+id/search_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_98">
+
+        <TextView
+            android:id="@+id/search_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_28"
+            android:layout_marginRight="@dimen/width_28"
+            android:gravity="center_vertical"
+            android:text="@string/cancel"
+            android:textColor="@color/color_black_191919"
+            android:textSize="@dimen/text_size_32" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_54"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/width_28"
+            android:layout_marginStart="@dimen/width_28"
+            android:layout_toLeftOf="@id/search_cancel"
+            android:layout_toStartOf="@id/search_cancel"
+            android:background="@drawable/icon_search_input">
+
+            <ImageView
+                android:id="@+id/search_hint_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="@dimen/width_12"
+                android:layout_marginRight="@dimen/width_12"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_search_hint_image" />
+
+            <ImageView
+                android:id="@+id/search_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"
+                android:paddingLeft="@dimen/width_12"
+                android:paddingRight="@dimen/width_12"
+                android:src="@drawable/icon_search_delete"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/search_input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_54"
+                android:layout_toEndOf="@id/search_hint_image"
+                android:layout_toLeftOf="@id/search_clear"
+                android:layout_toRightOf="@id/search_hint_image"
+                android:layout_toStartOf="@id/search_clear"
+                android:background="@color/color_gray_dfdfdf"
+                android:hint="@string/search_input_hint"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/color_black_191919"
+                android:textColorHint="@color/color_gray_929292"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/text_size_24" />
+
+        </RelativeLayout>
+
+        <include
+            layout="@layout/layout_view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_0.5"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/search_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_head">
+
+        <ListView
+            android:id="@+id/search_suggest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/search_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/search_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_default"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</RelativeLayout>

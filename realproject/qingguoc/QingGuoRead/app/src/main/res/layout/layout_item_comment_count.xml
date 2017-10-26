@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_88"
+    android:orientation="vertical"
+    android:background="@color/color_white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/width_32"
+        android:layout_marginStart="@dimen/width_32"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comment"
+            android:textColor="@color/color_black_191919"
+            android:textSize="@dimen/text_size_30" />
+
+        <TextView
+            android:id="@+id/comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/width_12"
+            android:layout_marginStart="@dimen/width_12"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_gray_686868"
+            android:textSize="@dimen/text_size_28"
+            tools:text="@string/default_name" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/comment_write"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical"
+        android:layout_marginRight="@dimen/width_32"
+        android:layout_marginEnd="@dimen/width_32"
+        android:drawableRight="@drawable/selector_comment_write"
+        android:drawableEnd="@drawable/selector_comment_write"
+        android:drawablePadding="@dimen/width_9"
+        android:text="@string/write_comment"
+        android:textColor="@color/theme_primary"
+        android:textSize="@dimen/text_size_34" />
+</RelativeLayout>
