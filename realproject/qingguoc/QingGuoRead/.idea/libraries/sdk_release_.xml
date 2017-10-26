@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="sdk-release-">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/30fe7d4dcc3b69ea4d98083a5e21fccb6c52d1ec/output/jars/libs/Baidu_NativeAd_SDK.jar!/" />
+      <root url="jar://$USER_HOME$/.android/build-cache/30fe7d4dcc3b69ea4d98083a5e21fccb6c52d1ec/output/jars/libs/GDTUnionSDK.4.8.520.min.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/30fe7d4dcc3b69ea4d98083a5e21fccb6c52d1ec/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/30fe7d4dcc3b69ea4d98083a5e21fccb6c52d1ec/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
