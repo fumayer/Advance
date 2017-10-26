@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_dynamic_empty_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/user_dynamic_empty_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_gray_6e6e6e"
+        android:textSize="@dimen/text_size_28"
+        tools:text="@string/default_name" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/user_dynamic_empty_prompt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/height_24"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/icon_dynamic_empty" />
+</RelativeLayout>
