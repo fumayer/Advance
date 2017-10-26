@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="slidingBlock" format="reference|color" />
+        <attr name="allowWidthFull" format="boolean" />
+        <attr name="disableViewPager" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleIndicator">
+        <attr name="ci_width" format="dimension" />
+        <attr name="ci_height" format="dimension" />
+        <attr name="ci_margin" format="dimension" />
+        <attr name="ci_animator" format="reference" />
+        <attr name="ci_animator_reverse" format="reference" />
+        <attr name="ci_drawable" format="reference" />
+        <attr name="ci_drawable_unselected" format="reference" />
+
+        <attr name="ci_orientation" format="enum">
+            <!-- Defines an horizontal widget. -->
+            <enum name="horizontal" value="0" />
+            <!-- Defines a vertical widget. -->
+            <enum name="vertical" value="1" />
+        </attr>
+
+        <attr name="ci_gravity">
+            <!-- Push object to the top of its container, not changing its size. -->
+            <flag name="top" value="0x30" />
+            <!-- Push object to the bottom of its container, not changing its size. -->
+            <flag name="bottom" value="0x50" />
+            <!-- Push object to the left of its container, not changing its size. -->
+            <flag name="left" value="0x03" />
+            <!-- Push object to the right of its container, not changing its size. -->
+            <flag name="right" value="0x05" />
+            <!-- Place object in the vertical center of its container, not changing its size. -->
+            <flag name="center_vertical" value="0x10" />
+            <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill_vertical" value="0x70" />
+            <!-- Place object in the horizontal center of its container, not changing its size. -->
+            <flag name="center_horizontal" value="0x01" />
+            <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+            <flag name="fill_horizontal" value="0x07" />
+            <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            <flag name="center" value="0x11" />
+            <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill" value="0x77" />
+            <!-- Additional option that can be set to have the top and/or bottom edges of
+            the child clipped to its container's bounds.
+            The clip will be based on the vertical gravity: a top gravity will clip the bottom
+            edge, a bottom gravity will clip the top edge, and neither will clip both edges. -->
+            <flag name="clip_vertical" value="0x80" />
+            <!-- Additional option that can be set to have the left and/or right edges of
+            the child clipped to its container's bounds.
+            The clip will be based on the horizontal gravity: a left gravity will clip the right
+            edge, a right gravity will clip the left edge, and neither will clip both edges. -->
+            <flag name="clip_horizontal" value="0x08" />
+            <!-- Push object to the beginning of its container, not changing its size. -->
+            <flag name="start" value="0x00800003" />
+            <!-- Push object to the end of its container, not changing its size. -->
+            <flag name="end" value="0x00800005" />
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="SwipeBackLayout">
+        <attr name="EdgeSize" format="dimension" />
+        <attr name="EdgeFlag" format="enum" />
+        <attr name="ShadowLeft" format="reference" />
+        <attr name="ShadowRight" format="reference" />
+        <attr name="ShadowBottom" format="reference" />
+    </declare-styleable>
+
+    <attr name="SwipeBackLayoutStyle" format="reference" />
+
+
+    <declare-styleable name="LiteratureWriteEditText">
+        <attr name="fontFile" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="LiteratureSectionModifyEditText">
+        <attr name="fontModifyFile" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="LiteratureEditText">
+        <attr name="textFontFile" format="string" />
+    </declare-styleable>
+
+
+    <!-- 流式搜索热词 -->
+    <declare-styleable name="SearchRecommendView">
+        <attr name="recommendTextSize" format="reference" />
+        <attr name="recommendTextColor" format="color" />
+        <attr name="recommendMaxLines" format="integer" />
+        <attr name="recommendPaddingTop" format="reference" />
+        <attr name="recommendPaddingBottom" format="reference" />
+        <attr name="recommendPaddingLeft" format="reference" />
+        <attr name="recommendPaddingRight" format="reference" />
+        <attr name="recommendVerticalSpace" format="reference" />
+        <attr name="recommendHorizontalSpace" format="reference" />
+    </declare-styleable>
+
+    <!-- 设置页推送开关 -->
+    <declare-styleable name="TextCheckView">
+        <attr name="checkText" format="reference" />
+        <attr name="checkTextSize" format="reference" />
+        <attr name="checkTextColor" format="color" />
+        <attr name="textMaxLines" format="integer" />
+        <attr name="textTypeface" format="integer" />
+        <attr name="textMarginLeft" format="reference" />
+        <attr name="textMarginRight" format="reference" />
+        <attr name="switchMarginLeft" format="reference" />
+        <attr name="switchMarginRight" format="reference" />
+    </declare-styleable>
+
+    <!-- 可收起的TextView -->
+    <declare-styleable name="ExpandTextView">
+        <attr name="expandTextSize" format="reference" />
+        <attr name="expandTextColor" format="color" />
+        <attr name="expandMaxLines" format="integer" />
+        <attr name="expandPromptText" format="reference" />
+        <attr name="expandPromptTextColor" format="color" />
+    </declare-styleable>
+
+    <!-- 表情View -->
+    <declare-styleable name="ExpressionView">
+        <attr name="expressionSize" format="reference" />
+        <attr name="expressionAlignType" format="integer" />
+    </declare-styleable>
+
+    <!-- 可收起的自定义表情View -->
+    <declare-styleable name="ExpandExpressionTextView">
+        <attr name="expandExpressionTextSize" format="reference" />
+        <attr name="expandExpressionIconSize" format="reference" />
+        <attr name="expandExpressionTextColor" format="color" />
+        <attr name="expandExpressionMaxLines" format="integer" />
+        <attr name="expandExpressionPromptText" format="reference" />
+        <attr name="expandExpressionPromptTextColor" format="color" />
+    </declare-styleable>
+
+    <!-- 书城导航 -->
+    <declare-styleable name="ViewPagerSlidingTabStrip">
+        <attr name="viewPagerSlidingTabStripSlidingBlockHeight" format="reference" />
+        <attr name="viewPagerSlidingTabStripAllowWidthFull" format="boolean" />
+        <attr name="viewPagerSlidingTabStripSlidingBlock" format="reference" />
+        <attr name="viewPagerSlidingTabStripSlidingBlockWidth" format="reference" />
+        <attr name="viewPagerSlidingTabStripDividerWidth" format="reference" />
+        <attr name="viewPagerSlidingTabStripDividerColor" format="color" />
+        <attr name="viewPagerSlidingTabStripDividerPadding" format="reference" />
+        <attr name="viewPagerSlidingTabStripShowDivider" format="boolean" />
+        <attr name="viewPagerSlidingTabStripTextSize" format="reference" />
+        <attr name="viewPagerSlidingTabStripTextSizeSelected" format="reference" />
+    </declare-styleable>
+
+    <!-- 左滑查看更多 -->
+    <declare-styleable name="SlideLeftLoadMoreLayout">
+        <attr name="slideLeftLoadMoreLayoutPromptViewWidth" format="reference" />
+        <attr name="slideLeftLoadMoreLayoutPromptViewHeight" format="reference" />
+        <attr name="slideLeftLoadMoreLayoutPromptTextSize" format="reference" />
+        <attr name="slideLeftLoadMoreLayoutPromptTextMargin" format="reference" />
+        <attr name="slideLeftLoadMoreLayoutPromptTextColor" format="color" />
+        <attr name="slideLeftLoadMoreLayoutPromptBackground" format="color" />
+    </declare-styleable>
+
+
+    <!-- 资源整理 -->
+
+    <!--可收起的TextView-->
+    <declare-styleable name="ExpandInformation">
+        <attr name="informationTextSize" format="reference" />
+        <attr name="informationTextColor" format="color" />
+        <attr name="informationMaxLines" format="integer" />
+        <attr name="informationPromptType" format="enum">
+            <enum name="drawable" value="0" />
+            <enum name="text" value="1" />
+        </attr>
+        <attr name="informationPromptDrawable" format="reference" />
+        <attr name="informationPromptDrawableWidth" format="reference" />
+        <attr name="informationPromptDrawableHeight" format="reference" />
+        <attr name="informationPromptDrawablePadding" format="reference" />
+        <attr name="informationPromptText" format="reference" />
+        <attr name="informationPromptTextColor" format="color" />
+        <attr name="informationPromptWidth" format="reference" />
+    </declare-styleable>
+
+    <!-- 导航栏 -->
+    <declare-styleable name="NavigationBarStrip">
+        <attr name="navigationWidth" format="reference" />
+        <attr name="navigationHeight" format="reference" />
+        <attr name="indicatorMarginBottom" format="reference"/>
+
+
+        <attr name="indicatorColor" format="reference" />
+        <attr name="indicatorFactor" format="float" />
+        <attr name="indicatorWidth" format="reference" />
+        <attr name="indicatorPadding" format="reference" />
+        <attr name="indicatorTextSize" format="reference" />
+
+        <attr name="indicatorType" format="enum">
+            <enum name="line" value="0" />
+            <enum name="point" value="1" />
+        </attr>
+
+        <attr name="indicatorGravity" format="enum">
+            <enum name="bottom" value="0" />
+            <enum name="top" value="1" />
+        </attr>
+
+        <attr name="indicatorRadius" format="reference" />
+        <attr name="indicatorAnimationDuration" format="integer" />
+
+        <attr name="indicatorInactiveColor" format="color" />
+        <attr name="indicatorActiveColor" format="color" />
+    </declare-styleable>
+
+    <!-- 导航栏 -->
+    <declare-styleable name="SlidePagerTabStrip">
+        <attr name="dividerColor" format="reference"/>
+        <attr name="tabSlideBlock" format="reference|color" />
+        <attr name="slideBlockHeight" format="reference" />
+        <attr name="slideBlockMargin" format="reference" />
+        <attr name="tabsAllowWidthFull" format="boolean" />
+        <attr name="viewPagerSlideDisable" format="boolean" />
+    </declare-styleable>
+
+
+
+
+    <declare-styleable name="RangeSliderView">
+        <attr name="rangeCount" format="integer"/>
+        <attr name="filledColor" format="color"/>
+        <attr name="emptyColor" format="color"/>
+        <attr name="barHeightPercent" format="float"/>
+        <attr name="slotRadiusPercent" format="float"/>
+        <attr name="sliderRadiusPercent" format="float"/>
+    </declare-styleable>
+
+</resources>
