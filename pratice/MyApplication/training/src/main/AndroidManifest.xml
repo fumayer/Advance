@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.zhouwei.androidtrainingsimples">
+    <uses-permission android:name="android.permission.INTERNET"/>
+        <!--android:name=".MyApp"-->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".FlexboxLayoutSimpleActivity"/>
+
+        <activity android:name=".flex_layoutmanager.FlexLayoutManagerSimpleActivity"/>
+
+        <activity android:name=".viewpager_wrapper.VActivity"/>
+
+        <activity android:name=".snap_helper.SnapHelperSimpleActivity"/>
+
+        <activity android:name=".layout_animation.LayoutAnimationActivity"
+            android:theme="@style/Theme.Design.Light.NoActionBar"
+            />
+        <activity android:name=".view.CustomViewActivity"
+                  android:theme="@style/Theme.Design.Light.NoActionBar"
+            />
+        <activity android:name=".bottom_navigation.FragmentTabHostActivity"/>
+        <activity android:name=".bottom_navigation.BottomTabLayoutActivity"/>
+        <activity android:name=".bottom_navigation.BottomNavigationViewActivity"/>
+        <activity android:name=".bottom_navigation.BottomNavigationBestPracticeActivity"/>
+        <activity android:name=".bottom_navigation.RadioGroupTabActivity"/>
+        <activity android:name=".bottom_navigation.CustomTabActivity"/>
+        <activity android:name=".service.ServiceSimpleActivity"/>
+        <activity android:name=".glide.GlideSimpleActivity"/>
+        <activity android:name=".rx_simples.RxJavaSimpleActivity"/>
+
+        <activity android:name=".arc_header_view.ArcHeaderActivity"
+                  android:theme="@style/Theme.Design.Light.NoActionBar"
+            />
+        <activity android:name=".arc_header_view.ArcHeaderViewPagerActivity"
+                  android:theme="@style/Theme.Design.Light.NoActionBar"
+            />
+        <activity android:name=".viewpager_transform.ViewPagerActivity"
+                  android:theme="@style/Theme.Design.Light.NoActionBar"
+            />
+        <activity android:name=".inflate_test.InflateSimpleActivity"/>
+        <!-- -->
+        <service android:name=".service.SimpleService"
+                 android:exported="false"
+            />
+        <service android:name=".service.DownloadService"/>
+        <service android:name=".service.MusicService"/>
+        <service android:name=".service.MyIntentService"/>
+    </application>
+
+</manifest>
