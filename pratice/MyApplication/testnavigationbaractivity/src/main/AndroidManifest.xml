@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.dzh.myapplication">
+          package="com.example.testnavigationbaractivity">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -16,11 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".tubatu2.TuBaTuActivity">
+        <activity android:name=".NavigatorBarActivity">
         </activity>
-        <activity android:name=".TestFinishActivity">
-        </activity>
-        <activity android:name=".TestShapeActivity">
+        <activity android:name=".NavigaActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden">
         </activity>
     </application>
 

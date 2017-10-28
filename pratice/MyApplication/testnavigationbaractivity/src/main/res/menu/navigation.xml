@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/recents"
+        android:icon="@drawable/navigator_main_select"
+        android:title="@string/main"/>
+    <!--android:icon="@drawable/navigator_main_normal"-->
+
+    <item
+        android:id="@+id/favourites"
+        android:titleCondensed="娃娃"
+        android:icon="@drawable/navigator_mydoll_select"
+        android:title="@string/mydoll"/>
+
+    <item
+        android:id="@+id/nearby"
+        android:icon="@drawable/navigator_my_select"
+        android:title="@string/my"/>
+
+</menu>

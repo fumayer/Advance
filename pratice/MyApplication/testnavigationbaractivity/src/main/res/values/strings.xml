@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TestNavigationBarActivity</string>
+    <string name="recents">最近</string>
+    <string name="favourites">收藏</string>
+    <string name="nearby">附近</string>
+    <string name="my">我的</string>
+    <string name="mydoll">我的娃娃</string>
+    <string name="main">首页</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

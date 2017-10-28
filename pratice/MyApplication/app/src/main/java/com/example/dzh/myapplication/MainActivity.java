@@ -33,10 +33,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void go2(View view) {
         Toast.makeText(this, "触发go2", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestFinishActivity.class));
+
     }
 
     public void go3(View view) {
         Toast.makeText(this, "触发go3", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestShapeActivity.class));
+
     }
 
     public void go4(View view) {
