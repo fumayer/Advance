@@ -13,19 +13,19 @@ import java.util.TreeMap;
  * 使用多个Fragment进行切换的Manager
  */
 
-public class SFragmentManager {
+public class JFragmentManager {
 
     private final int mContainer;
     private final FragmentManager mFragmentManager;
     private TreeMap<Integer, Fragment> mFragments = new TreeMap<>();  //使用TreeMap应该高效,无需遍历
     private int mLastFragment;
 
-    public SFragmentManager(@IdRes int layout, FragmentActivity context) {
+    public JFragmentManager(@IdRes int layout, FragmentActivity context) {
         mContainer = layout;
         mFragmentManager = context.getSupportFragmentManager();
     }
 
-    public SFragmentManager addFragment(Fragment fragment) {
+    public JFragmentManager addFragment(Fragment fragment) {
         if (mFragments != null && fragment != null) {
             mFragments.put(mFragments.size(), fragment);
         }
@@ -49,11 +49,7 @@ public class SFragmentManager {
 
         for (Integer key : mFragments.keySet()) {
             Fragment fragment = mFragments.get(key);
-//            transaction.add(mContainer, fragment);
             transaction.replace(mContainer, fragment);
-            if (key == position) {
-                transaction.show(fragment);
-            }
         }
         transaction.commitAllowingStateLoss();
         mLastFragment = position;
@@ -70,20 +66,23 @@ public class SFragmentManager {
             return;
         }
 
-        Fragment hideFragment = mFragments.get(mLastFragment);
-        Fragment showFragment = mFragments.get(position);
-
-        if (hideFragment == null || showFragment == null || hideFragment.isDetached() || showFragment.isDetached() || !hideFragment.isAdded() || !showFragment.isAdded()) {
-            return;
-        }
         FragmentTransaction transaction = mFragmentManager.beginTransaction();
-        if (transaction == null) {
-            return;
-        }
-        if (!hideFragment.isHidden()) {
-            transaction.hide(hideFragment);
-        }
-        transaction.show(showFragment);
+        transaction.replace(mContainer,mFragments.get(position));
+//        Fragment hideFragment = mFragments.get(mLastFragment);
+//        Fragment showFragment = mFragments.get(position);
+
+
+//        if (hideFragment == null || showFragment == null || hideFragment.isDetached() || showFragment.isDetached() || !hideFragment.isAdded() || !showFragment.isAdded()) {
+//            return;
+//        }
+//        FragmentTransaction transaction = mFragmentManager.beginTransaction();
+//        if (transaction == null) {
+//            return;
+//        }
+//        if (!hideFragment.isHidden()) {
+//            transaction.hide(hideFragment);
+//        }
+//        transaction.show(showFragment);
         transaction.commitAllowingStateLoss();
         mLastFragment = position;
     }

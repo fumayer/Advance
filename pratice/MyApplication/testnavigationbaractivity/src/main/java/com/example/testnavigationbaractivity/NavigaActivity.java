@@ -9,24 +9,26 @@ import android.view.MenuItem;
 
 public class NavigaActivity extends FragmentActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-    private SFragmentManager mSFragmentManager;
+    private JFragmentManager mSFragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_naviga);
-        initNavigator();
-        if (savedInstanceState == null) {
-            initFragment();
+        if (mSFragmentManager == null) {
+            mSFragmentManager = new JFragmentManager(R.id.fragment_container, this);
         }
+        initNavigator();
+//        if (savedInstanceState == null) {
+//            initFragment();
+//        }
+            initFragment();
 
 
     }
 
     private void initFragment() {
-        if (mSFragmentManager == null) {
-            mSFragmentManager = new SFragmentManager(R.id.fragment_container, this);
-        }
+
         if (mSFragmentManager != null) {
             mSFragmentManager.addFragment(new AFragment())
                     .addFragment(new BFragment())
@@ -38,17 +40,7 @@ public class NavigaActivity extends FragmentActivity implements BottomNavigation
     private void initNavigator() {
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation_view);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
-//        int[][] states = new int[][]{
-//                new int[]{-android.R.attr.state_checked},
-//                new int[]{android.R.attr.state_checked}
-//        };
-//
-//        int[] colors = new int[]{getResources().getColor(R.color.normal_color),
-//                getResources().getColor(R.color.master_color)
-//        };
-//        ColorStateList csl = new ColorStateList(states, colors);
-//        bottomNavigationView.setItemTextColor(csl);
-//        bottomNavigationView.setItemIconTintList(csl);
+
     }
 
     @Override
