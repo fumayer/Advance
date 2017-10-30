@@ -44,12 +44,19 @@ public class NavigaActivity extends FragmentActivity implements BottomNavigation
     }
 
 
+    private boolean isFirst = true;
+
     @Override
     protected void onResume() {
         super.onResume();
         if (bottomNavigationView != null) {
             Log.e("NavigaActivity", "52-----onResume--->" + bottomNavigationView.getSelectedItemId());
-            bottomNavigationView.setSelectedItemId(R.id.recents);
+            Log.e("NavigaActivity", "54-----onResume---isFirst>" + isFirst);
+
+            if (isFirst) {
+                bottomNavigationView.setSelectedItemId(R.id.recents);
+                isFirst = false;
+            }
         }
     }
 
