@@ -9,38 +9,48 @@ import android.view.MenuItem;
 
 public class NavigaActivity extends FragmentActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-    private JFragmentManager mSFragmentManager;
+    private SFragmentManager mSFragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_naviga);
         if (mSFragmentManager == null) {
-            mSFragmentManager = new JFragmentManager(R.id.fragment_container, this);
+            mSFragmentManager = new SFragmentManager(R.id.fragment_container, this);
         }
         initNavigator();
-//        if (savedInstanceState == null) {
-//            initFragment();
-//        }
-            initFragment();
-
+        initFragment(savedInstanceState);
 
     }
 
-    private void initFragment() {
+    private void initFragment(Bundle saveInstanceState) {
 
         if (mSFragmentManager != null) {
-            mSFragmentManager.addFragment(new AFragment())
+            mSFragmentManager.setBundle(saveInstanceState)
+                    .addFragment(new AFragment())
                     .addFragment(new BFragment())
                     .addFragment(new CFragment())
-                    .show();
+                    .showSelectFrag();
         }
     }
 
-    private void initNavigator() {
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation_view);
-        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+    BottomNavigationView bottomNavigationView;
 
+    private void initNavigator() {
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation_view);
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        Log.e("NavigaActivity", "42-----initNavigator--->" + bottomNavigationView.getSelectedItemId());
+
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (bottomNavigationView != null) {
+            Log.e("NavigaActivity", "52-----onResume--->" + bottomNavigationView.getSelectedItemId());
+            bottomNavigationView.setSelectedItemId(R.id.recents);
+        }
     }
 
     @Override
@@ -53,13 +63,13 @@ public class NavigaActivity extends FragmentActivity implements BottomNavigation
 
         switch (item.getItemId()) {
             case R.id.recents:
-                mSFragmentManager.changeCurrentFragment(0);
+                mSFragmentManager.showSelectFrag(0);
                 break;
             case R.id.favourites:
-                mSFragmentManager.changeCurrentFragment(1);
+                mSFragmentManager.showSelectFrag(1);
                 break;
             case R.id.nearby:
-                mSFragmentManager.changeCurrentFragment(2);
+                mSFragmentManager.showSelectFrag(2);
                 break;
             default:
                 return false;
