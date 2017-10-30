@@ -22,6 +22,7 @@
         app:itemIconTint="@color/navigator_color"
         app:itemTextColor="@color/navigator_color"
         app:menu="@menu/navigation"
+        app:elevation="0dp"
         />
 
     <android.support.design.internal.BottomNavigationItemView
@@ -29,6 +30,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/navigation_view"/>
+
+<FrameLayout
+    android:background="#000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
 
 </RelativeLayout>
 
