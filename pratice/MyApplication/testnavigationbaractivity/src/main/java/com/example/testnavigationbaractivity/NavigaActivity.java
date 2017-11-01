@@ -63,10 +63,10 @@ public class NavigaActivity extends FragmentActivity implements BottomNavigation
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
+        Log.e("NavigaActivity", "57-----onNavigationItemSelected--->" + item.toString());
         if (mSFragmentManager == null) {
             return false;
         }
-        Log.e("NavigaActivity", "57-----onNavigationItemSelected--->" + item.toString());
 
         switch (item.getItemId()) {
             case R.id.recents:

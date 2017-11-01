@@ -72,15 +72,16 @@ public class SFragmentManager {
             return;
         }
 
-        if (lastFrag != null && lastFrag.isAdded()) {
-            if (!lastFrag.isHidden()) {
-                transaction.hide(lastFrag);
-            }
-        }
+
         if (showCurrentFrag.isAdded()) {
             transaction.show(showCurrentFrag);
         } else {
             transaction.add(mContainer, showCurrentFrag, Integer.toString(position));
+        }
+        if (lastFrag != null && lastFrag.isAdded()) {
+            if (!lastFrag.isHidden()) {
+                transaction.hide(lastFrag);
+            }
         }
         transaction.commitAllowingStateLoss();
 
