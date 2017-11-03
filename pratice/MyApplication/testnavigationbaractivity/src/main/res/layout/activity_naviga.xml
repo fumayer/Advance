@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipChildren="true"
     tools:context="com.example.testnavigationbaractivity.NavigaActivity">
 
     <FrameLayout
@@ -14,7 +15,7 @@
         android:layout_above="@+id/navigation_view"
         />
 
-    <android.support.design.widget.BottomNavigationView
+    <com.example.testnavigationbaractivity.SBottomNavigationView
         android:id="@+id/navigation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

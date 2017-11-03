@@ -8,4 +8,18 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="tvStyle">
+
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#f00</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:shadowColor">#00f</item>
+        <item name="android:shadowDx">15</item>
+        <item name="android:shadowDy">30</item>
+        <item name="android:shadowRadius">3</item>
+        <item name="android:background">#000</item>
+
+    </style>
+
 </resources>

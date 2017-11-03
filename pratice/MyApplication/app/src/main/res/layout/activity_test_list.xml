@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dzh.myapplication.TestListActivity">
+
+
+      <LinearLayout
+                  android:id="@+id/linear_sixiang"
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="50dp">
+
+                  <Button
+                      android:id="@+id/bt1_sixiang"
+                      android:onClick="go1"
+                      android:text="坤"
+                      android:textStyle="bold"
+                      android:textColor="#f00"
+                      android:textSize="18dp"
+                      android:layout_weight="1"
+                      android:layout_width="0dp"
+                      android:layout_height="match_parent" />
+                  <Button
+                      android:id="@+id/bt2_sixiang"
+                      android:onClick="go2"
+                      android:text="卦"
+                      android:textStyle="bold"
+                      android:textColor="#f00"
+                      android:textSize="18dp"
+                      android:layout_weight="1"
+                      android:layout_width="0dp"
+                      android:layout_height="match_parent" />
+                  <Button
+                      android:id="@+id/bt3_sixiang"
+                      android:onClick="go3"
+                      android:text="坎"
+                      android:textStyle="bold"
+                      android:textColor="#f00"
+                      android:textSize="18dp"
+                      android:layout_weight="1"
+                      android:layout_width="0dp"
+                      android:layout_height="match_parent" />
+                  <Button
+                      android:id="@+id/bt4_sixiang"
+                      android:onClick="go4"
+                      android:text="离"
+                      android:textStyle="bold"
+                      android:textColor="#f00"
+                      android:textSize="18dp"
+                      android:layout_weight="1"
+                      android:layout_width="0dp"
+                      android:layout_height="match_parent" />
+              </LinearLayout>
+
+          <LinearLayout
+              android:id="@+id/linear_bagua"
+              android:layout_below="@+id/linear_sixiang"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="50dp">
+
+              <Button
+                  android:id="@+id/bt5_sixiang"
+                  android:onClick="go5"
+                  android:text="震"
+                  android:textStyle="bold"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:layout_weight="1"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent" />
+              <Button
+                  android:id="@+id/bt6_sixiang"
+                  android:onClick="go6"
+                  android:text="艮"
+                  android:textStyle="bold"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:layout_weight="1"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent" />
+              <Button
+                  android:id="@+id/bt7_sixiang"
+                  android:onClick="go7"
+                  android:text="巽"
+                  android:textStyle="bold"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:layout_weight="1"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent" />
+              <Button
+                  android:id="@+id/bt8_sixiang"
+                  android:onClick="go8"
+                  android:text="兑"
+                  android:textStyle="bold"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:layout_weight="1"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent" />
+          </LinearLayout>
+
+    <LinearLayout
+              android:id="@+id/linear_shengxiao"
+              android:layout_below="@+id/linear_bagua"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="50dp">
+
+              <Button
+                  android:id="@+id/bt9_sixiang"
+                  android:onClick="go9"
+                  android:text="9"
+                  android:textStyle="bold"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:layout_weight="1"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent" />
+              <Button
+                  android:id="@+id/bt10_sixiang"
+                  android:onClick="go10"
+                  android:text="10"
+                  android:textStyle="bold"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:layout_weight="1"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent" />
+              <Button
+                  android:id="@+id/bt11_sixiang"
+                  android:onClick="go11"
+                  android:text="11"
+                  android:textStyle="bold"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:layout_weight="1"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent" />
+              <Button
+                  android:id="@+id/bt12_sixiang"
+                  android:onClick="go12"
+                  android:text="12"
+                  android:textStyle="bold"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:layout_weight="1"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent" />
+          </LinearLayout>
+</RelativeLayout>
+

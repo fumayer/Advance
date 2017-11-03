@@ -34,10 +34,14 @@ public class NavigaActivity extends FragmentActivity implements BottomNavigation
         }
     }
 
-    BottomNavigationView bottomNavigationView;
+    private SBottomNavigationView bottomNavigationView;
 
     private void initNavigator() {
-        bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation_view);
+        bottomNavigationView = (SBottomNavigationView) findViewById(R.id.navigation_view);
+        bottomNavigationView.setItemHeight(141);
+        bottomNavigationView.setIconSize(67,61);
+        bottomNavigationView.setTextSize(28);
+        bottomNavigationView.setIconsMarginTop(21);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
         Log.e("NavigaActivity", "42-----initNavigator--->" + bottomNavigationView.getSelectedItemId());
 

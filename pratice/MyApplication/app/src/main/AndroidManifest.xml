@@ -22,6 +22,10 @@
         </activity>
         <activity android:name=".TestShapeActivity">
         </activity>
+        <activity android:name=".TestListActivity">
+        </activity>
+        <activity android:name=".TestStyleActivity">
+        </activity>
     </application>
 
 </manifest>
