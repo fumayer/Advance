@@ -2,7 +2,7 @@
 
 buildscript {
     repositories {
-	 google()
+        google()
         jcenter()
     }
     dependencies {
@@ -15,7 +15,7 @@ buildscript {
 
 allprojects {
     repositories {
-	 google()
+        google()
         jcenter()
         mavenCentral()
         maven { url 'https://jitpack.io' }
@@ -26,3 +26,35 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+
+ext {
+    projectName = "HappyWawa"
+    compileSdkVersion = 25
+    minSdkVersion = 16
+    buildToolsVersion = "26.0.2"
+    targetSdkVersion = 23
+    releaseVersionCode = 414
+    releaseVersionName = "1.4.2"
+    debugVersionCode = 666
+    debugVersionName = "6.6.666"
+    enableLog = "true"
+
+    configuration = [
+            package          : "com.quduquxie",
+
+            compileVersion   : 25,
+            buildToolsVersion: "26.0.2",
+
+            minSDK           : 16,
+            targetSDK        : 23,
+
+            release_code     : 123,
+            release_name     : "relese",
+            debug_code       : 456,
+            debug_name       : "debug"
+    ]
+
+}
+
+

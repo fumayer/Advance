@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.sj.design">
+          package="com.example.sj.design"
+
+          android:versionCode="666"
+          android:versionName="manifest">
 
     <application
         android:allowBackup="true"

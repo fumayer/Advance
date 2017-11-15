@@ -1,28 +1,52 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'tuituiyouxi.keystore'
+            keyPassword 'TuituiyouxiKey@sevenga'
+            storeFile file('F:/studio/work/sign/tuituiyouxi.keystore')
+            storePassword 'TuituiyouxiKey@sevenga'
+        }
+    }
+
+
+
+
+
     compileSdkVersion 26
-
-
-
     defaultConfig {
-        applicationId "com.example.sj.design"
-        minSdkVersion 14
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        applicationId configuration.package
+        minSdkVersion configuration.minSDK
+        targetSdkVersion configuration.targetSDK
+//        versionCode 11
+//        versionName "defaultConfig"
+        versionCode getMyCode()
+        versionName getMyName()
+
+//        versionCode configuration.debug_code
+//        versionName configuration.debug_name
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+//        applicationId configuration.package
+//
+//        minSdkVersion configuration.minSDK
+//        targetSdkVersion configuration.targetSDK
+//
+//        versionCode configuration.version_code
+//        versionName configuration.version_name
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
         }
     }
-
 }
 
 dependencies {
@@ -33,4 +57,63 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation 'com.android.support:design:27.0.0'
+}
+
+
+def configuration = rootProject.ext.configuration
+
+def getMyCode() {
+    def myCode = 111
+    android.applicationVariants.all { variant ->
+        myCode = 333
+        variant.outputs.all { output ->
+//            if (variant.buildType.isDebuggable()) {
+//                myCode = 222
+//            } else {
+//                myCode = 333
+//            }
+            myCode = 222
+        }
+    }
+    return myCode
+}
+
+def getMyName() {
+    def myName = "wojiushiwp"
+    android.applicationVariants.all { variant ->
+        if (variant.buildType.isDebuggable()) {
+            myName = rootProject.ext.debugVersionName
+        } else {
+            myName = rootProject.ext.releaseVersionName
+        }
+    }
+    return myName
+}
+
+
+def getVersionCode(boolean isRelease) {
+    // 正式环境
+    if (isRelease) {
+        majorNumber * 1000000 + minorNumber * 10000 + revisionNumber
+    }
+    // debug环境
+    else {
+        Integer.parseInt(new Date().format("yyMMddHHmm"))
+    }
+}
+
+//Major_Version_Number.Minor_Version_Number[Revision_Number[.Build_Number]]
+def getVersionName(boolean isRelease) {
+    // 正式环境
+    if (isRelease) {
+        majorNumber + "." + minorNumber + "." + revisionNumber + "." + revisionDescription
+    }
+    // debug环境
+    else {
+        String today = new Date().format("yyMMdd")
+        String time = new Date().format("HHmmss")
+        majorNumber + "." + minorNumber + "." + revisionNumber + ".$today.$time." + revisionDescription
+    }
+
+
 }
