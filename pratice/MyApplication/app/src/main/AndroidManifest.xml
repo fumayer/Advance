@@ -26,6 +26,8 @@
         </activity>
         <activity android:name=".TestStyleActivity">
         </activity>
+        <activity android:name=".TestShadowActivity">
+        </activity>
     </application>
 
 </manifest>

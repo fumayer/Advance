@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_window_focused="false">
+        <shape android:shape="rectangle">
+            <!-- 圆角 -->
+            <corners android:radius="4dp" />
+
+            <solid android:color="@color/black_3" />
+        </shape>
+    </item>
+    <!--单击时是一个带圆角, 背景, 的矩形-->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <!--圆角-->
+            <corners android:radius="4dp" />
+
+            <solid android:color="@color/black12" />
+        </shape>
+    </item>
+</selector>

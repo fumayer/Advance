@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_start_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shortmeet.www.StartUpActivity">
+  <TextView
+      android:id="@+id/tv"
+      android:gravity="center"
+      android:layout_centerInParent="true"
+      android:text="ShortMeet"
+      android:textSize="33dp"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+</RelativeLayout>

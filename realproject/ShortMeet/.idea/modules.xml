@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AliyunVideoSdk/AliyunVideoSdk.iml" filepath="$PROJECT_DIR$/AliyunVideoSdk/AliyunVideoSdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AliyunView/AliyunView.iml" filepath="$PROJECT_DIR$/AliyunView/AliyunView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShortMeet.iml" filepath="$PROJECT_DIR$/ShortMeet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/downloadermanager/downloadermanager.iml" filepath="$PROJECT_DIR$/downloadermanager/downloadermanager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jiaozivideoplayer/jiaozivideoplayer.iml" filepath="$PROJECT_DIR$/jiaozivideoplayer/jiaozivideoplayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myphotolibray/myphotolibray.iml" filepath="$PROJECT_DIR$/myphotolibray/myphotolibray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/takephoto_library/takephoto_library.iml" filepath="$PROJECT_DIR$/takephoto_library/takephoto_library.iml" />
+    </modules>
+  </component>
+</project>

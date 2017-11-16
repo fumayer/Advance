@@ -1,0 +1,61 @@
+<LinearLayout
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context="com.shortmeet.www.ui.PercenalCenter.fragment.MineFragment">
+    <View
+        android:id="@+id/top_stusbar_minefrag"
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+   <com.shortmeet.www.views.refreshPart.AutoRefreshLayout
+       xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:tools="http://schemas.android.com/tools"
+       android:id="@+id/autorefresh_minefrag"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <FrameLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <android.support.v7.widget.RecyclerView
+               android:background="@color/white"
+               android:id="@+id/recy_mine_frag"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"/>
+
+           <LinearLayout
+               android:id="@+id/linear_titlebar_minefrag"
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+           <FrameLayout
+               android:layout_width="match_parent"
+               android:layout_height="44dp">
+               <ImageView
+                   android:id="@+id/imgv_setting_mine_frg"
+                   android:src="@mipmap/shezhi_minefrag"
+                   android:layout_gravity="right|center_vertical"
+                   android:layout_marginRight="25dp"
+                   android:layout_width="20dp"
+                   android:layout_height="20dp"/>
+               <ImageView
+                   android:id="@+id/imgv_share_mine_frg"
+                   android:src="@mipmap/fenxiang_videodetail"
+                   android:layout_gravity="right|center_vertical"
+                   android:layout_marginRight="70dp"
+                   android:layout_width="20dp"
+                   android:layout_height="20dp"/>
+              </FrameLayout>
+               <View
+                   android:id="@+id/view_divider_minefrag"
+                   android:layout_width="match_parent"
+                   android:layout_height="1.5px"/>
+           </LinearLayout>
+       </FrameLayout>
+   </com.shortmeet.www.views.refreshPart.AutoRefreshLayout>
+</LinearLayout>
+
+
+

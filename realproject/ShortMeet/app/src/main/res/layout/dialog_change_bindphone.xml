@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_change_bindphone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="更换绑定手机"
+            android:textColor="@color/black_3"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_list" />
+        <Button
+            android:id="@+id/btn_cancel_bindphone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/black7"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/blue_dialog_text"
+            android:textSize="15sp" />
+</LinearLayout>

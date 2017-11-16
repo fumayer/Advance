@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="aliyun_colorPrimary">#232A42</color>
+    <color name="aliyun_colorPrimaryDark">#303F9F</color>
+    <color name="aliyun_colorAccent">#FF4081</color>
+    <color name="aliyun_record_fill_progress">#fff600</color>
+    <color name="aliyun_color_bg">#17181a</color>
+    <color name="aliyun_color_bg_50pct">#88232A42</color>
+    <color name="aliyun_seek_bar_theme">#F05487</color>
+    <color name="aliyun_radio_btn_bg">#333b55</color>
+    <color name="aliyun_total_duration_title">#6E768B</color>
+    <color name="aliyun_total_duration_value_normal">#6E768B</color>
+    <color name="aliyun_total_duration_value_over">#000021</color>
+
+    <color name="shortmeet_crop_vedio_duration">#d3d5db</color>
+    <color name="record_fill_progress">#fff600</color>
+    <color name="color_bg">#232A42</color>
+    <color name="seek_bar_theme">#F05487</color>
+    <color name="radio_btn_bg">#333b55</color>
+    <color name="total_duration_title">#6E768B</color>
+    <color name="total_duration_value_normal">#6E768B</color>
+    <color name="total_duration_value_over">#000021</color>
+
+    <array name="qupai_text_edit_colors">
+        <item>#E72E45</item>
+        <item>#0048D2</item>
+        <item>#000000</item>
+        <item>#53153E</item>
+        <item>#9A816B</item>
+        <item>#FFFF90</item>
+        <item>#E5CDFF</item>
+        <item>#FF6D00</item>
+        <item>#7A1FBA</item>
+        <item>#FA6593</item>
+        <item>#01ADD9</item>
+        <item>#ffffff</item>
+        <item>#C1FF44</item>
+        <item>#EF4B81</item>
+        <item>#019E25</item>
+        <item>#412D14</item>
+        <item>#FFEF02</item>
+        <item>#BC34BA</item>
+        <item>#F9C5C7</item>
+        <item>#38E5BF</item>
+        <item>#C5D2F9</item>
+    </array>
+
+    <array name="paint_colors">
+        <item>#FFFFFF</item>
+        <item>#000000</item>
+        <item>#01ADD9</item>
+        <item>#53DA3E</item>
+        <item>#FFEF02</item>
+        <item>#FF6D00</item>
+        <item>#E72E45</item>
+        <item>#BC34BA</item>
+    </array>
+
+    <color name="action_bar_bg">#232A42</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="defalut_primary_color">#ff5454</color>
+    <color name="defalut_primary_color_alpha30">#4dff5454</color>
+
+    <color name="tab_bg_color">#1B2133</color>
+    <!--<color name="tab_bg_color_50pct">#7f1B2133</color>-->
+    <color name="tab_bg_color_50pct">#f69</color>
+    <color name="tab_indicator_color">#EF4B81</color>
+    <color name="tab_text_color">#6E768B</color>
+    <color name="bg_effect_manager">#232A42</color>
+    <color name="action_bar_bg_50pct">#7f232A42</color>
+
+    <color name="white_transparent_40">#66FFFFFF</color>
+    <color name="timeline_bar_active_overlay">#66EF4B81</color>
+    <color name="timeline_bar_fix_overlay">#66EF4B81</color>
+    <color name="effect_bg_color">#EF4B81</color>
+    <color name="qupai_black_opacity_80pct">#cc000000</color>
+
+    <color name="white_alpha_0">#ffffff</color>
+    <color name="white_alpha_10">#1affffff</color>
+    <color name="white_alpha_20">#33ffffff</color>
+    <color name="white_alpha_30">#4dffffff</color>
+    <color name="white_alpha_40">#66ffffff</color>
+    <color name="white_alpha_50">#7fffffff</color>
+    <color name="white_alpha_60">#99ffffff</color>
+    <color name="white_alpha_70">#b3ffffff</color>
+    <color name="white_alpha_80">#ccffffff</color>
+
+    <color name="music_back_color">#1B2033</color>
+
+
+    <color name="aliyun_reocrd_bg">#232A42</color>
+    <color name="aliyun_tools_bar_color">#881B2133</color>
+    <color name="aliyun_color_red">#ff0000</color>
+    <color name="aliyun_music_select_actionbar_bg">#373d41</color>
+    <color name="aliyun_rate_item_select_bg">#00c2dd</color>
+    <color name="aliyun_color_record_duraton">#fd4646</color>
+    <color name="aliyun_white_alpha_50">#7FFFFFFF</color>
+    <color name="shortmeet_vedio_center">#7f8593</color>
+</resources>

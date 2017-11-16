@@ -1,0 +1,148 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme" parent="BaseAppTheme">
+    </style>
+
+
+   <!--完善资料 拍照、相册选择 dialog   开始###################-->
+    <style name="CustomDialog" parent="android:style/Theme.Dialog">
+        <!-- 背景颜色及透明程度 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/bottom_menu_anim_style</item>
+    </style>
+    <!--底部对话框进入的动画-->
+    <style name="bottom_menu_anim_style">
+        <item name="android:windowEnterAnimation">@anim/buttom_dialog_in_anim</item>
+        <item name="android:windowExitAnimation">@anim/buttom_dialog_out_anim</item>
+    </style>
+    <!--完善资料 拍照、相册选择 dialog  结束###################-->
+
+
+     <!--提示是否上传视频的对话框#################开始-->
+    <style name="Theme_Transparent" parent="@android:style/Theme.DeviceDefault.Light.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!--提示是否上传视频的对话框#################结束-->
+
+
+    <!--页面中间 加载进度的对话框样式##############################开始-->
+    <!--backgroundDimEnabled为false.那弹出的对话框背景是亮的,true 后面的界面是暗的-->
+    <style name="AlertTrans">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <!--页面中间 加载进度的对话框样式##############################结束-->
+
+  <!--上传进度进度条-->
+    <style name="StyleProgressBarMini" parent="Widget.AppCompat.ProgressBar.Horizontal">  
+     <item name="android:maxHeight">15dp</item>  
+     <item name="android:minHeight">15dp</item>  
+     <item name="android:indeterminateOnly">false</item>
+     <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>  
+     <item name="android:progressDrawable">@drawable/shape_progressbar_mini</item>  
+    </style> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--&lt;!&ndash; 自定义仿IOS的AlertDialog的样式 &ndash;&gt;-->
+    <!--<style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">-->
+    <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+    <!--<item name="android:windowContentOverlay">@null</item>-->
+    <!--<item name="android:windowIsFloating">true</item>-->
+    <!--<item name="android:windowFrame">@null</item>-->
+    <!--<item name="android:backgroundDimEnabled">true</item>-->
+    <!--<item name="android:windowNoTitle">true</item>-->
+    <!--<item name="android:windowIsTranslucent">true</item>-->
+    <!--</style>-->
+    <!--<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>-->
+    <!--<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>-->
+    <!--贪婪鬼 工具代码**************开始*************************************************************-->
+    <!--解决打开启动页白屏的问题-->
+    <!--<style name="No_Waite" parent="Theme.AppCompat.Light.NoActionBar">-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--<item name="colorPrimary">@color/red_1</item>-->
+    <!--<item name="colorPrimaryDark">@color/red_1</item>-->
+    <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--<item name="android:windowAnimationStyle">@style/activityAnim</item>-->
+    <!--<item name="android:windowBackground">@drawable/guide_pink</item>-->
+    <!--</style>-->
+
+    <!-- Activity进入退出动画 -->
+    <!--<style name="activityAnim">-->
+    <!--<item name="android:activityOpenEnterAnimation">@anim/activity_start_in</item>-->
+    <!--<item name="android:activityOpenExitAnimation">@anim/activity_start_out</item>-->
+    <!--<item name="android:activityCloseEnterAnimation">@anim/activity_close_in</item>-->
+    <!--<item name="android:activityCloseExitAnimation">@anim/activity_close_out</item>-->
+    <!--</style>-->
+
+    <!--<style name="cst_dialog" parent="android:style/Theme.Dialog">-->
+    <!--&lt;!&ndash; 背景颜色及透明程度 &ndash;&gt;-->
+    <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+    <!--&lt;!&ndash; 是否有标题 &ndash;&gt;-->
+    <!--<item name="android:windowNoTitle">true</item>-->
+    <!--&lt;!&ndash; 是否浮现在activity之上 &ndash;&gt;-->
+    <!--<item name="android:windowIsFloating">true</item>-->
+    <!--&lt;!&ndash; 是否模糊 &ndash;&gt;-->
+    <!--<item name="android:backgroundDimEnabled">true</item>-->
+    <!--<item name="android:windowFrame">@null</item>-->
+
+    <!--<item name="android:windowContentOverlay">@null</item>-->
+    <!--<item name="android:windowIsTranslucent">true</item>-->
+    <!--<item name="android:background">@android:color/transparent</item>-->
+    <!--</style>-->
+    <!--贪婪鬼 工具代码**************结束**************************************************************-->
+
+</resources>

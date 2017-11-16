@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/root_cover"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+                android:background="@color/aliyun_color_bg"
+    >
+    <include
+        android:id="@+id/short_tool"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        layout="@layout/shortmeet_crop_toolbar"
+        />
+
+    <com.aliyun.quview.VideoTrimFrameLayout
+        android:id="@+id/aliyun_video_surfaceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:layout_below="@id/short_tool"
+        >
+
+        <TextureView
+            android:id="@+id/aliyun_video_textureview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleX="1.0001"
+            android:scaleY="1.0001" />
+
+    </com.aliyun.quview.VideoTrimFrameLayout>
+
+    <LinearLayout
+        android:id="@+id/aliyun_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/aliyun_video_surfaceLayout"
+        android:layout_marginTop="37dp"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center"
+            >
+            <com.aliyun.quview.HorizontalListView
+                android:id="@+id/aliyun_video_tailor_image_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical"
+                />
+
+            <com.aliyun.quview.VideoCropCoverView
+                android:id="@+id/aliyun_seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center|center_vertical"
+
+                />
+        </FrameLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_dialog_exist"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    tools:context=".ui.PercenalCenter.activity.DialogExistActivity">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="26dp"
+        android:gravity="center"
+        android:text="消息!"
+        android:layout_marginBottom="5dp"
+        android:textSize="18sp"
+        android:visibility="visible" />
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/black"
+        android:text="您的账号已在另一台设备上登陆，若非本人操作则账号已泄露，请立即找回密码!"
+        android:textSize="12sp"
+        android:visibility="visible" />
+    <EditText
+        android:id="@+id/edt_message"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="27dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f0f0f0" />
+
+    <Button
+        android:id="@+id/btn_positive"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:textSize="16sp"
+        android:text="确定"
+        android:gravity="center"
+        android:visibility="visible" />
+</LinearLayout>

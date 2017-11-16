@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_dialog_corner_10"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_take_photo_camera"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@null"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="拍照"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_list" />
+
+        <Button
+            android:id="@+id/btn_take_photo_album"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@null"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="从手机相册选取"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_take_photo_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_bg_dialog_corner_10"
+        android:enabled="true"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/blue_dialog_text"
+        android:textSize="15sp" />
+
+</LinearLayout>

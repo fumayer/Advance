@@ -1,0 +1,1 @@
+include ':app', ':myphotolibray', ':AliyunVideoSdk', ':downloadermanager', ':AliyunView', ':takephoto_library', ':jiaozivideoplayer'

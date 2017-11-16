@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/linear"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.shortmeet.www.ui.Home.fragment.HomeFragment">
+    <View
+        android:id="@+id/top_stusbar"
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <com.shizhefei.view.indicator.ScrollIndicatorView
+        android:id="@+id/scroll_indicator_home"
+        android:layout_below="@+id/top_stusbar"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="34dp"/>
+  <View
+      android:id="@+id/view_divider"
+      android:background="@color/bg_divider"
+      android:layout_below="@+id/scroll_indicator_home"
+      android:layout_width="match_parent"
+      android:layout_height="1px"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home"
+        android:layout_below="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>
+

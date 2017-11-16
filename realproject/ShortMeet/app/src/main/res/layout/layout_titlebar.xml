@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_marginTop="5dp"
+              android:layout_width="match_parent"
+              android:background="@color/white"
+              android:layout_height="48dp">
+    <FrameLayout
+        android:id="@+id/title_bar_leftframelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/imgv_leftback_titlebar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/arrow_left" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_center_title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="我是标题"
+        android:textColor="@color/black_3"
+        android:textSize="18sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_right_titlebar"
+            android:text="完成"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/black_3"
+            android:layout_gravity="center_vertical|right"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+</FrameLayout>

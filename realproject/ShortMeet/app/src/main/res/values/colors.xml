@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00000000</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--透明-->
+    <color name="transparent">#00000000</color>
+    <!--80%透明-->
+    <color name="transparent80">#33000000</color>
+    <!--70%透明-->
+    <color name="transparent70">#4c000000</color>
+    <!--50%透明-->
+    <color name="transparent50">#7f000000</color>
+    <!--40%透明-->
+    <color name="transparent40">#99000000</color>
+    <!--30%透明-->
+    <color name="transparent30">#B2000000</color>
+    <!--20%透明-->
+    <color name="transparent20">#CC000000</color>
+    <!--80%白色透明-->
+    <color name="transparent80white">#33ffffff</color>
+    <!--20%白色透明-->
+    <color name="transparent20white">#CCffffff</color>
+    <!--白色96%不透明-->
+    <color name="white_96">#F4FFFFFF</color>
+
+
+    <!--shortmeet用到的颜色-->
+    <color name="black">#212121</color>
+    <color name="black_1">#212121</color>
+    <color name="black_2">#525252</color>
+    <color name="black_3">#333c4a</color>
+    <color name="black_4">#d3d5db</color>
+    <color name="black_5">#7f8593</color>
+    <color name="black6">#999999</color>
+    <color name="black7">#f6f6f6</color>
+    <color name="black8">#f8f8f8</color>
+    <color name="black9">#f2f2f2</color>
+    <color name="black10">#272e39</color>
+    <color name="black11">#f5f5f5</color>
+    <color name="black12">#1e2737</color>
+    <color name="black13">#fcfcfc</color>
+    <color name="black14">#17181a</color>
+    <color name="bg_divider">#eeeeee</color>
+    <color name="black_change4">#FFd3d5db</color>
+    <!--black_4 60%不透明-->
+    <color name="black_4_trans60">#99d3d5db</color>
+    <!--black_5 60%不透明-->
+    <color name="black_5_trans60">#997f8593</color>
+    <!--bg_divider 80%不透明-->
+    <color name="black_eee_trans80">#cceeeeee</color>
+
+    <color name="white1">#f9f9f9</color>
+    <color name="white">#FFFFFF</color>
+    <color name="getverify">#99bfff</color>
+    <color name="color_headcount">#f2ffdf</color>
+    <color name="item_tag">#AD8facff </color>
+    <color name="item_tag2">#afc4ff</color>
+
+
+    <!--minefrag里分割线-->
+    <color name="bg_divider2">#eeeeee</color>
+    <!--mine 我的-->
+    <color name="care_fans_minefrg">#7f8593</color>
+    <color name="care_count_minefrg">#99bfff</color>
+    <color name="fans_count_minefrg">#ff9292</color>
+
+
+    <!--完善用戶信息 封面-->
+    <color name="fengmian_perfect_userinfo">#191e2737</color>
+    <!--男 或者  女  选中时的颜色  完善资料界面-->
+    <color name="man_s_color">#a1caf9</color>
+    <color name="man_n_color">#7f8593</color>
+
+    <color name="woman_s_color">#f9a1a1</color>
+    <color name="woman_n_color">#7f8593</color>
+    <!--完善资料dialog上文字-->
+    <color name="blue_dialog_text">#5372e2</color>
+    <!--完善资料分割线-->
+    <color name="divider_list">#E0E0E0</color>
+
+
+    <!--个人中心 消息红点-->
+    <color name="redpoint">#FF0101</color>
+
+
+</resources>

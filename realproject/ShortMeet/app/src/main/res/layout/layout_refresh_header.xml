@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shortmeet.www.views.refreshPart.ShortMeRefreshView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <ImageView
+        android:id="@+id/refresh_img"
+        android:layout_width="49dp"
+        android:layout_height="42dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/refresh_header" />
+</com.shortmeet.www.views.refreshPart.ShortMeRefreshView>

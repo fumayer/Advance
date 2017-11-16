@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/transparent"
+              android:gravity="center">
+ <com.cunoraz.gifview.library.GifView
+     android:id="@+id/gif1"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:visibility="visible"
+     custom:gif="@drawable/bigload" />
+ <TextView
+     android:id="@+id/tv_loading"
+     android:paddingTop="6dp"
+     android:gravity="center"
+     android:textSize="14sp"
+     android:layout_gravity="center_horizontal"
+     android:textColor="@color/white"
+     android:text="正在为您加载"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"/>
+</LinearLayout>

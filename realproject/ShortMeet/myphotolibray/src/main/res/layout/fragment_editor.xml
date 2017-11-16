@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+             android:background="@color/aliyun_color_bg"
+            android:gravity="center_vertical"
+    >
+     <TextView
+         android:id="@+id/shortmeet_icon_crop"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:drawableTop="@mipmap/shortmeet_icon_crop"
+         android:text="@string/shortmeet_vedio_crop"
+         android:textColor="@color/white"
+         android:drawablePadding="10dp"
+         android:layout_marginLeft="15dp"
+         />
+        <TextView
+            android:id="@+id/shortmeet_icon_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/shortmeet_icon_music"
+            android:text="@string/shortmeet_vedio_music"
+            android:textColor="@color/white"
+            android:drawablePadding="10dp"
+            android:layout_marginLeft="30dp"
+
+            />
+</LinearLayout>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.shortmeet.www">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.RECORD_VIDEO"/>
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 获取手机设备信息 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <application
+        android:name=".Base.BaseApplication"
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".GuideActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!-- recorder*****************************************************************开始 -->
+        <!-- <activity -->
+        <!-- android:name="com.duanqu.demo.recorder.SettingPageActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:theme="@android:style/Theme.Black.NoTitleBar" -->
+        <!-- android:screenOrientation="portrait"> -->
+        <!--  -->
+        <!-- </activity> -->
+        <!-- recorder*****************************************************************结束 -->
+
+
+        <!-- editor*****************************************************************开始 -->
+        <activity
+            android:name=".zTakePai.editt.editor.EditorActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+            <!-- <intent-shortmeet_filter_icon> -->
+            <!-- <action android:name="com.duanqu.qupai.action.editor"/> -->
+            <!-- <data android:scheme="file"/> -->
+            <!-- <category android:name="android.intent.category.DEFAULT"/> -->
+            <!-- </intent-shortmeet_filter_icon> -->
+            <intent-filter>
+                <action android:name="com.duanqu.qupai.action.editor"/>
+                <!-- <data android:scheme="content" android:host="com.duanqu.qusdkdemo.fileprovider" -->
+                <!-- android:mimeType="text/plain"/> -->
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zTakePai.record.AliyunVideoRecorder"
+            android:theme="@style/AliyunVideoUIStytle"
+            tools:replace="android:theme"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.duanqu.qupai.action.recorder"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zTakePai.editt.effectmanager.EffectManagerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="com.duanqu.qupai.action.effectmanager"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zTakePai.editt.effectmanager.MorePasterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="com.duanqu.qupai.action.morepaster"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zTakePai.editt.effectmanager.MoreCaptionActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="com.duanqu.qupai.action.morecaption"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zTakePai.editt.effectmanager.MoreMVActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="com.duanqu.qupai.action.moremv"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <!-- editor*****************************************************************结束 -->
+
+
+        <!-- import开始***************************************************************** -->
+        <activity
+            android:name=".zTakePai.impo.MediaActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.duanqu.qupai.action.import"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <!-- import*****************************************************************结束 -->
+
+
+        <!-- crop开始***************************************************************** -->
+        <activity
+            android:name=".zTakePai.crop.MediaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AliyunVideoUIStytle"
+            tools:replace="android:theme">
+            <intent-filter>
+                <action android:name="com.duanqu.qupai.action.crop"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".zTakePai.crop.AliyunVideoCrop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AliyunVideoUIStytle"
+            tools:replace="android:theme">
+        </activity>
+        <activity
+            android:name=".zTakePai.crop.AliyunImageCrop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AliyunVideoUIStytle"
+            tools:replace="android:theme">
+        </activity>
+        <!-- crop*****************************************************************结束 -->
+        <!-- android:windowSoftInputMode="stateHidden" -->
+        <activity
+            android:name=".ui.TakePai.MyUploadActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.PercenalCenter.activity.RegistActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.PercenalCenter.activity.FindpwdActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.PercenalCenter.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".StartUpActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.PercenalCenter.activity.PerfectUserInfoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.PercenalCenter.activity.DialogExistActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme_Transparent"/>
+        <activity
+            android:name=".ui.PercenalCenter.activity.EditUserInfoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.PercenalCenter.activity.SettingPageActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.PercenalCenter.activity.BindPhoneNumberActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.PercenalCenter.activity.BindConfirmPhoneActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.PercenalCenter.activity.ChangeBindPhoneActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ui.PercenalCenter.activity.ChangeConfirmBindPhoneActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".ui.PercenalCenter.activity.OtherPeopleInfoActivity">
+        </activity>
+        <activity android:name=".ui.PercenalCenter.activity.CareAboutActivity">
+        </activity>
+        <activity android:name=".ui.PercenalCenter.activity.FansActivity">
+        </activity>
+        <activity android:name=".ui.PercenalCenter.activity.GetPraiseActivity">
+        </activity>
+        <activity android:name=".ui.PercenalCenter.activity.CommenActivity">
+        </activity>
+        <activity android:name=".ui.PercenalCenter.activity.ResponseActivity">
+        </activity>
+        <activity android:name=".ui.PercenalCenter.activity.PrivateActivity">
+        </activity>
+
+        <service
+            android:name=".service.VideoUpLoadService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+
+        <activity android:name=".ui.TakePai.EditeCoverActivity">
+        </activity>
+
+        <activity android:name=".ui.Video.activity.VideDetailActivity"
+                  android:windowSoftInputMode="stateHidden"
+                  android:configChanges="keyboard|screenSize|orientation"/>
+
+        <activity android:name=".ui.Video.activity.ZanHeadVideDetailActivity">
+        </activity>
+    </application>
+
+</manifest>

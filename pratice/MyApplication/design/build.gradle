@@ -1,14 +1,6 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        config {
-            keyAlias 'tuituiyouxi.keystore'
-            keyPassword 'TuituiyouxiKey@sevenga'
-            storeFile file('F:/studio/work/sign/tuituiyouxi.keystore')
-            storePassword 'TuituiyouxiKey@sevenga'
-        }
-    }
 
 
 
@@ -41,10 +33,8 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
         }
         debug {
-            signingConfig signingConfigs.config
         }
     }
 }

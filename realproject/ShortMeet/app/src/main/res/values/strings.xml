@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ShortMeet</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_find_pwd">FindPwdActivity</string>
+
+    <string name="update_dialog_msg">确定上传此视频？</string>
+
+</resources>
