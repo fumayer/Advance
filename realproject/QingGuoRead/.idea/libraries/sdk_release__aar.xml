@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="sdk-release:@aar">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/gradle-4.1/caches/transforms-1/files-1.1/sdk-release.aar/d6e5a9331a41b81fbbc2b06b1cace2c4/jars/libs/Baidu_NativeAd_SDK.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/gradle-4.1/caches/transforms-1/files-1.1/sdk-release.aar/d6e5a9331a41b81fbbc2b06b1cace2c4/jars/libs/GDTUnionSDK.4.8.520.min.jar!/" />
+      <root url="file://$APPLICATION_HOME_DIR$/gradle/gradle-4.1/caches/transforms-1/files-1.1/sdk-release.aar/d6e5a9331a41b81fbbc2b06b1cace2c4/res" />
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/gradle-4.1/caches/transforms-1/files-1.1/sdk-release.aar/d6e5a9331a41b81fbbc2b06b1cace2c4/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

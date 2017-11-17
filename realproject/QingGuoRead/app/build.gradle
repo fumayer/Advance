@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
+//apply plugin: 'com.neenbedankt.android-apt'
 
 //格式化打完完成后APK名称中的时间
 static def releaseTime() {
@@ -30,6 +30,14 @@ android {
 
         // 默认渠道和应用名称
         manifestPlaceholders = [CHANNEL_NAME: 'quduquxie_test', APP_NAME: '青果阅读']
+
+        flavorDimensions "versionCode"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
     }
 
     sourceSets {
@@ -86,12 +94,22 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             //指定签名包得输入文件名称
+//            applicationVariants.all { variant ->
+//                variant.outputs.each { output ->
+//                    def outputFile = output.outputFile
+//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                        def fileName = "quduquxie_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+//                        output.outputFile = new File(outputFile.parent, fileName)
+//                    }
+//                }
+//            }
+
             applicationVariants.all { variant ->
-                variant.outputs.each { output ->
-                    def outputFile = output.outputFile
-                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                        def fileName = "quduquxie_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
-                        output.outputFile = new File(outputFile.parent, fileName)
+                variant.outputs.all { output ->
+                    if (variant.buildType.isDebuggable()) {
+                        outputFileName = "QingGuo_debug.apk";
+                    } else {
+                        outputFileName = "QingGuo_release.apk";
                     }
                 }
             }
@@ -240,7 +258,7 @@ dependencies {
     compile "com.jakewharton:butterknife-compiler:${libraries.butterknife}"
     //Dagger
     compile "com.google.dagger:dagger:${libraries.dagger}"
-    apt "com.google.dagger:dagger-compiler:${libraries.dagger}"
+    annotationProcessor "com.google.dagger:dagger-compiler:${libraries.dagger}"
     //Gson
     compile "com.google.code.gson:gson:${libraries.gson}"
     //glide

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="feedbackSdk:@aar">
+    <CLASSES>
+      <root url="jar://$APPLICATION_HOME_DIR$/gradle/gradle-4.1/caches/transforms-1/files-1.1/feedbackSdk.aar/40012803505abe5c8374aa8349a99de0/jars/classes.jar!/" />
+      <root url="file://$APPLICATION_HOME_DIR$/gradle/gradle-4.1/caches/transforms-1/files-1.1/feedbackSdk.aar/40012803505abe5c8374aa8349a99de0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
