@@ -62,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void go7(View view) {
         Toast.makeText(this, "触发go7", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestVisbilityActivity.class));
+
     }
 
     public void go8(View view) {
