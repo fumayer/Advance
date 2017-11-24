@@ -68,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void go8(View view) {
         Toast.makeText(this, "触发go8", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestTimeFormatActivity.class));
+
     }
 
 }
