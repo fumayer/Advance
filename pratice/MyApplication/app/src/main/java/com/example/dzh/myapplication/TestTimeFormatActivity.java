@@ -14,7 +14,7 @@ import java.util.Date;
 
 public class TestTimeFormatActivity extends AppCompatActivity {
     private EditText mEt;
-    private long time = 44555 ;
+    private long time = 44555;
     private long oneDay = 86400000;  //  一天的毫秒值
 
     @Override
@@ -40,13 +40,16 @@ public class TestTimeFormatActivity extends AppCompatActivity {
         Log.e("TestTimeFormatActivity", "38-----go1--->" + time);
         Log.e("TestTimeFormatActivity", "37-----go1--->" + d);
         Log.e("TestTimeFormatActivity", "38-----go1--->" + date);
+        boolean b = false;
+        if (b = true) {
 
+        }
     }
 
     public void go2(View view) {
         String trim = mEt.getText().toString().trim();
         if (trim != null && !trim.equals("")) {
-            time = Long.parseLong(trim)-oneDay;
+            time = Long.parseLong(trim) - oneDay;
         }
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String d = format.format(time);
