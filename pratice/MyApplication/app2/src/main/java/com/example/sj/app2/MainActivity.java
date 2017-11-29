@@ -1,74 +1,66 @@
-package com.example.dzh.myapplication;
+package com.example.sj.app2;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.dzh.myapplication.tubatu.ScalePageTransformer;
-import com.example.dzh.myapplication.tubatu.VpAdapter;
-import com.example.dzh.myapplication.tubatu2.TuBaTuActivity;
-
-public class MainActivity extends AppCompatActivity  {
-    private ViewPager mVp;
-
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mVp = (ViewPager) findViewById(R.id.vp);
-        mVp.setAdapter(new VpAdapter(this));
-        mVp.setPageTransformer(true, new ScalePageTransformer());
-
     }
 
     public void go1(View view) {
         Toast.makeText(this, "触发go1", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, TuBaTuActivity.class));
-
+        startActivity(new Intent(this, TestMathActivity.class));
     }
 
     public void go2(View view) {
         Toast.makeText(this, "触发go2", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, TestFinishActivity.class));
-
     }
 
     public void go3(View view) {
         Toast.makeText(this, "触发go3", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, TestShapeActivity.class));
-
     }
 
     public void go4(View view) {
         Toast.makeText(this, "触发go4", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, TestListActivity.class));
-
     }
 
     public void go5(View view) {
         Toast.makeText(this, "触发go5", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, TestStyleActivity.class));
-
     }
 
     public void go6(View view) {
         Toast.makeText(this, "触发go6", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, TestShadowActivity.class));
     }
 
     public void go7(View view) {
         Toast.makeText(this, "触发go7", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, TestVisbilityActivity.class));
-
     }
 
     public void go8(View view) {
         Toast.makeText(this, "触发go8", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this, TestTimeFormatActivity.class));
+    }
+
+    public void go9(View view) {
+        Toast.makeText(this, "触发go9", Toast.LENGTH_SHORT).show();
+    }
+
+    public void go10(View view) {
+        Toast.makeText(this, "触发go10", Toast.LENGTH_SHORT).show();
+    }
+
+    public void go11(View view) {
+        Toast.makeText(this, "触发go11", Toast.LENGTH_SHORT).show();
+    }
+
+    public void go12(View view) {
+        Toast.makeText(this, "触发go12", Toast.LENGTH_SHORT).show();
     }
 
 }
