@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void go2(View view) {
         Toast.makeText(this, "触发go2", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestCrashActivity.class));
     }
 
     public void go3(View view) {
