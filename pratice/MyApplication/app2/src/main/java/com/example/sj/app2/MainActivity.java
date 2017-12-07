@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void go4(View view) {
         Toast.makeText(this, "触发go4", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestListActivity.class));
+
     }
 
     public void go5(View view) {
