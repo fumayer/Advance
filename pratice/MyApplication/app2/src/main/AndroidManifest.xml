@@ -25,6 +25,8 @@
         </activity>
         <activity android:name=".TestListActivity">
         </activity>
+        <activity android:name=".TestLinkedHashMapActivity">
+        </activity>
     </application>
 
 </manifest>

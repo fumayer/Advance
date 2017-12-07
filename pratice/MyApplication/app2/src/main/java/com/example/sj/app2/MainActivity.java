@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void go5(View view) {
         Toast.makeText(this, "触发go5", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestLinkedHashMapActivity.class));
     }
 
     public void go6(View view) {
