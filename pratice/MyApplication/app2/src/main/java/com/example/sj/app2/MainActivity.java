@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void go6(View view) {
         Toast.makeText(this, "触发go6", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestAnimActivity.class));
+
     }
 
     public void go7(View view) {

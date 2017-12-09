@@ -27,6 +27,8 @@
         </activity>
         <activity android:name=".TestLinkedHashMapActivity">
         </activity>
+        <activity android:name=".TestAnimActivity">
+        </activity>
     </application>
 
 </manifest>
