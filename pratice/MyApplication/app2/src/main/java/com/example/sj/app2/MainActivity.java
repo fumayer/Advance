@@ -49,10 +49,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void go7(View view) {
         Toast.makeText(this, "触发go7", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestArcActivity.class));
+
     }
 
     public void go8(View view) {
         Toast.makeText(this, "触发go8", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestSwitchActivity.class));
+
     }
 
     public void go9(View view) {

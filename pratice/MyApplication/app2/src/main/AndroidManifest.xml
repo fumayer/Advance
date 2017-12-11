@@ -29,6 +29,10 @@
         </activity>
         <activity android:name=".TestAnimActivity">
         </activity>
+        <activity android:name=".TestArcActivity">
+        </activity>
+        <activity android:name=".TestSwitchActivity">
+        </activity>
     </application>
 
 </manifest>

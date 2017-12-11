@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00f"
+    android:orientation="vertical"
+    tools:context="com.example.sj.app2.TestArcActivity">
+
+
+    <com.example.sj.app2.ArcImageView
+        android:id="@+id/img_top"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/test"
+        app:arcHeight="50dp"
+        />
+
+    <com.example.sj.app2.ArcView
+        android:id="@+id/img_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        app:arcHeight="50dp"/>
+</RelativeLayout>
