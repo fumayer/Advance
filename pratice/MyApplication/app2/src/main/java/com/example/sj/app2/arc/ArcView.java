@@ -1,4 +1,4 @@
-package com.example.sj.app2;
+package com.example.sj.app2.arc;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,6 +10,8 @@ import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.example.sj.app2.R;
 
 /**
  * Created by sunjie on 2017/12/9.

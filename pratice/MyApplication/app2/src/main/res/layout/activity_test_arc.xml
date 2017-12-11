@@ -7,22 +7,114 @@
     android:layout_height="match_parent"
     android:background="#00f"
     android:orientation="vertical"
-    tools:context="com.example.sj.app2.TestArcActivity">
+    tools:context="com.example.sj.app2.arc.TestArcActivity">
 
+    <LinearLayout
 
-    <com.example.sj.app2.ArcImageView
-        android:id="@+id/img_top"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/test"
-        app:arcHeight="50dp"
-        />
+        android:layout_height="200dp">
 
-    <com.example.sj.app2.ArcView
-        android:id="@+id/img_bottom"
+        <com.example.sj.app2.arc.ArcImageView
+            android:id="@+id/img_top"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/test"
+            app:arcHeight="50dp"
+            />
+
+        <com.example.sj.app2.arc.ArcView
+            android:id="@+id/img_bottom"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="1"
+            app:arcHeight="50dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_sixiang"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt1_sixiang"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="go1"
+            android:text="坤"
+            android:textColor="#f00"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/bt2_sixiang"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="go2"
+            android:text="卦"
+            android:textColor="#f00"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/bt3_sixiang"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="go3"
+            android:text="坎"
+            android:textColor="#f00"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/bt4_sixiang"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="go4"
+            android:text="离"
+            android:textColor="#f00"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <com.example.sj.app2.arc.ArcLayout
+        android:id="@+id/layout_arc"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_alignParentBottom="true"
-        app:arcHeight="50dp"/>
+        android:background="#0f0"
+        app:arc_height="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f00">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/test"/>
+                </FrameLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </com.example.sj.app2.arc.ArcLayout>
 </RelativeLayout>
