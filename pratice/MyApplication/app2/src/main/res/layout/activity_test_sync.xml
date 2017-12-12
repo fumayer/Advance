@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sj.app2.sync.TestSyncActivity">
+ <LinearLayout
+         android:id="@+id/linear_sixiang"
+         android:orientation="horizontal"
+         android:layout_width="match_parent"
+         android:layout_height="50dp">
+
+         <Button
+             android:id="@+id/bt1_sixiang"
+             android:onClick="go1"
+             android:text="坤"
+             android:textStyle="bold"
+             android:textColor="#f00"
+             android:textSize="18dp"
+             android:layout_weight="1"
+             android:layout_width="0dp"
+             android:layout_height="match_parent" />
+         <Button
+             android:id="@+id/bt2_sixiang"
+             android:onClick="go2"
+             android:text="卦"
+             android:textStyle="bold"
+             android:textColor="#f00"
+             android:textSize="18dp"
+             android:layout_weight="1"
+             android:layout_width="0dp"
+             android:layout_height="match_parent" />
+         <Button
+             android:id="@+id/bt3_sixiang"
+             android:onClick="go3"
+             android:text="坎"
+             android:textStyle="bold"
+             android:textColor="#f00"
+             android:textSize="18dp"
+             android:layout_weight="1"
+             android:layout_width="0dp"
+             android:layout_height="match_parent" />
+         <Button
+             android:id="@+id/bt4_sixiang"
+             android:onClick="go4"
+             android:text="离"
+             android:textStyle="bold"
+             android:textColor="#f00"
+             android:textSize="18dp"
+             android:layout_weight="1"
+             android:layout_width="0dp"
+             android:layout_height="match_parent" />
+     </LinearLayout>
+</RelativeLayout>

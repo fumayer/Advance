@@ -35,6 +35,8 @@
         </activity>
         <activity android:name=".arc.TestOutlineProviderActivity">
         </activity>
+        <activity android:name=".sync.TestSyncActivity">
+        </activity>
     </application>
 
 </manifest>

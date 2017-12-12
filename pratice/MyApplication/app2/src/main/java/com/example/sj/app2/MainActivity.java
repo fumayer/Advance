@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.sj.app2.arc.TestArcActivity;
+import com.example.sj.app2.sync.TestSyncActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void go9(View view) {
         Toast.makeText(this, "触发go9", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestSyncActivity.class));
     }
 
     public void go10(View view) {
