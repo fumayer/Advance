@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     public void go1(View view) {
@@ -69,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void go10(View view) {
         Toast.makeText(this, "触发go10", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestAppListActivity.class));
+
     }
 
     public void go11(View view) {
