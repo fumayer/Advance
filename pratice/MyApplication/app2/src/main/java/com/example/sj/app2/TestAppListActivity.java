@@ -36,8 +36,14 @@ public class TestAppListActivity extends AppCompatActivity {
         }
     }
 
-    public void go3(View view) {
+    private String mSequence = "           ";
 
+    public void go3(View view) {
+        if (mSequence.equals("")) {
+            LogUtil.e("TestAppListActivity", "42-----go3--->" + true);
+        } else {
+            LogUtil.e("TestAppListActivity", "45-----go3--->" + false);
+        }
     }
 
     public void go4(View view) {

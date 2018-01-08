@@ -76,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void go11(View view) {
         Toast.makeText(this, "触发go11", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, UnitConversionActivity.class));
+
     }
 
     public void go12(View view) {
