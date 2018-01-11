@@ -1,1 +1,1 @@
-include ':app', ':pagerecyelerview', ':horizontalpage', ':training', ':testnavigationbaractivity', ':design', ':app2', 'swipback'
+include ':app', ':pagerecyelerview', ':horizontalpage', ':training', ':testnavigationbaractivity', ':design', ':app2', ':planmode', 'swipback'
