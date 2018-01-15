@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.example.sj.app2.arc.TestArcActivity;
 import com.example.sj.app2.popup.TestPopupActivity;
+import com.example.sj.app2.seekbar.SeekBarActivity;
 import com.example.sj.app2.sync.TestSyncActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -85,6 +86,58 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "触发go12", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(this, TestPopupActivity.class));
 
+    }
+
+    public void go13(View view) {
+        Toast.makeText(this, "触发go13", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, SeekBarActivity.class));
+
+    }
+
+    public void go14(View view) {
+        Toast.makeText(this, "触发go14", Toast.LENGTH_SHORT).show();
+    }
+
+    public void go15(View view) {
+        Toast.makeText(this, "触发go15", Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void go16(View view) {
+        Toast.makeText(this, "触发go16", Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void go17(View view) {
+        Toast.makeText(this, "触发go17", Toast.LENGTH_SHORT).show();
+    }
+
+    public void go18(View view) {
+        Toast.makeText(this, "触发go18", Toast.LENGTH_SHORT).show();
+    }
+
+    public void go19(View view) {
+        Toast.makeText(this, "触发go19", Toast.LENGTH_SHORT).show();
+    }
+
+    public void go20(View view) {
+        Toast.makeText(this, "触发go20", Toast.LENGTH_SHORT).show();
+    }
+
+    public void go21(View view) {
+        Toast.makeText(this, "触发go21", Toast.LENGTH_SHORT).show();
+    }
+
+    public void go22(View view) {
+        Toast.makeText(this, "触发go22", Toast.LENGTH_SHORT).show();
+    }
+
+    public void go23(View view) {
+        Toast.makeText(this, "触发go23", Toast.LENGTH_SHORT).show();
+    }
+
+    public void go24(View view) {
+        Toast.makeText(this, "触发go24", Toast.LENGTH_SHORT).show();
     }
 
 }
