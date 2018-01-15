@@ -1,29 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="arcHeight" format="dimension"/>
+    <attr name="arcHeight" format="dimension" />
 
     <declare-styleable name="ArcView">
-        <attr name="arcHeight"/>
-        <attr name="bgColor" format="color"/>
+        <attr name="arcHeight" />
+        <attr name="bgColor" format="color" />
     </declare-styleable>
 
     <declare-styleable name="ArcImageView">
-        <attr name="arcHeight"/>
+        <attr name="arcHeight" />
     </declare-styleable>
-
 
 
     <declare-styleable name="ArcLayout">
         <attr name="arc_height" format="dimension" />
         <attr name="arc_position">
-            <enum name="bottom" value="0"/>
-            <enum name="top" value="1"/>
-            <enum name="left" value="2"/>
-            <enum name="right" value="3"/>
+            <enum name="bottom" value="0" />
+            <enum name="top" value="1" />
+            <enum name="left" value="2" />
+            <enum name="right" value="3" />
         </attr>
         <attr name="arc_cropDirection" format="enum">
             <enum name="cropInside" value="0" />
-            <enum name="cropOutside" value="1"/>
+            <enum name="cropOutside" value="1" />
         </attr>
+    </declare-styleable>
+
+    <declare-styleable name="MSeekBar">
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="textBackground" format="reference" />
+        <attr name="textOrientation" format="enum">
+            <enum name="top" value="1" />
+            <enum name="bottom" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="SJSeekbar">
+        <attr name="startTextSize" format="dimension"/>
+        <attr name="startTextStyle" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="bold" value="1"/>
+        </attr>
+        <attr name="startTextColor" format="color"/>
+        <attr name="endTextSize" format="dimension"/>
+        <attr name="endTextStyle" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="bold" value="1"/>
+        </attr>
+        <attr name="endTextColor" format="color"/>
+        <attr name="indicatorTextSize" format="dimension"/>
+        <attr name="indicatorTextStyle" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="bold" value="1"/>
+        </attr>
+        <attr name="indicatorTextColor" format="color"/>
+        <attr name="indicator_location" format="enum">
+            <enum name="top" value="3"/>
+            <enum name="bottom" value="4"/>
+¬        </attr>
+        <attr name="indicatorDrawable" format="reference"/>
     </declare-styleable>
 </resources>

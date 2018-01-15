@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 底部背景 -->
+    <item android:id="@android:id/background" android:height="12dp">
+        <shape>
+            <solid android:color="#010000"/>
+        </shape>
+    </item>
+
+    <!-- 进度背景 -->
+    <item android:id="@android:id/progress" android:height="12dp">
+        <clip>
+            <shape>
+                <solid android:color="#ff0000"/>
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

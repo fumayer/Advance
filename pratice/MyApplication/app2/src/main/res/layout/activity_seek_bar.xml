@@ -6,4 +6,85 @@
     android:layout_height="match_parent"
     tools:context="com.example.sj.app2.seekbar.SeekBarActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="32dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+
+        android:progressDrawable="@drawable/bg_seekbar_progress_drawable"
+        android:thumb="@null"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="85dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="50dp"
+        android:max="10"
+        android:progress="3"
+        android:progressDrawable="@drawable/bg_seekbar_progress_drawable"
+        android:thumb="@null"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="140dp" />
+
+
+    <com.example.sj.app2.seekbar.MSeekbar
+        android:id="@+id/m_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="20dp"
+        android:background="#8f00"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/bg_seekbar_progress_drawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar2"
+        app:textBackground="@mipmap/ic_launcher"
+        app:textColor="#000000"
+        app:textOrientation="top"
+        app:textSize="14sp" />
+
+
+    <com.example.sj.app2.seekbar.SJSeekbar
+        android:id="@+id/sj_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="20dp"
+        android:background="#8f00"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/bg_seekbar_progress_drawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/m_seekbar" />
+
+
 </android.support.constraint.ConstraintLayout>
