@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.sj.app2.arc.TestArcActivity;
+import com.example.sj.app2.popup.TestPopupActivity;
 import com.example.sj.app2.sync.TestSyncActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -82,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void go12(View view) {
         Toast.makeText(this, "触发go12", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestPopupActivity.class));
+
     }
 
 }

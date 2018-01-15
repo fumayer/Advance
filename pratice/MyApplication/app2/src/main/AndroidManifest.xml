@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.sj.app2">
+    package="com.example.sj.app2">
 
     <application
         android:name=".MyApp"
@@ -12,24 +12,24 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TestMathActivity"/>
-        <activity android:name=".TestCrashActivity"/>
-        <activity android:name=".TestInstanceActivity"/>
-        <activity android:name=".TestListActivity"/>
-        <activity android:name=".TestLinkedHashMapActivity"/>
-        <activity android:name=".TestAnimActivity"/>
-        <activity android:name=".arc.TestArcActivity"/>
-        <activity android:name=".TestSwitchActivity"/>
-        <activity android:name=".arc.TestOutlineProviderActivity"/>
-        <activity android:name=".sync.TestSyncActivity"/>
-        <activity android:name=".TestAppListActivity"/>
-        <activity android:name=".UnitConversionActivity">
-        </activity>
+        <activity android:name=".TestMathActivity" />
+        <activity android:name=".TestCrashActivity" />
+        <activity android:name=".TestInstanceActivity" />
+        <activity android:name=".TestListActivity" />
+        <activity android:name=".TestLinkedHashMapActivity" />
+        <activity android:name=".TestAnimActivity" />
+        <activity android:name=".arc.TestArcActivity" />
+        <activity android:name=".TestSwitchActivity" />
+        <activity android:name=".arc.TestOutlineProviderActivity" />
+        <activity android:name=".sync.TestSyncActivity" />
+        <activity android:name=".TestAppListActivity" />
+        <activity android:name=".UnitConversionActivity"></activity>
+        <activity android:name=".popup.TestPopupActivity"></activity>
     </application>
 
 </manifest>
