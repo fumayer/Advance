@@ -98,6 +98,12 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
      * 进度条的宽度 <控件减去 padding>
      */
     private int progressWidth;
+    /**
+     * seekbar  垂直 / 横向
+     */
+    private int SeekbarOrientation;
+    public static final int SEEKBAR_ORIENTATION_VERTICAL=5;
+    public static final int SEEKBAR_ORIENTATION_HORIZONTAL=6;
 
 
     public SJSeekbar(Context context) {
@@ -125,6 +131,7 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
         indicatorBitmap = BitmapFactory.decodeResource(getResources(), typedArray.getResourceId(R.styleable.SJSeekbar_indicatorDrawable, R.drawable.seekbar_indicator));
 
         indicatorLocation = typedArray.getInt(R.styleable.SJSeekbar_indicator_location, INDICATOR_LOCATION_TOP);
+        SeekbarOrientation = typedArray.getInt(R.styleable.SJSeekbar_indicator_location, SEEKBAR_ORIENTATION_HORIZONTAL);
         typedArray.recycle();
         setPadding((int) (indicatorTextSize * 1), (int) (indicatorTextSize * 2), (int) (indicatorTextSize * 1), (int) (indicatorTextSize * 2));
 
@@ -193,13 +200,13 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
             indicatorBitmapRotateDegree = 180;
             indicatorBitmapY = height - (indicatorTextSize * 2);
         } else {
-            startTextY = endTextY = indicatorTextY  = height - (indicatorTextSize );
+            startTextY = endTextY = indicatorTextY = height - (indicatorTextSize);
             indicatorBitmapRotateDegree = 0;
-            indicatorBitmapY = (float) (indicatorTextSize/2);
+            indicatorBitmapY = (float) (indicatorTextSize / 2);
         }
 
 
-        RectF locationRectF = new RectF(progressLocationX, indicatorBitmapY, (float) (progressLocationX + (indicatorTextSize * 1.5)), (float) (indicatorBitmapY + (indicatorTextSize * 1.5)));
+        RectF locationRectF = new RectF(progressLocationX, indicatorBitmapY, (float) (progressLocationX + (indicatorTextSize * 1.5)), (float) (indicatorBitmapY + (indicatorBitmap.getHeight() / indicatorBitmap.getWidth() * indicatorTextSize * 1.5)));
         canvas.drawText(startText, startTextX, startTextY, startTextPaint);
         canvas.drawText(endText, endTextX, endTextY, endTextPaint);
         canvas.drawText(indicatorText, progressLocationX, indicatorTextY, indicatorTextPaint);
@@ -210,11 +217,6 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
         Rect bitmapRect = new Rect(0, 0, rotateBitmap.getWidth(), rotateBitmap.getHeight());
         canvas.drawBitmap(rotateBitmap, bitmapRect, locationRectF, null);
     }
-
-
-
-    
-
 
 
 }

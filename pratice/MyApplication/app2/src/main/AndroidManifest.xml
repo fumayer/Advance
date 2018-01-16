@@ -31,7 +31,8 @@
         <activity android:name=".UnitConversionActivity" />
         <activity android:name=".popup.TestPopupActivity" />
         <activity android:name=".seekbar.SeekBarActivity" />
-        <activity android:name=".seekbar.TestCanvasRotateActivity"></activity>
+        <activity android:name=".seekbar.TestCanvasRotateActivity" />
+        <activity android:name=".seekbar.Seekbar2Activity"></activity>
     </application>
 
 </manifest>

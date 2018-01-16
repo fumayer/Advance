@@ -62,5 +62,9 @@
             <enum name="bottom" value="4"/>
 ¬        </attr>
         <attr name="indicatorDrawable" format="reference"/>
+        <attr name="seekbarOrientation" format="enum">
+            <enum name="vertical" value="5"/>
+            <enum name="horizontal" value="6"/>
+        </attr>
     </declare-styleable>
 </resources>
