@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
@@ -89,7 +90,14 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
      * indicator bitmap
      */
     private Bitmap indicatorBitmap;
+    /**
+     * 控件高度
+     */
     private int height;
+    /**
+     * 进度条的宽度 <控件减去 padding>
+     */
+    private int progressWidth;
 
 
     public SJSeekbar(Context context) {
@@ -118,7 +126,7 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
 
         indicatorLocation = typedArray.getInt(R.styleable.SJSeekbar_indicator_location, INDICATOR_LOCATION_TOP);
         typedArray.recycle();
-        setPadding((int) (indicatorTextSize * 1), (int) (indicatorTextSize * 3), (int) (indicatorTextSize * 1), (int) (indicatorTextSize * 3));
+        setPadding((int) (indicatorTextSize * 1), (int) (indicatorTextSize * 2), (int) (indicatorTextSize * 1), (int) (indicatorTextSize * 2));
 
         if (startTextPaint == null) {
             startTextPaint = new Paint();
@@ -145,11 +153,26 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
     }
 
 
+    private String startText = String.valueOf(1);
+    private String endText = String.valueOf(100);
+    private String indicatorText = String.valueOf(1);
+    private float startTextX = 0;
+    private float startTextY = 0;
+    private float endTextX = 0;
+    private float endTextY = 0;
+    private float indicatorTextX = 0, indicatorTextY = 0;
+    private float indicatorBitmapRotateDegree;
+    private float indicatorBitmapY;
+    private int progressLocationX;
+
+
     @Override
     protected synchronized void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         if (width == 0) {
             width = getMeasuredWidth();
+            progressWidth = width - getPaddingRight() - getPaddingLeft();
+            endTextX = width - (indicatorTextSize * 2);
         }
         if (height == 0) {
 
@@ -157,27 +180,41 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
         }
         int progress = getProgress();
         int max = getMax();
+        if (progress == 0) {
+            progress = 1;
+        }
+        progressLocationX = progressWidth * progress / max;
+        indicatorText = String.valueOf(progress);
+        startTextX = indicatorTextSize / 2;
+        endTextX = width - indicatorTextSize * 2;
+
         if (indicatorLocation == INDICATOR_LOCATION_TOP) {
-            LogUtil.e("SJSeekbar", "144-----onDraw--->" + 1);
-            canvas.drawText(String.valueOf(1), indicatorTextSize / 2, indicatorTextSize * 2, startTextPaint);
-            canvas.drawText(String.valueOf(getMax()), width - (indicatorTextSize * 2), indicatorTextSize * 2, endTextPaint);
-            if (progress != 0 && max != 0) {
-                LogUtil.e("SJSeekbar", "148-----onDraw---indicator>" + getProgress());
-                canvas.drawText(String.valueOf(getProgress()), width * progress / max, indicatorTextSize * 2, indicatorTextPaint);
-                Rect bitmapRect = new Rect(0, 0, indicatorBitmap.getWidth(), indicatorBitmap.getHeight());
-                RectF locationRectF = new RectF(width * progress / max, height - indicatorTextSize * 2, width * progress / max + indicatorTextSize, height - indicatorTextSize );
-
-
-                canvas.drawBitmap(indicatorBitmap, bitmapRect, locationRectF, new Paint());
-            }
+            startTextY = endTextY = indicatorTextY = (float) (indicatorTextSize * 1.5);
+            indicatorBitmapRotateDegree = 180;
+            indicatorBitmapY = height - (indicatorTextSize * 2);
+        } else {
+            startTextY = endTextY = indicatorTextY  = height - (indicatorTextSize );
+            indicatorBitmapRotateDegree = 0;
+            indicatorBitmapY = (float) (indicatorTextSize/2);
         }
 
 
-//        if (startTextPaint != null) {
-//            LogUtil.e("SJSeekbar", "147-----onDraw--->" + getProgress());
-//            canvas.drawText(String.valueOf(getProgress()), 50, 50, startTextPaint);
-//        } else {
-//            LogUtil.e("SJSeekbar", "145-----onDraw--->null");
-//        }
+        RectF locationRectF = new RectF(progressLocationX, indicatorBitmapY, (float) (progressLocationX + (indicatorTextSize * 1.5)), (float) (indicatorBitmapY + (indicatorTextSize * 1.5)));
+        canvas.drawText(startText, startTextX, startTextY, startTextPaint);
+        canvas.drawText(endText, endTextX, endTextY, endTextPaint);
+        canvas.drawText(indicatorText, progressLocationX, indicatorTextY, indicatorTextPaint);
+
+        Matrix matrix1 = new Matrix();
+        matrix1.postRotate(indicatorBitmapRotateDegree);
+        Bitmap rotateBitmap = Bitmap.createBitmap(indicatorBitmap, 0, 0, indicatorBitmap.getWidth(), indicatorBitmap.getHeight(), matrix1, true);
+        Rect bitmapRect = new Rect(0, 0, rotateBitmap.getWidth(), rotateBitmap.getHeight());
+        canvas.drawBitmap(rotateBitmap, bitmapRect, locationRectF, null);
     }
+
+
+
+    
+
+
+
 }

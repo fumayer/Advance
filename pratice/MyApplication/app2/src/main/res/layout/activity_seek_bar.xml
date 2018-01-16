@@ -73,12 +73,16 @@
 
     <com.example.sj.app2.seekbar.SJSeekbar
         android:id="@+id/sj_seekbar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
         android:layout_marginBottom="50dp"
         android:layout_marginTop="20dp"
         android:background="#8f00"
         android:max="100"
+        android:thumb="@null"
+        app:indicator_location="bottom"
+        app:indicatorTextColor="#fff100"
+        app:indicatorTextSize="18dp"
         android:progress="0"
         android:progressDrawable="@drawable/bg_seekbar_progress_drawable"
         app:layout_constraintBottom_toBottomOf="parent"
