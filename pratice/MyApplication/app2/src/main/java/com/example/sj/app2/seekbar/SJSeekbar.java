@@ -15,6 +15,7 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.MotionEvent;
 
 import com.example.sj.app2.LogUtil;
 import com.example.sj.app2.R;
@@ -102,12 +103,62 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
      * seekbar  垂直 / 横向
      */
     private int SeekbarOrientation;
-    public static final int SEEKBAR_ORIENTATION_VERTICAL=5;
-    public static final int SEEKBAR_ORIENTATION_HORIZONTAL=6;
+    public static final int SEEKBAR_ORIENTATION_VERTICAL = 5;
+    public static final int SEEKBAR_ORIENTATION_HORIZONTAL = 6;
 
 
     public SJSeekbar(Context context) {
         super(context);
+    }
+
+    public SJSeekbar(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        if (SeekbarOrientation == SEEKBAR_ORIENTATION_HORIZONTAL) {
+            super.onSizeChanged(w, h, oldw, oldh);
+        } else {
+            super.onSizeChanged(h, w, oldh, oldw);
+        }
+    }
+
+    @Override
+    protected synchronized void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        if (SeekbarOrientation == SEEKBAR_ORIENTATION_HORIZONTAL) {
+            super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        } else {
+            super.onMeasure(heightMeasureSpec, widthMeasureSpec);
+            setMeasuredDimension(getMeasuredHeight(), getMeasuredWidth());
+        }
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if (SeekbarOrientation == SEEKBAR_ORIENTATION_HORIZONTAL) {
+
+            return super.onTouchEvent(event);
+        } else {
+
+            if (!isEnabled()) {
+                return false;
+            }
+
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                case MotionEvent.ACTION_MOVE:
+                case MotionEvent.ACTION_UP:
+                    setProgress(getMax() - (int) (getMax() * event.getY() / getHeight()));
+                    onSizeChanged(getWidth(), getHeight(), 0, 0);
+                    break;
+
+                case MotionEvent.ACTION_CANCEL:
+                    break;
+            }
+            return true;
+        }
     }
 
     private static float dpToPx(Context context, int dp) {
@@ -131,7 +182,8 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
         indicatorBitmap = BitmapFactory.decodeResource(getResources(), typedArray.getResourceId(R.styleable.SJSeekbar_indicatorDrawable, R.drawable.seekbar_indicator));
 
         indicatorLocation = typedArray.getInt(R.styleable.SJSeekbar_indicator_location, INDICATOR_LOCATION_TOP);
-        SeekbarOrientation = typedArray.getInt(R.styleable.SJSeekbar_indicator_location, SEEKBAR_ORIENTATION_HORIZONTAL);
+        SeekbarOrientation = typedArray.getInt(R.styleable.SJSeekbar_seekbarOrientation, SEEKBAR_ORIENTATION_HORIZONTAL);
+        LogUtil.e("SJSeekbar", "136-----SJSeekbar--->" + SeekbarOrientation);
         typedArray.recycle();
         setPadding((int) (indicatorTextSize * 1), (int) (indicatorTextSize * 2), (int) (indicatorTextSize * 1), (int) (indicatorTextSize * 2));
 
@@ -155,10 +207,6 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
         indicatorTextPaint.setAntiAlias(true);
     }
 
-    public SJSeekbar(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
-
 
     private String startText = String.valueOf(1);
     private String endText = String.valueOf(100);
@@ -170,31 +218,42 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
     private float indicatorTextX = 0, indicatorTextY = 0;
     private float indicatorBitmapRotateDegree;
     private float indicatorBitmapY;
-    private int progressLocationX;
-
+    private int textRotateDegree;
 
     @Override
     protected synchronized void onDraw(Canvas canvas) {
+        if (SeekbarOrientation != SEEKBAR_ORIENTATION_HORIZONTAL) {
+            canvas.rotate(-90);
+            canvas.translate(-getHeight(), 0);
+            textRotateDegree = 90;
+        }
         super.onDraw(canvas);
         if (width == 0) {
-            width = getMeasuredWidth();
+            if (SeekbarOrientation == SEEKBAR_ORIENTATION_HORIZONTAL) {
+                width = getMeasuredWidth();
+            } else {
+                width = getMeasuredHeight();
+            }
             progressWidth = width - getPaddingRight() - getPaddingLeft();
             endTextX = width - (indicatorTextSize * 2);
         }
         if (height == 0) {
-
-            height = getHeight();
+            if (SeekbarOrientation == SEEKBAR_ORIENTATION_HORIZONTAL) {
+                height = getMeasuredHeight();
+            } else {
+                height = getMeasuredWidth();
+            }
         }
         int progress = getProgress();
         int max = getMax();
         if (progress == 0) {
             progress = 1;
         }
-        progressLocationX = progressWidth * progress / max;
+        indicatorTextX = progressWidth * progress / max;
         indicatorText = String.valueOf(progress);
         startTextX = indicatorTextSize / 2;
         endTextX = width - indicatorTextSize * 2;
-
+        endText=String.valueOf(getMax());
         if (indicatorLocation == INDICATOR_LOCATION_TOP) {
             startTextY = endTextY = indicatorTextY = (float) (indicatorTextSize * 1.5);
             indicatorBitmapRotateDegree = 180;
@@ -205,12 +264,22 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
             indicatorBitmapY = (float) (indicatorTextSize / 2);
         }
 
+        canvas.save();
+        RectF locationRectF = new RectF(indicatorTextX, indicatorBitmapY, (float) (indicatorTextX + (indicatorTextSize * 1.5)), (float) (indicatorBitmapY + (indicatorBitmap.getHeight() / indicatorBitmap.getWidth() * indicatorTextSize * 1.5)));
 
-        RectF locationRectF = new RectF(progressLocationX, indicatorBitmapY, (float) (progressLocationX + (indicatorTextSize * 1.5)), (float) (indicatorBitmapY + (indicatorBitmap.getHeight() / indicatorBitmap.getWidth() * indicatorTextSize * 1.5)));
+        canvas.rotate(textRotateDegree, startTextX + indicatorTextSize, startTextY);
         canvas.drawText(startText, startTextX, startTextY, startTextPaint);
-        canvas.drawText(endText, endTextX, endTextY, endTextPaint);
-        canvas.drawText(indicatorText, progressLocationX, indicatorTextY, indicatorTextPaint);
+        canvas.restore();
+        canvas.save();
 
+        canvas.rotate(textRotateDegree, endTextX + indicatorTextSize, endTextY);
+        canvas.drawText(endText, endTextX, endTextY, endTextPaint);
+        canvas.restore();
+        canvas.save();
+
+        canvas.rotate(textRotateDegree, indicatorTextX + indicatorTextSize, indicatorTextY);
+        canvas.drawText(indicatorText, indicatorTextX, indicatorTextY, indicatorTextPaint);
+        canvas.restore();
         Matrix matrix1 = new Matrix();
         matrix1.postRotate(indicatorBitmapRotateDegree);
         Bitmap rotateBitmap = Bitmap.createBitmap(indicatorBitmap, 0, 0, indicatorBitmap.getWidth(), indicatorBitmap.getHeight(), matrix1, true);
@@ -220,3 +289,4 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
 
 
 }
+
