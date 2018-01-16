@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.example.sj.app2.arc.TestArcActivity;
 import com.example.sj.app2.popup.TestPopupActivity;
 import com.example.sj.app2.seekbar.SeekBarActivity;
+import com.example.sj.app2.seekbar.TestCanvasRotateActivity;
 import com.example.sj.app2.sync.TestSyncActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -96,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void go14(View view) {
         Toast.makeText(this, "触发go14", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestCanvasRotateActivity.class));
+
     }
 
     public void go15(View view) {
