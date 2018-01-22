@@ -12,6 +12,7 @@ import com.example.sj.app2.seekbar.SeekBarActivity;
 import com.example.sj.app2.seekbar.Seekbar2Activity;
 import com.example.sj.app2.seekbar.TestCanvasRotateActivity;
 import com.example.sj.app2.sync.TestSyncActivity;
+import com.example.sj.app2.toast.TestToastActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -110,11 +111,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void go16(View view) {
         Toast.makeText(this, "触发go16", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestToastActivity.class));
+
 
     }
 
     public void go17(View view) {
         Toast.makeText(this, "触发go17", Toast.LENGTH_SHORT).show();
+
     }
 
     public void go18(View view) {

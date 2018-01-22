@@ -32,7 +32,8 @@
         <activity android:name=".popup.TestPopupActivity" />
         <activity android:name=".seekbar.SeekBarActivity" />
         <activity android:name=".seekbar.TestCanvasRotateActivity" />
-        <activity android:name=".seekbar.Seekbar2Activity"></activity>
+        <activity android:name=".seekbar.Seekbar2Activity" />
+        <activity android:name=".toast.TestToastActivity"></activity>
     </application>
 
 </manifest>
