@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.sj.app2.arc.TestArcActivity;
+import com.example.sj.app2.fragmentconn.TestFragmentConnActivity;
 import com.example.sj.app2.popup.TestPopupActivity;
 import com.example.sj.app2.seekbar.SeekBarActivity;
 import com.example.sj.app2.seekbar.Seekbar2Activity;
@@ -118,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void go17(View view) {
         Toast.makeText(this, "触发go17", Toast.LENGTH_SHORT).show();
-
+        startActivity(new Intent(this, TestFragmentConnActivity.class));
     }
 
     public void go18(View view) {

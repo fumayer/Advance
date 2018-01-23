@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/call"
+        android:icon="@mipmap/ic_launcher"
+        android:title="call" />
+    <item
+        android:id="@+id/message"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="message" />
+
+
+    <item
+        android:id="@+id/me"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="me" />
+</menu>
