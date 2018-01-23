@@ -5,12 +5,13 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.sj.app2.LogUtil;
 import com.example.sj.app2.R;
-import com.example.sj.app2.fragmentconn.dummy.DummyContent;
+import com.example.sj.app2.fragmentconn.messagefragment.MyItemRecyclerViewAdapter;
+import com.example.sj.app2.fragmentconn.messagefragment.dummy.DummyContent;
+import com.example.sj.app2.fragmentconn.messagefragment.MessageFragment;
 
 public class TestFragmentConnActivity extends AppCompatActivity implements MessageFragment.OnListFragmentInteractionListener, MeFragment.Listener {
 
@@ -69,6 +70,13 @@ public class TestFragmentConnActivity extends AppCompatActivity implements Messa
                 Toast.makeText(TestFragmentConnActivity.this, "无参数无返回值", Toast.LENGTH_SHORT).show();
             }
         });
+
+        Functions.getInstance().addFunction(new Functions.FunNoParamsHasResult<String>(MyItemRecyclerViewAdapter.TAG) {
+            @Override
+            String function() {
+                return "我就是我，不一样的烟火";
+            }
+        });
         mSFragmentManager.setBundle(savedInstanceState)
                 .addFragment(new CallFragment())
                 .addFragment(new MessageFragment())
@@ -90,5 +98,6 @@ public class TestFragmentConnActivity extends AppCompatActivity implements Messa
     protected void onDestroy() {
         super.onDestroy();
         Functions.getInstance().removeFunction(CallFragment.TAG);
+        Functions.getInstance().removeFunction(MyItemRecyclerViewAdapter.TAG);
     }
 }

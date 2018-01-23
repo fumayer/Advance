@@ -1,4 +1,4 @@
-package com.example.sj.app2.fragmentconn.dummy;
+package com.example.sj.app2.fragmentconn.messagefragment.dummy;
 
 import java.util.ArrayList;
 import java.util.HashMap;

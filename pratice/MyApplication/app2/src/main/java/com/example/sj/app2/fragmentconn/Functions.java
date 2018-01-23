@@ -1,6 +1,8 @@
 package com.example.sj.app2.fragmentconn;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by sunjie on 2018/1/23.
@@ -10,6 +12,7 @@ public class Functions {
     private Functions() {
     }
 
+    private List<HashMap> maxLists = new ArrayList<>();
     private static Functions instance;
     private HashMap<String, FunNoParamsNoResult> noParamsNoResultHashMap;
     private HashMap<String, FunNoParamsHasResult> noParamsHasResultHashMap;
@@ -62,11 +65,14 @@ public class Functions {
         if (function instanceof FunNoParamsNoResult) {
             if (noParamsNoResultHashMap == null) {
                 noParamsNoResultHashMap = new HashMap<>();
+                maxLists.add(noParamsNoResultHashMap);
             }
             noParamsNoResultHashMap.put(function.getName(), (FunNoParamsNoResult) function);
         } else if (function instanceof FunNoParamsHasResult) {
             if (noParamsHasResultHashMap == null) {
                 noParamsHasResultHashMap = new HashMap<>();
+                maxLists.add(noParamsHasResultHashMap);
+
             }
             noParamsHasResultHashMap.put(function.getName(), (FunNoParamsHasResult) function);
         }
@@ -93,12 +99,19 @@ public class Functions {
     }
 
     public void removeFunction(String name) {
-        if (noParamsNoResultHashMap != null) {
-            if (noParamsNoResultHashMap.size() > 0) {
-                noParamsNoResultHashMap.remove(name);
-            } else {
-                noParamsNoResultHashMap = null;
+
+        if (maxLists != null) {
+            for (int i = 0, length = maxLists.size(); i < length; i++) {
+                HashMap map = maxLists.get(i);
+                if (map != null) {
+                    if (map.size() > 0) {
+                        map.remove(name);
+                    }
+                }
             }
         }
+
     }
+
+
 }

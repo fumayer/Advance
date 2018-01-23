@@ -1,4 +1,4 @@
-package com.example.sj.app2.fragmentconn;
+package com.example.sj.app2.fragmentconn.messagefragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -11,10 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.sj.app2.R;
-import com.example.sj.app2.fragmentconn.dummy.DummyContent;
-import com.example.sj.app2.fragmentconn.dummy.DummyContent.DummyItem;
-
-import java.util.List;
+import com.example.sj.app2.fragmentconn.messagefragment.dummy.DummyContent;
+import com.example.sj.app2.fragmentconn.messagefragment.dummy.DummyContent.DummyItem;
 
 /**
  * A fragment representing a list of Items.

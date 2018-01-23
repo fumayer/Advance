@@ -1,14 +1,17 @@
-package com.example.sj.app2.fragmentconn;
+package com.example.sj.app2.fragmentconn.messagefragment;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.sj.app2.LogUtil;
 import com.example.sj.app2.R;
-import com.example.sj.app2.fragmentconn.MessageFragment.OnListFragmentInteractionListener;
-import com.example.sj.app2.fragmentconn.dummy.DummyContent.DummyItem;
+import com.example.sj.app2.fragmentconn.Functions;
+import com.example.sj.app2.fragmentconn.messagefragment.MessageFragment.OnListFragmentInteractionListener;
+import com.example.sj.app2.fragmentconn.messagefragment.dummy.DummyContent.DummyItem;
 
 import java.util.List;
 
@@ -18,7 +21,7 @@ import java.util.List;
  * TODO: Replace the implementation with code for your data type.
  */
 public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder> {
-
+    public static final String TAG = MyItemRecyclerViewAdapter.class.getSimpleName();
     private final List<DummyItem> mValues;
     private final OnListFragmentInteractionListener mListener;
 
@@ -47,6 +50,7 @@ public class MyItemRecyclerViewAdapter extends RecyclerView.Adapter<MyItemRecycl
                     // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
                     mListener.onListFragmentInteraction(holder.mItem);
+                    LogUtil.e("MyItemRecyclerViewAdapter","53-----onClick--->"+Functions.getInstance().invokeFunction(TAG,String.class));
                 }
             }
         });

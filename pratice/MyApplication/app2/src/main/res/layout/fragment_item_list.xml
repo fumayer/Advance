@@ -11,5 +11,5 @@
     android:layout_marginRight="16dp"
     android:background="#500f"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.example.sj.app2.fragmentconn.MessageFragment"
+    tools:context="com.example.sj.app2.fragmentconn.messagefragment.MessageFragment"
     tools:listitem="@layout/fragment_item" />
