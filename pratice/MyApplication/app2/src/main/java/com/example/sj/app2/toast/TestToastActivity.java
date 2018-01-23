@@ -58,11 +58,25 @@ public class TestToastActivity extends AppCompatActivity {
 
     public void go6(View view) {
 //        new ImageToast(this, R.mipmap.ic_launcher).show();
+        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(200, 500);
+        lp.setMargins(300, 400, 0, 0);
+        ToastImage.build(new ToastImage.Builder(this)
+                .setDuration(Toast.LENGTH_LONG)
+                .setDrawable(R.drawable.claw_doll_success_default)
+                .setGravity(Gravity.CENTER_HORIZONTAL)
+                .setLp(lp)).show();
 
     }
 
     public void go7(View view) {
-        Toast.makeText(this, "触发go7", Toast.LENGTH_SHORT).show();
+        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(400, 500);
+        lp.setMargins(200, 400, 0, 0);
+        ToastImage.build(new ToastImage.Builder(this)
+                .setDuration(Toast.LENGTH_LONG)
+                .setDrawable(R.drawable.claw_doll_success_default)
+                .setGravity(Gravity.CENTER_HORIZONTAL)
+                .setLp(lp)).show();
+
     }
 
     public void go8(View view) {

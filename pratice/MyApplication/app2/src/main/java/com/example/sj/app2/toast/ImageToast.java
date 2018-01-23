@@ -21,6 +21,7 @@ import java.lang.annotation.RetentionPolicy;
 
 public class ImageToast extends Toast {
 
+
     private ImageView view;
     /**
      * 默认图
