@@ -2,7 +2,10 @@ package com.example.sj.app2.toast;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.sj.app2.R;
@@ -41,11 +44,21 @@ public class TestToastActivity extends AppCompatActivity {
     }
 
     public void go5(View view) {
-        Toast.makeText(this, "触发go5", Toast.LENGTH_SHORT).show();
+//        new ImageToast(this, R.mipmap.ic_launcher_round).show();
+        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(500, 500);
+
+        ImageToast imageToast = new ImageToast.Builder(this)
+                .setDrawable(R.drawable.claw_doll_success_default)
+                .setGravity(Gravity.CENTER_HORIZONTAL)
+                .setDuration(Toast.LENGTH_LONG)
+                .setLayoutParams(lp)
+                .create();
+        imageToast.show();
     }
 
     public void go6(View view) {
-        Toast.makeText(this, "触发go6", Toast.LENGTH_SHORT).show();
+//        new ImageToast(this, R.mipmap.ic_launcher).show();
+
     }
 
     public void go7(View view) {
