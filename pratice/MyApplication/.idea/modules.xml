@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyApplication.iml" filepath="$PROJECT_DIR$/MyApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Performance/Performance.iml" filepath="$PROJECT_DIR$/Performance/Performance.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app2/app2.iml" filepath="$PROJECT_DIR$/app2/app2.iml" />
       <module fileurl="file://$PROJECT_DIR$/design/design.iml" filepath="$PROJECT_DIR$/design/design.iml" />
@@ -11,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/planmode/planmode.iml" filepath="$PROJECT_DIR$/planmode/planmode.iml" />
       <module fileurl="file://$PROJECT_DIR$/swipback/swipback.iml" filepath="$PROJECT_DIR$/swipback/swipback.iml" />
       <module fileurl="file://$PROJECT_DIR$/testnavigationbaractivity/testnavigationbaractivity.iml" filepath="$PROJECT_DIR$/testnavigationbaractivity/testnavigationbaractivity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thread/thread.iml" filepath="$PROJECT_DIR$/thread/thread.iml" />
       <module fileurl="file://$PROJECT_DIR$/training/training.iml" filepath="$PROJECT_DIR$/training/training.iml" />
     </modules>
   </component>

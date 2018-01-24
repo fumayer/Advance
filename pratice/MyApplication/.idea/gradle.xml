@@ -8,6 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Performance" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/app2" />
             <option value="$PROJECT_DIR$/design" />
@@ -16,6 +17,7 @@
             <option value="$PROJECT_DIR$/planmode" />
             <option value="$PROJECT_DIR$/swipback" />
             <option value="$PROJECT_DIR$/testnavigationbaractivity" />
+            <option value="$PROJECT_DIR$/thread" />
             <option value="$PROJECT_DIR$/training" />
           </set>
         </option>
