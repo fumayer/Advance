@@ -5,5 +5,6 @@ package com.example.myapplication.forcicle;
  */
 
 public class Dog {
-    
+    private String age;
+
 }
