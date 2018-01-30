@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             >
+    <LinearLayout
+        android:id="@+id/Lin_nologin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:layout_marginTop="20dp"
+        android:visibility="visible"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:src="@mipmap/logo_yellow"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragmentme_login_check"
+            android:textSize="13sp"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_loginbtn"
+            android:gravity="center"
+            android:text="@string/fragmentme_log_on"
+            android:textSize="13sp"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

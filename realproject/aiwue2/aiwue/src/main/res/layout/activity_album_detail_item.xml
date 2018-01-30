@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    >
+    <RelativeLayout
+        android:id="@+id/tool_bar_pub"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+        <ImageView
+            android:id="@+id/close_albumdetail"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="7dp"
+            android:layout_marginLeft="4dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/top_navigation_close_white"
+            />
+        <ImageView
+            android:id="@+id/share_albumdetail"
+            android:layout_width="30dp"
+            android:layout_height="36dp"
+            android:background="@drawable/top_navigation_more_white"
+            android:layout_alignParentRight="true"
+            android:textColor="#FFFFFF"
+            android:layout_marginRight="11dp"
+            android:layout_centerVertical="true"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_avatar_albumdetail"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="5dp"
+            android:src="@drawable/default_portrait"
+            android:layout_toLeftOf="@id/share_albumdetail"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/introduce_albumdetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:text="2/6 有眼有文艺的他一直被称为李连杰的接班人，他就是是小公安咯昂啊阿龙啊"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_albumdetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/introduce_albumdetail"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/tool_bar_pub"
+        android:layout_marginTop="20dp"
+        ></android.support.v4.view.ViewPager>
+
+
+</RelativeLayout>

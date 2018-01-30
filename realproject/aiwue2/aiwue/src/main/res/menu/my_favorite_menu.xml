@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MyFavoritesActivity">
+    <!-- edit, should always be in the overflow -->
+    <!--<item android:id="@+id/my_favorites_menu_edit"-->
+        <!--android:icon="@mipmap/writeicon_edit_normal"-->
+        <!--android:title="@string/personaldata_edit"-->
+        <!--app:showAsAction="ifRoom"/>-->
+
+</menu>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:padding="10dp"
+    android:layout_centerInParent="true">
+
+
+    <ImageView
+        android:id="@+id/imgv_recommend_friends"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/b_newhome_tabbar_selector"
+       />
+
+    <TextView
+        android:id="@+id/tv_recommend_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgv_recommend_friends"
+        android:layout_centerHorizontal="true"
+        android:text="我是武友1"
+        android:textColor="?attr/font_color"
+        android:textSize="15sp"
+        android:ellipsize="end"
+
+      />
+
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryWhite"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/personaldata_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:onClick="onClick"
+            android:src="@mipmap/leftbackicon_titlebar_normal" />
+
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/myinfo_personal_data" />
+
+        <TextView
+            android:id="@+id/personaldata_edit_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:onClick="onClick"
+            android:text="@string/personaldata_edit" />
+    </LinearLayout>
+</layout>

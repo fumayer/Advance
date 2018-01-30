@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            app:isColorUi="true"
+            android:id="@+id/feed_top_search_hint"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:background="@drawable/search_background"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/feed_search_tip"
+            android:textColor="?attr/font_color"
+            android:textSize="14.0sp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+        <!--app:ctTabTextColor="@color/ssxinheihui1"-->
+        <!--app:ctTabSelectedTextColor="@color/ssxinhongse1"-->
+        <!--android:background="@color/ssqianhui"-->
+
+        <ImageView
+            android:id="@+id/new_category_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="7.0dip"
+            android:layout_marginTop="6.0dip"
+            android:layout_toLeftOf="@+id/icon_category"
+            android:src="@drawable/ic_new_category_tip_dark"
+            android:visibility="gone"
+            />
+
+
+
+        <com.aiwue.ui.view.colortrackview.ColorTrackTabViewIndicator
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/main_bg"
+            app:ctMode="scrollable"
+            app:ctTabSelectedTextColor="@color/ssxinhongse1"
+            app:ctTabTextColor="?attr/font_color"
+            app:ctTabTextSize="16sp"
+            app:ctTabWidth="50dp"
+            app:isColorUi="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"></com.aiwue.ui.view.colortrackview.ColorTrackTabViewIndicator>
+        <ImageView
+            android:id="@+id/icon_category"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shadow_add_titlebar_new"
+            android:paddingLeft="5dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_category_expand"
+            app:isColorUi="true"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/divider_light_grey"
+        app:isColorUi="true"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+</LinearLayout>

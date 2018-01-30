@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorAccent"
+    android:gravity="center_horizontal"
+    android:padding="15dp"
+    android:clickable="true" >
+
+    <TextView
+        android:id="@+id/menu_recommend_article_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_recommend_article"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/menu_txt_bg"
+        android:onClick="onRightMenuItemSelect"
+        style="@style/txt_sliding_menu"/>
+
+    <TextView
+        android:id="@+id/menu_channel_manage_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_channel"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/menu_txt_bg"
+        android:onClick="onRightMenuItemSelect"
+        style="@style/txt_sliding_menu"/>
+
+    <TextView
+        android:id="@+id/menu_my_info_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_info"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/menu_txt_bg"
+        android:onClick="onRightMenuItemSelect"
+        style="@style/txt_sliding_menu"/>
+
+    <TextView
+        android:id="@+id/menu_article_channel_edit_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_article_channel_edit"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/menu_txt_bg"
+        android:onClick="onRightMenuItemSelect"
+        style="@style/txt_sliding_menu"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/menu_feedback_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_feedback"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/menu_txt_bg"
+        android:onClick="onRightMenuItemSelect"
+        style="@style/txt_sliding_menu"/>
+
+    <TextView
+        android:id="@+id/menu_update_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_check_update"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/menu_txt_bg"
+        android:onClick="onRightMenuItemSelect"
+        style="@style/txt_sliding_menu"/>
+
+    <TextView
+        android:id="@+id/menu_setup_item"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_setting"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/menu_txt_bg"
+        android:onClick="onRightMenuItemSelect"
+        style="@style/txt_sliding_menu"/>
+
+    <TextView
+        android:id="@+id/menu_aboutus_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_about_us"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/menu_txt_bg"
+        android:onClick="onRightMenuItemSelect"
+        style="@style/txt_sliding_menu"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aiwue_host"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/txt_menu"/>
+
+</LinearLayout>

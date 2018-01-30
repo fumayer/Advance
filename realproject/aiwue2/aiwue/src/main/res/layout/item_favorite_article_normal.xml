@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="article"
+            type="com.aiwue.model.FavoriteArticle" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/favorite_article_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/txt_title"
+            android:layout_toLeftOf="@+id/img"
+            android:layout_alignParentLeft="true"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:text="@{article.title}"/>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="110dp"
+            android:layout_height="80dp"
+
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentRight="true"/>
+        <!--app:imageUrl="@{article.headPicName}"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                style="@style/article_type_seal"
+                android:text="@string/article"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/txt_sub_tag"
+                android:text="@{article.author}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                style="@style/txt_sub_tag"
+                android:text="@{article.commentNum}"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                style="@style/txt_sub_tag"
+                android:text="@string/comment"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/txt_sub_tag"
+                android:layout_marginLeft="10dp"
+                android:text="@{article.saveNum}"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                style="@style/txt_sub_tag"
+                android:text="@string/save"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/txt_sub_tag"
+                android:layout_marginLeft="10dp"
+                android:text="@{article.praiseNum}"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                style="@style/txt_sub_tag"
+                android:text="@string/praise"/>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
+

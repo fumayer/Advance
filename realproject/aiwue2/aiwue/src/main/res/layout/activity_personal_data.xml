@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="personaldata"
+            type="com.aiwue.model.User" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:navigationIcon="@mipmap/leftbackicon_white_titlebar_normal"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:theme="@style/AppTheme.AppBarOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/personaldata_head_pic_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/personaldata_list_item_height"
+                    android:background="@color/personal_data_item_background"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/personaldata_margin_left"
+                    android:paddingRight="@dimen/personaldata_margin_right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/personaldata_head_pic"
+                        android:textColor="@color/personal_data_list_item_title"
+                        android:textSize="@dimen/personaldata_text_size" />
+
+                    <ImageView
+                        android:id="@+id/personaldata_head_pic"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                         />
+                    <!--app:imageUrl="@{personaldata.headPicName}"-->
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/myinfo_item_left"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/personal_data_list_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/personaldata_nickname_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/personaldata_list_item_height"
+                    android:background="@color/personal_data_item_background"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/personaldata_margin_left"
+                    android:paddingRight="@dimen/personaldata_margin_right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/personaldata_nick_name"
+                        android:textColor="@color/personal_data_list_item_title"
+                        android:textSize="@dimen/personaldata_text_size" />
+
+                    <TextView
+                        android:id="@+id/personaldata_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@{personaldata.nickName}"
+                        android:textColor="@color/personal_data_edit_gray"
+                        android:textSize="@dimen/personaldata_text_size" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/myinfo_item_left"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/personal_data_list_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/personaldata_real_name_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/personaldata_list_item_height"
+                    android:background="@color/personal_data_item_background"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/personaldata_margin_left"
+                    android:paddingRight="@dimen/personaldata_margin_right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/personaldata_real_name"
+                        android:textColor="@color/personal_data_list_item_title"
+                        android:textSize="@dimen/personaldata_text_size" />
+
+                    <TextView
+                        android:id="@+id/personaldata_real_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@{personaldata.realName}"
+                        android:textColor="@color/personal_data_edit_gray"
+                        android:textSize="@dimen/personaldata_text_size" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/myinfo_item_left"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/personal_data_list_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/personaldata_gendar_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/personaldata_list_item_height"
+                    android:background="@color/personal_data_item_background"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/personaldata_margin_left"
+                    android:paddingRight="@dimen/personaldata_margin_right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/personaldata_gendar"
+                        android:textColor="@color/personal_data_list_item_title"
+                        android:textSize="@dimen/personaldata_text_size" />
+
+                    <TextView
+                        android:id="@+id/personaldata_gendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@{personaldata.gendar}"
+                        android:textColor="@color/personal_data_edit_gray"
+                        android:textSize="@dimen/personaldata_text_size" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/myinfo_item_left"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/personal_data_list_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/personaldata_birthday_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/personaldata_list_item_height"
+                    android:background="@color/personal_data_item_background"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/personaldata_margin_left"
+                    android:paddingRight="@dimen/personaldata_margin_right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/personaldata_birthday"
+                        android:textColor="@color/personal_data_list_item_title"
+                        android:textSize="@dimen/personaldata_text_size" />
+
+                    <TextView
+                        android:id="@+id/personaldata_birthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@{personaldata.birthdayStr}"
+                        android:textColor="@color/personal_data_edit_gray"
+                        android:textSize="@dimen/personaldata_text_size" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/myinfo_item_left"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/personal_data_list_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/personaldata_mobile_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/personaldata_list_item_height"
+                    android:background="@color/personal_data_item_background"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/personaldata_margin_left"
+                    android:paddingRight="@dimen/personaldata_margin_right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/personaldata_mobile"
+                        android:textColor="@color/personal_data_list_item_title"
+                        android:textSize="@dimen/personaldata_text_size" />
+
+                    <TextView
+                        android:id="@+id/personaldata_mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@{personaldata.mobile}"
+                        android:textColor="@color/personal_data_edit_gray"
+                        android:textSize="@dimen/personaldata_text_size" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/myinfo_item_left"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/personal_data_list_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/personaldata_email_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/personaldata_list_item_height"
+                    android:background="@color/personal_data_item_background"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/personaldata_margin_left"
+                    android:paddingRight="@dimen/personaldata_margin_right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/personaldata_email"
+                        android:textColor="@color/personal_data_list_item_title"
+                        android:textSize="@dimen/personaldata_text_size" />
+
+                    <TextView
+                        android:id="@+id/personaldata_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@{personaldata.email}"
+                        android:textColor="@color/personal_data_edit_gray"
+                        android:textSize="@dimen/personaldata_text_size" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/myinfo_item_left"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/personal_data_list_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/personaldata_live_city_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/personaldata_list_item_height"
+                    android:background="@color/personal_data_item_background"
+
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/personaldata_margin_left"
+                    android:paddingRight="@dimen/personaldata_margin_right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/personaldata_live_city"
+                        android:textColor="@color/personal_data_list_item_title"
+                        android:textSize="@dimen/personaldata_text_size" />
+
+                    <TextView
+                        android:id="@+id/personaldata_live_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@{personaldata.liveCity}"
+                        android:textColor="@color/personal_data_edit_gray"
+                        android:textSize="@dimen/personaldata_text_size" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/myinfo_item_left"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/personal_data_list_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/personaldata_address_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/personaldata_list_item_height"
+                    android:background="@color/personal_data_item_background"
+
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/personaldata_margin_left"
+                    android:paddingRight="@dimen/personaldata_margin_right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/personaldata_address"
+                        android:textColor="@color/personal_data_list_item_title"
+                        android:textSize="@dimen/personaldata_text_size" />
+
+                    <TextView
+                        android:id="@+id/personaldata_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@{personaldata.address}"
+                        android:textColor="@color/personal_data_edit_gray"
+                        android:textSize="@dimen/personaldata_text_size" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/myinfo_item_left"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/personal_data_list_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/personaldata_slogen_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/personaldata_list_item_height"
+                    android:background="@color/personal_data_item_background"
+
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/personaldata_margin_left"
+                    android:paddingRight="@dimen/personaldata_margin_right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/personaldata_slogen"
+                        android:textColor="@color/personal_data_list_item_title"
+                        android:textSize="@dimen/personaldata_text_size" />
+
+                    <TextView
+                        android:id="@+id/personaldata_slogen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@{personaldata.slogen}"
+                        android:textColor="@color/personal_data_edit_gray"
+                        android:textSize="@dimen/personaldata_text_size" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/myinfo_item_left"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/personal_data_list_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/personaldata_height_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/personaldata_list_item_height"
+                    android:background="@color/personal_data_item_background"
+
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/personaldata_margin_left"
+                    android:paddingRight="@dimen/personaldata_margin_right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/personaldata_height"
+                        android:textColor="@color/personal_data_list_item_title"
+                        android:textSize="@dimen/personaldata_text_size" />
+
+                    <TextView
+                        android:id="@+id/personaldata_height"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@{personaldata.heightStr}"
+                        android:textColor="@color/personal_data_edit_gray"
+                        android:textSize="@dimen/personaldata_text_size" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/myinfo_item_left"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/personal_data_list_divider" />
+
+                <RelativeLayout
+                    android:id="@+id/personaldata_weight_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/personaldata_list_item_height"
+                    android:background="@color/personal_data_item_background"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/personaldata_margin_left"
+                    android:paddingRight="@dimen/personaldata_margin_right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/personaldata_weight"
+                        android:textColor="@color/personal_data_list_item_title"
+                        android:textSize="@dimen/personaldata_text_size" />
+
+                    <TextView
+                        android:id="@+id/personaldata_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="@{personaldata.weightStr}"
+                        android:textColor="@color/personal_data_edit_gray"
+                        android:textSize="@dimen/personaldata_text_size" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <data>
+        <variable
+            name="article"
+           type="com.aiwue.model.Article"/>
+   </data>
+
+    <RelativeLayout
+        android:id="@+id/article_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <!-- title bar-->
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:navigationIcon="@mipmap/leftbackicon_white_titlebar_normal"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:theme="@style/AppTheme.AppBarOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <!-- tools bar -->
+        <LinearLayout
+            android:id="@+id/tools_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            >
+
+            <!--用layout_width="0.0dip"和layout_weight来控制各个控件的成比例显示-->
+            <TextView
+                android:id="@+id/article_new_comment"
+                android:layout_width="0.0dip"
+                android:layout_height="32dp"
+                android:text="@string/write_comment"
+                android:textSize="13sp"
+                android:gravity="center|left"
+                android:layout_gravity="center"
+                android:paddingLeft="12dp"
+                android:layout_marginRight="20dp"
+                android:drawablePadding="6dp"
+                android:layout_weight="5.0"
+                android:background="@drawable/shape_round_corner"
+                />
+            <RelativeLayout
+                android:id="@+id/article_comment_number_bar"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2.0">
+
+                <ImageView
+                    android:id="@+id/comment_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/comment_number_bar"
+                    android:scaleType="center"
+                    />
+                <TextView
+                    android:id="@+id/article_comment_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/comment_btn"
+                    android:layout_alignLeft="@id/comment_btn"
+                    android:layout_marginLeft="11dp"
+                    android:background="@drawable/comment_circle_red_badge"
+                    style="@style/comment_number_style"
+                    android:text="0"
+                    />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/article_favorite"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:layout_weight="2.0"
+                android:src="@drawable/article_favorite"
+                />
+            <ImageView
+                android:id="@+id/article_share"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:src="@drawable/article_share"
+                android:scaleType="center"
+                android:layout_weight="2.0"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+
+        <!-- webview and comment view -->
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nested_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/action_bar"
+            android:layout_above="@+id/tools_bar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/article_comment_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="@dimen/comment_title_size"
+                    android:visibility="gone"
+                    android:text="@string/article_comments"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/comments_list"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <!-- 用户书写评论时的对话框-->
+        <com.aiwue.widget.ImeRelativeLayout
+            android:id="@+id/comment_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:id="@+id/submit_comment_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:background="#f5f4f4"
+                android:layout_alignParentBottom="true">
+
+                <EditText
+                    android:id="@+id/comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:textSize="15sp"
+                    android:gravity="left"
+                    android:layout_gravity="center|left|top"
+                    android:paddingLeft="12dp"
+                    android:drawablePadding="6dp"
+                    android:lineSpacingExtra="8dp"
+                    android:inputType="textMultiLine"
+                    android:background="@drawable/shape_round_corner"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/write_comment"/>
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/submit"
+                    android:layout_gravity="right"
+                    android:textSize="15sp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="4dp"
+                    />
+            </LinearLayout>
+            <!--无论在LinearLayout还是在RelativeLayout中，如果view之间出现了位置上的重叠，后声明的view会覆盖到先声明的view上-->
+            <!-- 这个view最后申明，它会盖在webview的上面,达到半透明的效果-->
+            <View
+                android:id="@+id/night_mode_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:background="@color/night_mode_transparent"
+                android:layout_above="@+id/submit_comment_dialog"/>
+        </com.aiwue.widget.ImeRelativeLayout>
+
+    </RelativeLayout>
+</layout>

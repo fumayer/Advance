@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/fl_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"></FrameLayout>
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/bg_grey"/>-->
+        <View
+            android:id="@+id/my_page_message_divider"
+            style="@style/my_page_item_divider"
+            android:background="?attr/divider_light_grey"
+            app:isColorUi="true" />
+
+
+        <LinearLayout
+            android:id="@+id/llBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="?attr/main_bg"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            app:isColorUi="true">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/ivIconHome"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/b_newhome_tabbar_selector"
+                    app:isColorUi="true" />
+
+                <TextView
+                    android:id="@+id/tvTextHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivIconHome"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/tab_caption_home"
+                    android:textColor="?attr/font_color"
+                    android:textSize="11sp"
+                    app:isColorUi="true" />
+
+                <TextView
+                    android:id="@+id/tvBadgeHome"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_toRightOf="@+id/ivIconHome"
+                    android:background="@drawable/shape_round_red"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@android:color/white"
+                    android:textSize="11sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/ivIconVideo"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/b_newvideo_tabbar_selector"
+                    app:isColorUi="true" />
+
+                <TextView
+                    android:id="@+id/tvTextVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivIconVideo"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/tab_caption_learn"
+                    android:textColor="?attr/font_color"
+                    android:textSize="11sp"
+                    app:isColorUi="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/ivIconAttention"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/b_newmsg_tabbar_selector"
+                    app:isColorUi="true" />
+
+                <TextView
+                    android:id="@+id/tvTextAttention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivIconAttention"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/tab_caption_messenge"
+                    android:textColor="?attr/font_color"
+                    android:textSize="11sp"
+                    app:isColorUi="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/ivIconMe"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/b_newnologin_tabbar_selector"
+                    app:isColorUi="true" />
+
+                <TextView
+                    android:id="@+id/tvTextMe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivIconMe"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/tab_caption_mine"
+                    android:textColor="?attr/font_color"
+                    android:textSize="11sp"
+                    app:isColorUi="true" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivIconPublish"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:onClick="onPublishBtnClick"
+        android:src="@drawable/b_newpublish_tabbar"
+        app:isColorUi="true" />
+
+</RelativeLayout>

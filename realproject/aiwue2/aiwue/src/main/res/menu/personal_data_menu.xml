@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".PersonalDataActivity">
+    <!-- edit, should always be in the overflow -->
+    <item android:id="@+id/personal_date_menu_edit"
+        android:icon="@mipmap/writeicon_edit_normal"
+        android:title="@string/personaldata_edit"
+        app:showAsAction="ifRoom"/>
+
+    <!-- edit, should always be in the overflow -->
+    <item android:id="@+id/personal_date_menu_refresh"
+        android:icon="@mipmap/titlebar_refresh_small_normal"
+        android:title="@string/personaldata_refresh"
+        app:showAsAction="ifRoom"/>
+</menu>
