@@ -34,7 +34,8 @@
         <activity android:name=".seekbar.TestCanvasRotateActivity" />
         <activity android:name=".seekbar.Seekbar2Activity" />
         <activity android:name=".toast.TestToastActivity" />
-        <activity android:name=".fragmentconn.TestFragmentConnActivity"></activity>
+        <activity android:name=".fragmentconn.TestFragmentConnActivity" />
+        <activity android:name=".TestNewViewActivity"></activity>
     </application>
 
 </manifest>
