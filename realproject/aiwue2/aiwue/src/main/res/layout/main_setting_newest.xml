@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dip"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip"
+    android:paddingTop="15dip" >
+
+    <TextView
+        android:id="@+id/update_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dip"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+<!--    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/update_tip"
+        android:background="@drawable/main_setting_update_version_info"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
+    </RelativeLayout>-->
+
+</RelativeLayout>

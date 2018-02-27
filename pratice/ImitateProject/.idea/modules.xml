@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ImitateProject.iml" filepath="$PROJECT_DIR$/ImitateProject.iml" />
+      <module fileurl="file://F:\studio\work\own_\pratice\ImitateProject\mvpro\app.iml" filepath="F:\studio\work\own_\pratice\ImitateProject\mvpro\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvpro/mvpro.iml" filepath="$PROJECT_DIR$/mvpro/mvpro.iml" />
+    </modules>
+  </component>
+</project>

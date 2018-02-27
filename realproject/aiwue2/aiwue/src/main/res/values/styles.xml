@@ -1,0 +1,359 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <!--<item name="clickableBackground">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <style name="Theme.Light" parent="Theme.AppCompat.Light">
+        <item name="android:windowBackground">@color/default_window_bg</item>
+        <item name="android:listSelector">?clickableBackground</item>
+        <item name="clickableBackground">@drawable/clickable_background</item>
+        <item name="font_color">@color/ssxinheihui1</item>
+        <item name="main_bg">@color/white</item>
+        <item name="font_color2">@color/ssxinzi3</item>
+        <item name="divider_black">@color/write_comment_divider_color</item>
+        <item name="divider_light_grey">@color/ssxinxian1</item>
+        <item name="font_red">@color/subscribe_category_btn_bg_normal</item>
+        <item name="white_bg">@color/white</item>
+        <item name="windowNoTitle">?android:windowNoTitle</item>
+    </style>
+
+    <style name="Theme.Night" parent="Theme.AppCompat.DayNight">
+        <item name="android:windowBackground">@color/default_window_bg_night</item>
+        <item name="android:listSelector">?clickableBackground</item>
+        <item name="clickableBackground">@drawable/clickable_background_night</item>
+        <item name="font_color">@color/ssxinheihui10_press</item>
+        <item name="main_bg">@color/ss_menu_text</item>
+        <item name="divider_black">@color/default_window_bg_night</item>
+        <item name="font_color2">@color/ssxinheihui10_press</item>
+        <item name="divider_light_grey">@color/ssxinheihui10_press</item>
+        <item name="font_red">@color/subscribe_category_btn_bg_pressed</item>
+        <item name="white_bg">@color/subscribe_category_bar_bg_night</item>
+        <item name="windowNoTitle">?android:windowNoTitle</item>
+    </style>
+    <!--<style name="the" parent="Theme.AppCompat.DayNight"/>-->
+
+    <style name="RecycleViewCommon">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <style name="Clickable">
+        <item name="android:background">@drawable/clickable_background</item>
+    </style>
+
+    <style name="new_info_layout_text_style">
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:textColor">@color/ssxinzi2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0.0dip</item>
+    </style>
+
+    <style name="new_info_layout_line2_divider_style">
+        <item name="android:background">@drawable/new_info_layout_round_divider_shape</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">2.0dip</item>
+        <item name="android:layout_height">2.0dip</item>
+        <item name="android:layout_marginLeft">5.0dip</item>
+        <item name="android:layout_marginRight">5.0dip</item>
+    </style>
+
+    <style name="new_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/new_title</item>
+    </style>
+
+    <style name="my_page_item_root" parent="@style/Clickable" >
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:background">?attr/main_bg</item>
+    </style>
+
+    <style name="my_page_item_divider">
+        <item name="android:background">@color/ssxinxian1</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5dip</item>
+    </style>
+
+    <style name="my_page_item_right_arrow">
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/setting_arrow</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="my_page_item_tv">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">11.0dip</item>
+        <item name="android:paddingBottom">11.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="my_page_tagview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">8.0dip</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="toolbar_action">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:layout_weight">0.0</item>
+    </style>
+
+    <style name="toolbar_action_comment">
+        <item name="android:textSize">8.0sp</item>
+        <item name="android:textColor">@color/action_comment_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:background">@drawable/main_tab_badge_bg</item>
+        <item name="android:paddingLeft">3.0dip</item>
+        <item name="android:paddingRight">3.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">5.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="title_bar_style">
+        <item name="android:background">@drawable/bg_titlebar</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/title_bar_height</item>
+    </style>
+
+    <style name="topic_title_back_image">
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:paddingRight">8.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:src">@drawable/leftbackicon_titlebar</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme_No_Title" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="TransParentAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/completely_transparent</item>
+        <item name="colorPrimaryDark">@color/completely_transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="txt_title">
+        <item name="android:textSize">@dimen/txt_title</item>
+        <item name="android:textColor">@color/txt_title</item>
+    </style>
+
+    <style name="txt_sub_tag">
+        <item name="android:textSize">@dimen/txt_tag</item>
+        <item name="android:textColor">@color/txt_tag</item>
+    </style>
+
+    <style name="txt_video_item">
+        <item name="android:textSize">@dimen/txt_tag</item>
+        <item name="android:textColor">@color/txt_tag</item>
+        <item name="android:layout_marginRight">@dimen/dp_20</item>
+    </style>
+
+    <style name="article_type_seal">
+        <item name="android:textSize">@dimen/article_type_seal</item>
+        <item name="android:textColor">@color/red_border</item>
+        <item name="android:background">@drawable/txt_red_border</item>
+
+    </style>
+
+    <style name="my_recommend_status_text">
+        <item name="android:textSize">@dimen/my_recommend_status_text_size</item>
+        <item name="android:textColor">@color/my_recommend_status_text_color</item>
+    </style>
+
+    <style name="txt_sliding_menu">
+        <item name="android:textSize">@dimen/txt_subhead</item>
+        <item name="android:textColor">@color/txt_menu</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="myinfo_list_item_title">
+        <item name="android:textSize">@dimen/myinfo_list_item_title</item>
+        <item name="android:textColor">@color/myinfo_list_item_title</item>
+    </style>
+
+    <style name="myinfo_head_name">
+        <item name="android:textSize">@dimen/myinfo_head_name</item>
+        <item name="android:textColor">@color/myinfo_head_name</item>
+    </style>
+
+    <style name="myinfo_head_sub_info">
+        <item name="android:textSize">@dimen/myinfo_head_sub_info</item>
+        <item name="android:textColor">@color/myinfo_head_name</item>
+    </style>
+
+    <style name="recommend_article_title_txt">
+        <item name="android:textSize">@dimen/recommend_article_title_txt</item>
+        <item name="android:textColor">@color/recommend_article_title_txt</item>
+    </style>
+
+    <style name="recommend_article_prompt_txt">
+        <item name="android:textSize">@dimen/recommend_article_prompt_txt</item>
+        <item name="android:textColor">@color/recommend_article_prompt_txt</item>
+    </style>
+
+    <style name="recommend_article_help_txt">
+        <item name="android:textSize">@dimen/recommend_article_help_txt</item>
+        <item name="android:textColor">@color/recommend_article_help_txt</item>
+    </style>
+
+    <style name="comment_user_name_style">
+        <item name="android:textSize">@dimen/comment_user_name_size</item>
+        <item name="android:textColor">@color/comment_user_name_color</item>
+    </style>
+
+    <style name="comment_time_style">
+        <item name="android:textSize">@dimen/comment_time_size</item>
+        <item name="android:textColor">@color/comment_time_color</item>
+    </style>
+
+
+    <style name="recommend_article_edit">
+        <item name="android:textSize">@dimen/recommend_article_edit_txt</item>
+        <item name="android:textColor">@color/recommend_article_title_txt</item>
+        <item name="android:padding">@dimen/dp_5</item>
+        <item name="android:gravity">left|top</item>
+    </style>
+
+
+    <style name="channel_notes_style">
+        <item name="android:textSize">@dimen/channel_notes</item>
+        <item name="android:textColor">@color/channel_notes_color</item>
+    </style>
+    <!-- 详情页-->
+    <style name="comment_number_style">
+        <item name="android:textSize">8.0sp</item>
+        <item name="android:textColor">#fffafafa</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:maxWidth">44.0dip</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+    <style name="night_mode_transparent">
+        <item name="android:background">@color/night_mode_transparent</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="aiwue_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- 自定义风格对话框-->
+    <style name="aiwue_name_text_logo">
+        <item name="android:src">@mipmap/ic_launcher</item>
+    </style>
+    <style name="textDialogMessageContent">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/dialog_title_color</item>
+    </style>
+    <style name="TextAppearanceDialogWindowTitle">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/dialog_title_color</item>
+    </style>
+    <style name="DialogWindowTitle">
+        <item name="android:textAppearance">@style/TextAppearanceDialogWindowTitle</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+    </style>
+    <style name="AliDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle</item>
+        <item name="android:popupBackground">@null</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--升级相关-->
+    <style name="ListItemTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/primary_text_black_color</item>
+    </style>
+    <!-- 对话框内容文字样式 -->
+    <style name="DialogMessage">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/primary_text_black_color</item>
+    </style>
+
+    <!-- my loading dialog -->
+    <style name="MyDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- popup window 显示消失动画-->
+    <style name="PopWindowAnimStyle">
+        <item name="android:windowShowAnimation">@anim/dialog_enter</item>
+        <!-- 指定显示的动画xml  -->
+        <item name="android:windowHideAnimation">@anim/dialog_exit</item>
+        <!-- 指定消失的动画xml  -->
+    </style>
+</resources>

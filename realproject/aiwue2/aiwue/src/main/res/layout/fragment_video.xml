@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.aiwue.ui.view.colortrackview.ColorTrackTabViewIndicator
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="?attr/main_bg"
+        app:ctMode="scrollable"
+        app:ctTabSelectedTextColor="@color/ssxinhongse1"
+        app:ctTabTextColor="?attr/font_color"
+        app:ctTabTextSize="16sp"
+        app:ctTabWidth="70dp"
+        app:isColorUi="true"></com.aiwue.ui.view.colortrackview.ColorTrackTabViewIndicator>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/divider_light_grey"
+        app:isColorUi="true"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/root_layout"
+                android:animateLayoutChanges="true"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+
+    <ImageView
+        android:id="@+id/banner_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/splash_banner_margin_bottom"
+        android:background="@color/white"
+        android:scaleType="centerInside"
+        android:src="@drawable/splash_banner"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:layout_marginBottom="10dp"
+        android:id="@+id/splash_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/banner_view"
+        android:scaleType="fitXY"
+        android:visibility="invisible"/>
+
+    <FrameLayout
+        android:id="@+id/guide_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+    <ImageView
+        android:id="@+id/ad_click_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/splash_view"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/viewicon_splash"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ad_click"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_alignBottom="@+id/splash_view"
+        android:background="@color/ssxinmian16"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5.0dip"
+            android:drawableRight="@drawable/splash_ad_button_view"
+            android:gravity="center"
+            android:text="@string/splash_ad_button_text"
+            android:textColor="@color/ssxinzi7"/>
+    </LinearLayout>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/ad_splash_has_wifi_loaded"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="9.0dip"-->
+        <!--android:layout_marginTop="14.0dip"-->
+        <!--android:layout_toLeftOf="@+id/ad_ignore"-->
+        <!--android:src="@drawable/wifi_splash"-->
+        <!--android:visibility="gone"/>-->
+
+    <FrameLayout
+        android:id="@+id/ad_ignore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="8.0dip"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/skip_real"
+            android:layout_width="wrap_content"
+            android:layout_height="24.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/splash_ad_ignore_bg"
+            android:gravity="center"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:text="@string/splash_ad_ignore"
+            android:textColor="@color/ssxinzi8"
+            android:textSize="12.0sp"/>
+
+        <ImageView
+            android:id="@+id/ad_skip_loading"
+            android:layout_width="@dimen/splash_ad_ignore"
+            android:layout_height="@dimen/splash_ad_ignore"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/loading"
+            android:visibility="invisible"/>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/splash_video_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/splash_video_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</RelativeLayout>

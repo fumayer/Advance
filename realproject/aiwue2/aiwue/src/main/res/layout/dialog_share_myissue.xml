@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000"
+    >
+
+    <Button
+        android:id="@+id/share_btn_myissue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="分享"
+        android:textColor="#2751BC"
+        android:background="@drawable/shape_dialog_myissue"
+        />
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/cancel_btn_myissue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:textColor="#2751BC"
+        android:background="@drawable/shape_dialog_myissue"
+        />
+
+
+
+</LinearLayout>

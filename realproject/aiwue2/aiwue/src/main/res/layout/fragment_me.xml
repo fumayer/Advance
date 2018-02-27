@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="?attr/main_bg"
+              android:orientation="vertical"
+              app:isColorUi="true"
+
+    >
+    <!--<com.todaynews.ui.view.PullZoomLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:pzMain="@layout/mine_fragment_content"-->
+    <!--app:pzHeader="@layout/mine_fragment_header"></com.todaynews.ui.view.PullZoomLayout>-->
+    <com.aiwue.ui.view.HeaderZoomLayout
+        android:id="@+id/zommLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F7F7"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <include layout="@layout/mine_fragment_header"/>
+            <LinearLayout
+                android:id="@+id/unlisted_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+                <include layout="@layout/include_minefrag_unlisted"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/content_lin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                >
+                <include layout="@layout/mine_fragment_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.aiwue.ui.view.HeaderZoomLayout>
+    <!--<com.todaynews.ui.view.MyScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"></com.todaynews.ui.view.MyScrollView>-->
+</LinearLayout>

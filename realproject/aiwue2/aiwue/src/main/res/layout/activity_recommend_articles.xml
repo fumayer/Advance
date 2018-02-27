@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/caption1"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:navigationIcon="@mipmap/leftbackicon_white_titlebar_normal"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:theme="@style/AppTheme.AppBarOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_below="@+id/caption1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_15"
+                style="@style/recommend_article_title_txt"
+                android:text="@string/recommend_articles_link_name" />
+
+            <EditText
+                android:id="@+id/link_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_100"
+                android:inputType="textMultiLine"
+                android:maxLength="255"
+                android:background="@drawable/recommend_article_edit_border_selector"
+                style="@style/recommend_article_edit"
+                android:hint="@string/recommend_articles_content_hint" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_15"
+                style="@style/recommend_article_title_txt"
+                android:text="@string/recommend_articles_reason_name" />
+
+            <EditText
+                android:id="@+id/reason_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_100"
+                android:inputType="textMultiLine"
+                android:maxLength="50"
+                android:background="@drawable/recommend_article_edit_border_selector"
+                style="@style/recommend_article_edit"
+                android:hint="@string/recommend_articles_reason_hint" />
+
+            <TextView
+                style="@style/recommend_article_prompt_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:paddingTop="@dimen/dp_20"
+                android:text="@string/recommend_articles_why" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:gravity="center"
+                android:background="@drawable/recommend_article_help_button"
+                android:layout_marginBottom="@dimen/dp_10"
+                style="@style/recommend_article_prompt_txt"
+                android:onClick="gotoHelp"
+                android:text="@string/recommend_articles_help" />
+
+        </LinearLayout>
+        </ScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>

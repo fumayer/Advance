@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="article"
+            type="com.aiwue.model.MyRecommendArticle" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/left_text_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/right_img_block">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                style="@style/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{article.title}" />
+
+            <TextView
+                android:id="@+id/note"
+                style="@style/txt_sub_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTitle"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:paddingTop="10dp"
+                android:text="@{article.recommendNote}" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/right_img_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="110dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                />
+            <!-- app:imageUrl="@{article.headPicName}"-->
+
+            <TextView
+                android:id="@+id/status"
+                style="@style/my_recommend_status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{article.statusStr}" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/right_img_block"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/txt_sub_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_recommend_create_time" />
+
+            <TextView
+                style="@style/txt_sub_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@{article.recommendTime}" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
+

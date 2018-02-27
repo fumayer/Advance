@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ArticleDetailActivity">
+    <!-- remove, should always be in the overflow -->
+    <item android:id="@+id/article_detail_menu_remove"
+        android:icon="@mipmap/article_detail_remove"
+        android:title="@string/article_detail_remove"
+        app:showAsAction="never"/>
+    <item android:id="@+id/article_detail_menu_channel_edit"
+        android:icon="@mipmap/article_detail_channel_edit"
+        android:title="@string/article_detail_channel_edit"
+        app:showAsAction="never"/>
+</menu>

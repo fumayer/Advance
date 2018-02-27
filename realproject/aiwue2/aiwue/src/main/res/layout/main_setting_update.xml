@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20dip"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="20dip"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip"
+    android:paddingTop="20dip" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_setting_update_version_info"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip" >
+
+        <TextView
+            android:id="@+id/update_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/privacy_dark_gray"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/update_right_now"
+            android:layout_width="180dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/update_version"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/install_btn_positive_selector"
+            android:text="@string/update_right_now"
+            android:textColor="@color/dialog_btn_text_positive_selector"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/update_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/update_right_now"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:textColor="@color/primary_text_gray_color"
+            android:textSize="12sp" />
+        <RelativeLayout 
+            android:id="@+id/recomm_lb_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/update_right_now"
+            android:layout_centerHorizontal="true" >
+            <CheckBox
+                android:id="@+id/recomm_lb_chk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:button="@null"
+                android:background="@drawable/update_check_box_selector"
+                android:checked="true"/>
+           <TextView
+                android:id="@+id/recomm_lb_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/recomm_lb_chk"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/privacy_dark_gray"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/update_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:textColor="@color/primary_text_gray_color"
+        android:lineSpacingExtra="1dp"
+        android:textSize="14sp" />
+
+</LinearLayout>

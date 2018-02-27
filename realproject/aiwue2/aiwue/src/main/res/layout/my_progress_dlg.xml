@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="fill_parent">
+
+	<TextView android:id="@+id/progress_title" android:textColor="@color/textColorPrimaryDark"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_marginTop="7dip" android:layout_marginBottom="7dip"
+		android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+		android:text="@string/update_dlg_ctent_updating" />
+	<ProgressBar android:id="@+id/progress_bar"
+		style="?android:attr/progressBarStyleHorizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_marginBottom="7dip"
+		android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+		android:layout_centerHorizontal="true" android:layout_below="@id/progress_title" />
+
+	<TextView android:textColor="@color/textColorPrimaryDark" android:id="@+id/progress_item1"
+		android:text="10%" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_marginBottom="7dip"
+		android:layout_marginLeft="10dip" android:layout_marginRight="5dip"
+		android:layout_alignParentLeft="true" android:layout_below="@id/progress_bar" />
+
+	<TextView android:textColor="@color/textColorPrimaryDark" android:id="@+id/progress_item2"
+		android:text="@string/update_required" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_marginBottom="7dip"
+		android:layout_marginLeft="10dip" android:layout_marginRight="5dip"
+		android:layout_alignParentLeft="true" android:layout_below="@id/progress_item1" />
+
+
+</RelativeLayout> 
