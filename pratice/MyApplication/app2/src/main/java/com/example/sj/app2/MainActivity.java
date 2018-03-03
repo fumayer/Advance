@@ -130,6 +130,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void go19(View view) {
         Toast.makeText(this, "触发go19", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, ColorFilterActivity.class));
+
     }
 
     public void go20(View view) {

@@ -35,7 +35,8 @@
         <activity android:name=".seekbar.Seekbar2Activity" />
         <activity android:name=".toast.TestToastActivity" />
         <activity android:name=".fragmentconn.TestFragmentConnActivity" />
-        <activity android:name=".TestNewViewActivity"></activity>
+        <activity android:name=".TestNewViewActivity" />
+        <activity android:name=".ColorFilterActivity"></activity>
     </application>
 
 </manifest>

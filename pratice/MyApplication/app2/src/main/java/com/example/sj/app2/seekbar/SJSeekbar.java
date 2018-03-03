@@ -116,6 +116,7 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
     }
 
 
+
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         if (SeekbarOrientation == SEEKBAR_ORIENTATION_HORIZONTAL) {
@@ -124,6 +125,8 @@ public class SJSeekbar extends android.support.v7.widget.AppCompatSeekBar {
             super.onSizeChanged(h, w, oldh, oldw);
         }
     }
+
+
 
     @Override
     protected synchronized void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {

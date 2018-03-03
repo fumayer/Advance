@@ -36,6 +36,7 @@
                         android:id="@+id/bt3_sixiang"
                         android:onClick="go3"
                         android:text="坎"
+                        android:background="@drawable/input_"
                         android:textStyle="bold"
                         android:textColor="#f00"
                         android:textSize="18dp"

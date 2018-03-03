@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sj.app2.ColorFilterActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linear_sixiang"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt1_sixiang"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="go1"
+                android:text="坤"
+                android:textColor="#f00"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bt2_sixiang"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="go2"
+                android:text="卦"
+                android:textColor="#f00"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bt3_sixiang"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="go3"
+                android:text="坎"
+                android:textColor="#f00"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bt4_sixiang"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="go4"
+                android:text="离"
+                android:textColor="#f00"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="#000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/claw_doll_success_default"
+            android:tint="#ff0000"
+            app:layout_constraintTop_toBottomOf="@+id/linear_sixiang" />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="#000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/service_icon"
+            android:tint="#66000000"
+            app:layout_constraintTop_toBottomOf="@+id/img" />
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="#000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/appointment_flag"
+            android:tint="#66000000"
+            app:layout_constraintTop_toBottomOf="@+id/img2" />
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="#000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/appointment_flag"
+            android:tint="#66000000"
+            app:layout_constraintTop_toBottomOf="@+id/img3" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

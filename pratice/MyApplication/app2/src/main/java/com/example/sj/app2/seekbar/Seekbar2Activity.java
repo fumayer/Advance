@@ -14,6 +14,6 @@ public class Seekbar2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seekbar2);
         sjSeekbar = (SJSeekbar) findViewById(R.id.sj_seekbar);
-        sjSeekbar.setMax(500);
+//        sjSeekbar.setMax(500);
     }
 }
