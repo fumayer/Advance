@@ -17,6 +17,8 @@ public class ColorFilterActivity extends AppCompatActivity implements View.OnTou
     private ImageView img4;
     private ImageView img;
 
+    private SJText tv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,14 @@ public class ColorFilterActivity extends AppCompatActivity implements View.OnTou
         img2 = (ImageView) findViewById(R.id.img2);
         img = (ImageView) findViewById(R.id.img3);
         img4 = (ImageView) findViewById(R.id.img4);
+        tv = (SJText) findViewById(R.id.tv);
+        tv.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                LogUtil.e("SJText","35-----onTouch--->"+event.getAction());
+                return false;
+            }
+        } );
         img.setOnTouchListener(this);
     }
 
