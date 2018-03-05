@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ public class ColorFilterActivity extends AppCompatActivity implements View.OnTou
     private ImageView img;
 
     private SJText tv;
+    private Button bt1Sixiang;
 
 
     @Override
@@ -28,15 +30,31 @@ public class ColorFilterActivity extends AppCompatActivity implements View.OnTou
         img2 = (ImageView) findViewById(R.id.img2);
         img3 = (ImageView) findViewById(R.id.img3);
         img4 = (ImageView) findViewById(R.id.img4);
+        bt1Sixiang = (Button) findViewById(R.id.bt1_sixiang);
+
         tv = (SJText) findViewById(R.id.tv);
         tv.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                LogUtil.e("SJText", "35-----onTouch--->" + event.getAction());
+                LogUtil.e("ColorFilterActivity", "35-----onTouch--->" + event.getAction());
                 return false;
             }
         });
+
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LogUtil.e("ColorFilterActivity","47-----onClick--->");
+            }
+        });
         img.setOnTouchListener(this);
+        bt1Sixiang.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                LogUtil.e("ColorFilterActivity", "48-----onTouch--->" + event.getAction());
+                return false;
+            }
+        });
     }
 
     public void go1(View view) {
@@ -46,10 +64,13 @@ public class ColorFilterActivity extends AppCompatActivity implements View.OnTou
 
     public void go2(View view) {
         Toast.makeText(this, "触发go2", Toast.LENGTH_SHORT).show();
+        tv.setEnabled(false);
     }
 
     public void go3(View view) {
         Toast.makeText(this, "触发go3", Toast.LENGTH_SHORT).show();
+        tv.setEnabled(true);
+
     }
 
     public void go4(View view) {
@@ -65,7 +86,7 @@ public class ColorFilterActivity extends AppCompatActivity implements View.OnTou
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        LogUtil.e("ColorFilterActivity", "48-----onTouch--->" + event.getAction());
+        LogUtil.e("ColorFilterActivity","79-----onTouch--->"+event.getAction());
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
 
