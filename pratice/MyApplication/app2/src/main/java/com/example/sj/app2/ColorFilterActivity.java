@@ -24,18 +24,18 @@ public class ColorFilterActivity extends AppCompatActivity implements View.OnTou
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color_filter);
-        img1 = (ImageView) findViewById(R.id.img);
+        img = (ImageView) findViewById(R.id.img);
         img2 = (ImageView) findViewById(R.id.img2);
-        img = (ImageView) findViewById(R.id.img3);
+        img3 = (ImageView) findViewById(R.id.img3);
         img4 = (ImageView) findViewById(R.id.img4);
         tv = (SJText) findViewById(R.id.tv);
-        tv.setOnTouchListener(new View.OnTouchListener(){
+        tv.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                LogUtil.e("SJText","35-----onTouch--->"+event.getAction());
+                LogUtil.e("SJText", "35-----onTouch--->" + event.getAction());
                 return false;
             }
-        } );
+        });
         img.setOnTouchListener(this);
     }
 
@@ -76,13 +76,13 @@ public class ColorFilterActivity extends AppCompatActivity implements View.OnTou
 //                img.setColorFilter(Color.TRANSPARENT, PorterDuff.Mode.DST);
 //                img.setColorFilter(Color.TRANSPARENT, PorterDuff.Mode.DARKEN);
 //                img.setColorFilter(Color.TRANSPARENT, PorterDuff.Mode.MULTIPLY);
-                img.setColorFilter(Color.RED, PorterDuff.Mode.XOR);
+                img.setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY);
                 break;
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_CANCEL:
 //                img.setColorFilter(getResources().getColor(R.color.colorAccent));
-                img.setColorFilter(Color.RED, PorterDuff.Mode.LIGHTEN);
-
+//                img.setColorFilter(Color.GRAY, PorterDuff.Mode.LIGHTEN);
+                img.clearColorFilter();
                 break;
             default:
                 break;
