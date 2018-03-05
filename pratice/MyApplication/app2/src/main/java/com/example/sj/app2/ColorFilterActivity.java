@@ -46,6 +46,13 @@ public class ColorFilterActivity extends AppCompatActivity implements View.OnTou
         Toast.makeText(this, "触发go4", Toast.LENGTH_SHORT).show();
     }
 
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return super.onTouchEvent(event);
+    }
+
+
     @Override
     public boolean onTouch(View v, MotionEvent event) {
         LogUtil.e("ColorFilterActivity", "48-----onTouch--->" + event.getAction());
@@ -71,11 +78,6 @@ public class ColorFilterActivity extends AppCompatActivity implements View.OnTou
                 break;
 
         }
-        return true;
-    }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        return super.onTouchEvent(event);
+        return false;
     }
 }
