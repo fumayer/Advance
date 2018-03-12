@@ -36,7 +36,8 @@
         <activity android:name=".toast.TestToastActivity" />
         <activity android:name=".fragmentconn.TestFragmentConnActivity" />
         <activity android:name=".TestNewViewActivity" />
-        <activity android:name=".ColorFilterActivity"></activity>
+        <activity android:name=".ColorFilterActivity" />
+        <activity android:name=".TestCommonItemActivity"></activity>
     </application>
 
 </manifest>

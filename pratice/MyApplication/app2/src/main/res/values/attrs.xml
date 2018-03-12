@@ -10,6 +10,9 @@
     <declare-styleable name="ArcImageView">
         <attr name="arcHeight" />
     </declare-styleable>
+    <declare-styleable name="ArcTopImageView">
+        <attr name="arcHeight" />
+    </declare-styleable>
 
 
     <declare-styleable name="ArcLayout">

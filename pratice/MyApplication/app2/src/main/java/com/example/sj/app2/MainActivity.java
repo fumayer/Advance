@@ -136,6 +136,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void go20(View view) {
         Toast.makeText(this, "触发go20", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestCommonItemActivity.class));
+
     }
 
     public void go21(View view) {
