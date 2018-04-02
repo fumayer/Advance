@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.sunjie.knowledgepointshareproject.abstract_factory.AbstractFactoryActivity;
 import com.example.sunjie.knowledgepointshareproject.factory.FactoryActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void go2(View view) {
         Toast.makeText(this, "触发go2", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, AbstractFactoryActivity.class));
     }
 
     public void go3(View view) {
