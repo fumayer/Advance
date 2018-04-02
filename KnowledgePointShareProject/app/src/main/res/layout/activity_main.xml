@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sunjie.knowledgepointshareproject.MainActivity">
+
+      <android.support.constraint.ConstraintLayout
+              android:id="@+id/layout_solar_term"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true">
+
+              <Button
+                  android:id="@+id/bt1"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go1"
+                  android:text="立春"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintRight_toLeftOf="@+id/bt2"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              <Button
+                  android:id="@+id/bt2"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go2"
+                  android:text="雨水"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt1"
+                  app:layout_constraintRight_toLeftOf="@+id/bt3"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              <Button
+                  android:id="@+id/bt3"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go3"
+                  android:text="惊蛰"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt2"
+                  app:layout_constraintRight_toLeftOf="@+id/bt4"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              <Button
+                  android:id="@+id/bt4"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go4"
+                  android:text="春风"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt3"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              <Button
+                  android:id="@+id/bt5"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go5"
+                  android:text="清明"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintRight_toLeftOf="@+id/bt6"
+                  app:layout_constraintTop_toBottomOf="@+id/bt1" />
+
+              <Button
+                  android:id="@+id/bt6"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go6"
+                  android:text="谷雨"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt5"
+                  app:layout_constraintRight_toLeftOf="@+id/bt7"
+                  app:layout_constraintTop_toBottomOf="@+id/bt2" />
+
+              <Button
+                  android:id="@+id/bt7"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go7"
+                  android:text="立夏"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt6"
+                  app:layout_constraintRight_toLeftOf="@+id/bt8"
+                  app:layout_constraintTop_toBottomOf="@+id/bt3" />
+
+              <Button
+                  android:id="@+id/bt8"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go8"
+                  android:text="小满"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt7"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/bt4" />
+
+
+              <Button
+                  android:id="@+id/bt9"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go9"
+                  android:text="芒种"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintRight_toLeftOf="@+id/bt10"
+                  app:layout_constraintTop_toBottomOf="@+id/bt5" />
+
+              <Button
+                  android:id="@+id/bt10"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go10"
+                  android:text="夏至"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt9"
+                  app:layout_constraintRight_toLeftOf="@+id/bt11"
+                  app:layout_constraintTop_toBottomOf="@+id/bt6" />
+
+
+              <Button
+                  android:id="@+id/bt11"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go11"
+                  android:text="小暑"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt10"
+                  app:layout_constraintRight_toLeftOf="@+id/bt12"
+                  app:layout_constraintTop_toBottomOf="@+id/bt7" />
+
+
+              <Button
+                  android:id="@+id/bt12"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go12"
+                  android:text="大暑"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt11"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/bt8" />
+
+              <Button
+                  android:id="@+id/bt13"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go13"
+                  android:text="立秋"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintRight_toLeftOf="@+id/bt14"
+                  app:layout_constraintTop_toBottomOf="@+id/bt9" />
+
+              <Button
+                  android:id="@+id/bt14"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go14"
+                  android:text="处暑"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt13"
+                  app:layout_constraintRight_toLeftOf="@+id/bt15"
+                  app:layout_constraintTop_toBottomOf="@+id/bt10" />
+
+              <Button
+                  android:id="@+id/bt15"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go15"
+                  android:text="白露"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt14"
+                  app:layout_constraintRight_toLeftOf="@+id/bt16"
+                  app:layout_constraintTop_toBottomOf="@+id/bt11" />
+
+              <Button
+                  android:id="@+id/bt16"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go16"
+                  android:text="秋风"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt15"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/bt12" />
+
+              <Button
+                  android:id="@+id/bt17"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go17"
+                  android:text="寒露"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintRight_toLeftOf="@+id/bt18"
+                  app:layout_constraintTop_toBottomOf="@+id/bt13" />
+
+              <Button
+                  android:id="@+id/bt18"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go18"
+                  android:text="霜降"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt17"
+                  app:layout_constraintRight_toLeftOf="@+id/bt19"
+                  app:layout_constraintTop_toBottomOf="@+id/bt14" />
+
+
+              <Button
+                  android:id="@+id/bt19"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go19"
+                  android:text="立冬"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt18"
+                  app:layout_constraintRight_toLeftOf="@+id/bt20"
+                  app:layout_constraintTop_toBottomOf="@+id/bt15" />
+
+
+              <Button
+                  android:id="@+id/bt20"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go20"
+                  android:text="小雪"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt19"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/bt16" />
+
+              <Button
+                  android:id="@+id/bt21"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go21"
+                  android:text="大雪"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toLeftOf="parent"
+                  app:layout_constraintRight_toLeftOf="@+id/bt22"
+                  app:layout_constraintTop_toBottomOf="@+id/bt17" />
+
+              <Button
+                  android:id="@+id/bt22"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go22"
+                  android:text="冬至"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt21"
+                  app:layout_constraintRight_toLeftOf="@+id/bt23"
+                  app:layout_constraintTop_toBottomOf="@+id/bt18" />
+
+              <Button
+                  android:id="@+id/bt23"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go23"
+                  android:text="小寒"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt22"
+                  app:layout_constraintRight_toLeftOf="@+id/bt24"
+                  app:layout_constraintTop_toBottomOf="@+id/bt19" />
+
+              <Button
+                  android:id="@+id/bt24"
+                  android:layout_width="0dp"
+                  android:layout_height="50dp"
+                  android:layout_margin="3dp"
+                  android:onClick="go24"
+                  android:text="大寒"
+                  android:textColor="#f00"
+                  android:textSize="18dp"
+                  android:textStyle="bold"
+                  app:layout_constraintHorizontal_weight="1"
+                  app:layout_constraintLeft_toRightOf="@+id/bt23"
+                  app:layout_constraintRight_toRightOf="parent"
+                  app:layout_constraintTop_toBottomOf="@+id/bt20" />
+
+          </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
