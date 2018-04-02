@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".factory.FactoryActivity" />
-        <activity android:name=".abstract_factory.AbstractFactoryActivity"></activity>
+        <activity android:name=".abstract_factory.AbstractFactoryActivity" />
+        <activity android:name=".abstract_factory2.AbstractFactory2Activity"></activity>
     </application>
 
 </manifest>
