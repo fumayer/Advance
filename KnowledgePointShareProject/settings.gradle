@@ -1,1 +1,1 @@
-include ':app', ':factorydemo'
+include ':app'
