@@ -21,8 +21,8 @@ public class FactoryActivity extends AppCompatActivity {
     }
 
     public void go1(View view) {
-        Toast.makeText(this, "触发go1", Toast.LENGTH_SHORT).show();
-        ShapeFactory.getShape(ShapeFactory.ShapeType.RING).draw();
+        IShape shape = ShapeFactory.getShape(ShapeFactory.ShapeType.RING);
+        shape.draw();
     }
 
     public void go2(View view) {

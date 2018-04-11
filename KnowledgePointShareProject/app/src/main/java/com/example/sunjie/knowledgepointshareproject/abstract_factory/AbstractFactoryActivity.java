@@ -22,15 +22,13 @@ public class AbstractFactoryActivity extends AppCompatActivity {
     }
 
     public void go1(View view) {
-        Toast.makeText(this, "触发go1", Toast.LENGTH_SHORT).show();
-        PhoneAbstractFactory xiaoMiPhone = new XiaoMiPhone();
+        PhoneAbstractFactory xiaoMiPhone = new XiaoMiPhoneFactory();
         xiaoMiPhone.installCamera().takePhoto();
         xiaoMiPhone.installScreen().look();
     }
 
     public void go2(View view) {
-        Toast.makeText(this, "触发go2", Toast.LENGTH_SHORT).show();
-        PhoneAbstractFactory hwPhone = new HWPhone();
+        PhoneAbstractFactory hwPhone = new HWPhoneFactory();
         hwPhone.installScreen().look();
         hwPhone.installCamera().takePhoto();
     }
