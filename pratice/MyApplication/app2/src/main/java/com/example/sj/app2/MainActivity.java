@@ -142,6 +142,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void go21(View view) {
         Toast.makeText(this, "触发go21", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, TestSoundActivity.class));
+
     }
 
     public void go22(View view) {

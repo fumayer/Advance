@@ -334,7 +334,7 @@
                 android:layout_height="50dp"
                 android:layout_margin="3dp"
                 android:onClick="go21"
-                android:text="大雪"
+                android:text="Sound"
                 android:textColor="#f00"
                 android:textSize="18dp"
                 android:textStyle="bold"
