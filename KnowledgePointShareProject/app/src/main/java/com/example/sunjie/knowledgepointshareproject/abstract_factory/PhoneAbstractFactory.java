@@ -10,5 +10,4 @@ import com.example.sunjie.knowledgepointshareproject.abstract_factory.screen.Scr
 public interface PhoneAbstractFactory {
     Screen installScreen();
     Camera installCamera();
-
 }

@@ -9,7 +9,7 @@ import com.example.sunjie.knowledgepointshareproject.abstract_factory.screen.Scr
  * Created by sunjie on 2018/4/2.
  */
 
-public class HWPhone implements PhoneAbstractFactory {
+public class HWPhoneFactory implements PhoneAbstractFactory {
     @Override
     public Screen installScreen() {
         return new BigScreen();

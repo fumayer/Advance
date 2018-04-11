@@ -9,7 +9,7 @@ import com.example.sunjie.knowledgepointshareproject.abstract_factory.screen.Sma
  * Created by sunjie on 2018/4/2.
  */
 
-public class XiaoMiPhone implements PhoneAbstractFactory {
+public class XiaoMiPhoneFactory implements PhoneAbstractFactory {
 
     @Override
     public Screen installScreen() {
