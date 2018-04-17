@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KnowledgePointShareProject.iml" filepath="$PROJECT_DIR$/KnowledgePointShareProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/composelib/composelib.iml" filepath="$PROJECT_DIR$/composelib/composelib.iml" />
     </modules>
   </component>
 </project>

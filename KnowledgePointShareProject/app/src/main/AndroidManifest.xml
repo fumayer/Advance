@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".factory.FactoryActivity" />
         <activity android:name=".abstract_factory.AbstractFactoryActivity" />
-        <activity android:name=".abstract_factory2.AbstractFactory2Activity"></activity>
+        <activity android:name=".abstract_factory2.AbstractFactory2Activity" />
+        <activity android:name=".compose.ComposeActivity"></activity>
     </application>
 
 </manifest>

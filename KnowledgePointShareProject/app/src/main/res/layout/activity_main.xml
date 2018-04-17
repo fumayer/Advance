@@ -63,7 +63,7 @@
                   android:layout_height="50dp"
                   android:layout_margin="3dp"
                   android:onClick="go4"
-                  android:text="春风"
+                  android:text="组合"
                   android:textColor="#f00"
                   android:textSize="18dp"
                   android:textStyle="bold"
