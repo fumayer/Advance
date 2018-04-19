@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:drawable="@drawable/svg_logo">
+    <target
+        android:animation="@animator/lightning"
+        android:name="lightning_clip"/>
+    <target
+        android:animation="@animator/color"
+        android:name="lightning"/>
+    <target android:name="star_1"
+            android:animation="@animator/star_first"/>
+    <target android:name="star_2"
+            android:animation="@animator/star_second"/>
+    <target android:name="star_3"
+            android:animation="@animator/star_third"/>
+</animated-vector>

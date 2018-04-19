@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //webview
+    compile files('libs/tbs_sdk_thirdapp_v2.2.0.1096_36549_sharewithdownload_withoutGame_obfs_20160830_211645.jar')
+
+    //base
+    testCompile rootProject.ext.dependencies.test
+    compile rootProject.ext.dependencies.libv7
+    compile rootProject.ext.dependencies.design
+    compile rootProject.ext.dependencies.cardview
+
+    //ui
+    compile rootProject.ext.dependencies.materialsearchview
+    compile rootProject.ext.dependencies.multilineCollapsingtoolbar
+    compile rootProject.ext.dependencies.materialCalendarview
+    compile rootProject.ext.dependencies.gildeTrans
+    compile rootProject.ext.dependencies.PhotoView
+    compile rootProject.ext.dependencies.htmlTextview
+
+
+    //other
+    compile rootProject.ext.dependencies.logger
+    compile rootProject.ext.dependencies.crashreport
+    compile rootProject.ext.dependencies.multidex
+    compile rootProject.ext.dependencies.fragmentation
+    //canary
+    compile rootProject.ext.dependencies.blockcanaryAndroid
+  //  compile rootProject.ext.dependencies.blockcanaryMoOp
+    compile rootProject.ext.dependencies.leakcanaryAndroid
+  //  compile rootProject.ext.dependencies.leakcanaryAndroidNoOp
+
+    //rx2
+    compile rootProject.ext.dependencies.rxjava
+    compile rootProject.ext.dependencies.rxandroid
+    compile rootProject.ext.dependencies.rxpermissions
+
+    //dagger2
+    compile rootProject.ext.dependencies.dagger
+    compile rootProject.ext.dependencies.daggerCompiler
+    compile rootProject.ext.dependencies.butterknife
+    annotationProcessor  rootProject.ext.dependencies.butterknifeCompiler
+    provided rootProject.ext.dependencies.annotation
+
+    //network
+    compile rootProject.ext.dependencies.gson
+    compile rootProject.ext.dependencies.retrofit
+    compile rootProject.ext.dependencies.retrofitConverterGson
+    compile rootProject.ext.dependencies.retrofitAdapterRxjava2
+    compile rootProject.ext.dependencies.okhttp
+    compile rootProject.ext.dependencies.okhttpLoggingInterceptor
+    compile rootProject.ext.dependencies.glide
+    compile rootProject.ext.dependencies.glideOkhttp3Integration
+    compile rootProject.ext.dependencies.jsoup
+
+}

@@ -1,0 +1,81 @@
+
+ext {
+    compileSdkVersion=26
+    buildToolsVersion="26.0.2"
+    applicationId="com.newsdemo"
+    minSdkVersion=21
+    targetSdkVersion=25
+    versionCode=1
+    versionName="1.0"
+
+    //android library
+    androidSupportLibraryVersion='25.2.0'
+    testVersion='4.12'
+
+    //rx
+    rxjava='2.0.7'
+    rxandroid='2.0.1'
+    rxbinding='2.0.0'
+    retrofit='2.2.0'
+    okhttp='3.6.0'
+    dagger2='2.0.2'
+
+    butterknife ='8.5.1'
+    blockcanary = '1.2.1'
+    leakcanary  = '1.4-beta2'
+
+    dependencies=[
+            test                            :"junit:junit:${testVersion}",
+            //base
+            libv7                           :"com.android.support:appcompat-v7:${androidSupportLibraryVersion}",
+            design                          :"com.android.support:design:${androidSupportLibraryVersion}",
+            recyclerview                    :"com.android.support:recyclerview-v7:${androidSupportLibraryVersion}",
+            cardview                        :"com.android.support:cardview-v7:${androidSupportLibraryVersion}",
+
+
+            //ui
+            materialCalendarview           : "com.prolificinteractive:material-calendarview:1.4.0",
+            materialsearchview              :"com.miguelcatalan:materialsearchview:1.4.0",
+            multilineCollapsingtoolbar      :"net.opacapp:multiline-collapsingtoolbar:1.3.1",
+            rxjava                          :"io.reactivex.rxjava2:rxjava:${rxjava}",
+            rxandroid                       :"io.reactivex.rxjava2:rxandroid:${rxandroid}",
+            rxpermissions                   :"com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar",
+            gildeTrans                      : "jp.wasabeef:glide-transformations:2.0.2",
+            //多点触控，放大图片
+            PhotoView                       : "com.github.chrisbanes:PhotoView:1.3.0",
+            htmlTextview                    : "org.sufficientlysecure:html-textview:3.1",
+
+
+
+
+            //network
+            gson                            :"com.google.code.gson:gson:2.7",
+            retrofit                        :"com.squareup.retrofit2:retrofit:${retrofit}",
+            retrofitConverterGson           :"com.squareup.retrofit2:converter-gson:${retrofit}",
+            retrofitAdapterRxjava2          :"com.squareup.retrofit2:adapter-rxjava2:${retrofit}",
+            okhttp                          :"com.squareup.okhttp3:okhttp:${okhttp}",
+            okhttpLoggingInterceptor        :"com.squareup.okhttp3:logging-interceptor:${okhttp}",//okhttp拦截器
+            glide                           :"com.github.bumptech.glide:glide:3.7.0",
+            glideOkhttp3Integration         :"com.github.bumptech.glide:okhttp3-integration:1.4.0@aar",//glide使用okhttp3
+            "jsoup"                     : "org.jsoup:jsoup:1.10.1",
+
+            //di
+            dagger                          :"com.google.dagger:dagger:${dagger2}",
+            daggerCompiler                  :"com.google.dagger:dagger-compiler:${dagger2}",
+            butterknife                     :"com.jakewharton:butterknife:${butterknife}",
+            butterknifeCompiler             :"com.jakewharton:butterknife-compiler:${butterknife}",
+            annotation                      : "org.glassfish:javax.annotation:10.0-b28",
+
+            //other
+            logger                          :"com.orhanobut:logger:1.15",
+            crashreport                     : "com.tencent.bugly:crashreport:latest.release",//腾讯手机错误日志
+            multidex                        : "com.android.support:multidex:1.0.1",             //分包
+            fragmentation                   : "me.yokeyword:fragmentation:0.10.4",
+
+            //canary
+            blockcanaryAndroid              : "com.github.moduth:blockcanary-android:${blockcanary}",
+            blockcanaryMoOp                 : "com.github.moduth:blockcanary-no-op:${blockcanary}",
+            leakcanaryAndroid               : "com.squareup.leakcanary:leakcanary-android:${leakcanary}",
+            leakcanaryAndroidNoOp           : "com.squareup.leakcanary:leakcanary-android-no-op:${leakcanary}"
+    ]
+}
