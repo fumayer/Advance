@@ -1,8 +1,8 @@
 package com.example.sunjie.knowledgepointshareproject;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
@@ -10,12 +10,17 @@ import com.example.sunjie.knowledgepointshareproject.abstract_factory.AbstractFa
 import com.example.sunjie.knowledgepointshareproject.abstract_factory2.AbstractFactory2Activity;
 import com.example.sunjie.knowledgepointshareproject.compose.ComposeActivity;
 import com.example.sunjie.knowledgepointshareproject.factory.FactoryActivity;
+import com.example.sunjie.knowledgepointshareproject.filter.FilterActivity;
+import com.orhanobut.logger.AndroidLogAdapter;
+import com.orhanobut.logger.Logger;
+
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Logger.addLogAdapter(new AndroidLogAdapter());
         setContentView(R.layout.activity_main);
     }
 
@@ -44,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void go5(View view) {
         Toast.makeText(this, "触发go5", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, FilterActivity.class));
     }
 
     public void go6(View view) {
