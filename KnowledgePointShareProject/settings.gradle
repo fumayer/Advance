@@ -1,1 +1,1 @@
-include ':app', ':composelib'
+include ':app'
