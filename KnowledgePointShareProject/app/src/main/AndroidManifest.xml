@@ -19,7 +19,8 @@
         <activity android:name=".factory.FactoryActivity" />
         <activity android:name=".abstract_factory.AbstractFactoryActivity" />
         <activity android:name=".abstract_factory2.AbstractFactory2Activity" />
-        <activity android:name=".compose.ComposeActivity"></activity>
+        <activity android:name=".compose.ComposeActivity" />
+        <activity android:name=".flyweight.FlyWeightActivity"></activity>
     </application>
 
 </manifest>

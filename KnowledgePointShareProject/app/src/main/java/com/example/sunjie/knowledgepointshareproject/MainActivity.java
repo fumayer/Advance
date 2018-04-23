@@ -10,6 +10,7 @@ import com.example.sunjie.knowledgepointshareproject.abstract_factory.AbstractFa
 import com.example.sunjie.knowledgepointshareproject.abstract_factory2.AbstractFactory2Activity;
 import com.example.sunjie.knowledgepointshareproject.compose.ComposeActivity;
 import com.example.sunjie.knowledgepointshareproject.factory.FactoryActivity;
+import com.example.sunjie.knowledgepointshareproject.flyweight.FlyWeightActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void go6(View view) {
         Toast.makeText(this, "触发go6", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, FlyWeightActivity.class));
 
     }
 

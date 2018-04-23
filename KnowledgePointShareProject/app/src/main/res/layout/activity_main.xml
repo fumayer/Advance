@@ -93,7 +93,7 @@
                   android:layout_height="50dp"
                   android:layout_margin="3dp"
                   android:onClick="go6"
-                  android:text="谷雨"
+                  android:text="享元"
                   android:textColor="#f00"
                   android:textSize="18dp"
                   android:textStyle="bold"
