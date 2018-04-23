@@ -16,11 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".factory.FactoryActivity" />
         <activity android:name=".abstract_factory.AbstractFactoryActivity" />
         <activity android:name=".abstract_factory2.AbstractFactory2Activity" />
         <activity android:name=".compose.ComposeActivity" />
-        <activity android:name=".flyweight.FlyWeightActivity"></activity>
+        <activity android:name=".filter.FilterActivity" />
+        <activity android:name=".flyweight.FlyWeightActivity" />
     </application>
 
 </manifest>

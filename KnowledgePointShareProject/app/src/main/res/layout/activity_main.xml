@@ -78,7 +78,7 @@
                   android:layout_height="50dp"
                   android:layout_margin="3dp"
                   android:onClick="go5"
-                  android:text="清明"
+                  android:text="过滤"
                   android:textColor="#f00"
                   android:textSize="18dp"
                   android:textStyle="bold"
