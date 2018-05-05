@@ -108,7 +108,7 @@
                   android:layout_height="50dp"
                   android:layout_margin="3dp"
                   android:onClick="go7"
-                  android:text="立夏"
+                  android:text="建造者"
                   android:textColor="#f00"
                   android:textSize="18dp"
                   android:textStyle="bold"

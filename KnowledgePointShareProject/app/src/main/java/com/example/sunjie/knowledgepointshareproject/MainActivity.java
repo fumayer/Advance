@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.example.sunjie.knowledgepointshareproject.abstract_factory.AbstractFactoryActivity;
 import com.example.sunjie.knowledgepointshareproject.abstract_factory2.AbstractFactory2Activity;
+import com.example.sunjie.knowledgepointshareproject.builder.BuilderActivity;
 import com.example.sunjie.knowledgepointshareproject.compose.ComposeActivity;
 import com.example.sunjie.knowledgepointshareproject.factory.FactoryActivity;
 import com.example.sunjie.knowledgepointshareproject.filter.FilterActivity;
@@ -61,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void go7(View view) {
         Toast.makeText(this, "触发go7", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, BuilderActivity.class));
+
 
     }
 
