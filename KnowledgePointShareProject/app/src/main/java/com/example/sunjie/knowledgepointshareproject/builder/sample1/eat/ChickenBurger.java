@@ -1,4 +1,4 @@
-package com.example.sunjie.knowledgepointshareproject.builder.sample1;
+package com.example.sunjie.knowledgepointshareproject.builder.sample1.eat;
 
 /**
  * Created by sunjie on 2018/5/5.
