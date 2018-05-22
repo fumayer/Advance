@@ -16,7 +16,7 @@ public class Skill_W extends Skills{
 
     @Override
     public void learnSkills() {
-        System.out.println("学习了技能W:" + skillName);
         super.learnSkills();
+        System.out.println("学习了技能W:" + skillName);
     }
 }

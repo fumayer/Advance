@@ -7,7 +7,7 @@ package com.example.knowledgepointsharelib.decorator.sample2;
 public class Player {
     public static void main(String[] args) {
         //选择英雄
-        Hero hero = new BlindMonk("李青");
+        Hero hero = new BlindMonk("驸马爷");
 
         Skills skills = new Skills(hero);
         Skills r = new Skill_R(skills, "猛龙摆尾");

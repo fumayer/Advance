@@ -15,6 +15,6 @@ public class BlindMonk implements Hero {
 
     @Override
     public void learnSkills() {
-        System.out.println(name + "学习了以上技能！");
+        System.out.println(name + "：自带技能，瞎眼");
     }
 }
