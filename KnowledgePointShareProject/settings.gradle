@@ -1,1 +1,1 @@
-include ':app', ':knowledgepointsharelib', ':testlibrary'
+include ':app', ':knowledgepointsharelib'
