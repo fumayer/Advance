@@ -17,7 +17,7 @@ public class TestLinkedHashMapActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_linked_hash_map);
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             Person person = new Person(i, "Person" + i);
             mHashMap.put(i, person);
             mLinkedMap.put(i, person);
@@ -25,29 +25,18 @@ public class TestLinkedHashMapActivity extends AppCompatActivity {
     }
 
     public void go1(View view) {
-        Toast.makeText(this, "触发go1", Toast.LENGTH_SHORT).show();
 
-        LogUtil.e("TestLinkedHashMapActivity", "32-----go1--->\n\n\n");
-
-        for (Integer integer : mHashMap.keySet()) {
-            LogUtil.e("TestLinkedHashMapActivity", "33-----go1--->hashmap   key    " + integer + "       value    " + mHashMap.get(integer));
+        for (Integer key : mHashMap.keySet()) {
+            System.out.println("     hashmap   key    " + key + "       value    " + mHashMap.get(key));
         }
-
-        LogUtil.e("TestLinkedHashMapActivity", "32-----go1--->\n\n\n");
-
-
-        LogUtil.e("TestLinkedHashMapActivity", "32-----go1--->\n\n\n");
-
-        for (Integer integer : mLinkedMap.keySet()) {
-            LogUtil.e("TestLinkedHashMapActivity", "33-----go1--->linkedhashmap   key    " + integer + "       value    " + mLinkedMap.get(integer));
+        System.out.println(" \n");
+        for (Integer key : mLinkedMap.keySet()) {
+            System.out.println("linkedhashmap   key    " + key + "       value    " + mLinkedMap.get(key));
         }
-
 
     }
 
     public void go2(View view) {
-        Toast.makeText(this, "触发go2", Toast.LENGTH_SHORT).show();
-
         Person x因素 = new Person(-1, "X因素");
         mHashMap.put(-1, x因素);
         mLinkedMap.put(-1, x因素);
