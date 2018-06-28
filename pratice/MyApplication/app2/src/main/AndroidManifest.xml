@@ -41,6 +41,8 @@
         <activity android:name=".TestSoundActivity"/>
         <activity android:name=".TestListViewActivity">
         </activity>
+        <activity android:name=".TestLogcatActivity">
+        </activity>
     </application>
 
 </manifest>
