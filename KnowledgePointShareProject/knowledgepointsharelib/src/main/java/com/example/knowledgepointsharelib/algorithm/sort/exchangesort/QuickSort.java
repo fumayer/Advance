@@ -15,7 +15,7 @@ public class QuickSort {
         }
     }
 
-    private static void quickSort(int[] ints, int start, int end) {
+    public static void quickSort(int[] ints, int start, int end) {
         if (ints != null && ints.length > 1) {
             if (start < end) {
 //                找到整个数组第一个元素的正确位置
