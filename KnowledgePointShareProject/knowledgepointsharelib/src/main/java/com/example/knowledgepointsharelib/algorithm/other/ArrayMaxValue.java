@@ -1,4 +1,4 @@
-package com.example.knowledgepointsharelib.test;
+package com.example.knowledgepointsharelib.algorithm.other;
 
 import java.util.Arrays;
 
@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Created by sunjie on 2018/10/16.
  */
 
-public class Test2 {
+public class ArrayMaxValue {
     public void test() {
         //int[] num = {1,-2,3,10,-4,10,2,-5};
         int[] num = {1, -2, 3, 10, -4, 7, 2, -5};
@@ -43,7 +43,7 @@ public class Test2 {
     }
 
     public static void main(String[] args) {
-        Test2 test2 = new Test2();
+        ArrayMaxValue test2 = new ArrayMaxValue();
         test2.test();
     }
 }
