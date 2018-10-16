@@ -5,7 +5,7 @@ package com.example.knowledgepointsharelib.algorithm.other;
  */
 
 public class ClockwiseMatrix {
-    //    /顺时针打印一个矩阵  @Test
+    //    /顺时针打印一个矩阵
     public void test() {
         int[][] num = new int[4][4];
         int count = 1;
