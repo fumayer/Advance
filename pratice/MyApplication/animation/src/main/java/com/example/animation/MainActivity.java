@@ -1,9 +1,12 @@
 package com.example.animation;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.animation.bezier.BezierActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void go1(View view) {
         Toast.makeText(this, "触发go1", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, BezierActivity.class));
     }
 
     public void go2(View view) {
