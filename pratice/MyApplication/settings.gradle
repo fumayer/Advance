@@ -1,1 +1,1 @@
-include ':app', ':pagerecyelerview', ':horizontalpage', ':training', ':testnavigationbaractivity', ':design', ':app2', ':planmode', ':thread', ':Performance', ':testJava', ':testndk', ':animation', 'swipback', ':htmlstartapp'
+include ':app', ':pagerecyelerview', ':horizontalpage', ':training', ':testnavigationbaractivity', ':design', ':app2', ':planmode', ':thread', ':Performance', ':testJava', ':animation', 'swipback', ':htmlstartapp'
