@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".bezier.BezierActivity"></activity>
+        <activity android:name=".bezier.BezierActivity" />
+        <activity android:name=".frame.FrameAnimationActivity"></activity>
     </application>
 
 </manifest>
