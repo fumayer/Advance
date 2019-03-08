@@ -11,7 +11,6 @@ public class LightOffCommand implements Command {
         this.receiver = receiver;
     }
 
-
     @Override
     public void exec() {
         receiver.offLight();
