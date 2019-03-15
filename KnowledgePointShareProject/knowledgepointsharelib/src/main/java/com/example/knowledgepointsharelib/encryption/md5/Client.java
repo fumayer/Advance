@@ -11,7 +11,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class Client {
 
-    public static void main(String[] args) throws Exception {
+    public static void main3(String[] args) throws Exception {
         String md51 = MD5Util.md5("123");
         String md52 = MD5Util.md5(md51);
         String md53 = MD5Util.md5(md52);
@@ -27,7 +27,7 @@ public class Client {
         System.out.println(md5);
     }
 
-    public static void main2(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
         File file = new File("/Users/sunjie/develop/android/as/work/own/myGit/" +
                 "KnowledgePointShareProject/knowledgepointsharelib/src/main/java/com/example" +
                 "/knowledgepointsharelib/encryption/md5/rgbvrShow2D-release.apk");
@@ -39,6 +39,7 @@ public class Client {
         String md5ForFile2 = MD5Util.md5ForFile2(file);
         System.out.println("md5ForFile2： " + md5ForFile2);
 
+        main3(null);
     }
 
 
