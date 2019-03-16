@@ -15,9 +15,26 @@ import java.io.ObjectOutputStream;
 public class Client {
     private static File file = new File("/Users/sunjie/develop/android/as/work/own/myGit/KnowledgePointShareProject/knowledgepointsharelib/src/main/java/com/example/knowledgepointsharelib/javaBase/serialization/person.txt");
 
-    public static void main1(String[] args) {
+    public static void main(String[] args) {
         try {
-            Person.ANCESTORS="猿猴";// 序列化之前，修改静态值，结果反序列化回来是正确的
+            seria(file, new Person("孙杰", 273));
+            Person person1 = deSeria(file);
+            Person person2 = deSeria(file);
+            System.out.println(person1.toString());
+            System.out.println("\n" + person2.toString());
+            System.out.println("equals:" + person1.equals(person2));
+            System.out.println("    ==:" + (person1 == person2));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main2(String[] args) {
+        try {
+            Person.ANCESTORS = "猿猴";// 序列化之前，修改静态值，结果反序列化回来是正确的
             seria(file, new Person("孙杰", 273));
             Person person = deSeria(file);
             System.out.println(person.toString());
@@ -32,7 +49,7 @@ public class Client {
     /**
      * 模拟另一个程序反序列化对象，查看静态的值
      */
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
+    public static void main3(String[] args) throws IOException, ClassNotFoundException {
         Person person = deSeria(file);
         System.out.println(person.toString());
         System.out.println();

@@ -43,10 +43,24 @@ public class Person implements Serializable {
 
     @Override
     public String toString() {
-        return "Person{" +
+
+        return "地址是：" + super.toString() +
+                "\nPerson{" +
                 "name='" + name + '\'' +
                 ", age=" + age + '}' +
-                "\nPerson.ANCESTORS=" + ANCESTORS;
+                "   Person.ANCESTORS=" + ANCESTORS;
 
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Person person = (Person) o;
+
+        if (age != person.age) return false;
+        return name != null ? name.equals(person.name) : person.name == null;
+    }
+
 }
