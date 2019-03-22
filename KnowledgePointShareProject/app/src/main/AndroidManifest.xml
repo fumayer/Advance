@@ -22,7 +22,8 @@
         <activity android:name=".compose.ComposeActivity" />
         <activity android:name=".filter.FilterActivity" />
         <activity android:name=".flyweight.FlyWeightActivity" />
-        <activity android:name=".builder.BuilderActivity"></activity>
+        <activity android:name=".builder.BuilderActivity" />
+        <activity android:name=".apt.AptActivity"></activity>
     </application>
 
 </manifest>

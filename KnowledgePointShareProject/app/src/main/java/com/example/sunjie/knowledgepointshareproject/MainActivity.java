@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.example.sunjie.knowledgepointshareproject.abstract_factory.AbstractFactoryActivity;
 import com.example.sunjie.knowledgepointshareproject.abstract_factory2.AbstractFactory2Activity;
+import com.example.sunjie.knowledgepointshareproject.apt.AptActivity;
 import com.example.sunjie.knowledgepointshareproject.builder.BuilderActivity;
 import com.example.sunjie.knowledgepointshareproject.compose.ComposeActivity;
 import com.example.sunjie.knowledgepointshareproject.factory.FactoryActivity;
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void go8(View view) {
         Toast.makeText(this, "触发go8", Toast.LENGTH_SHORT).show();
-
+        startActivity(new Intent(this, AptActivity.class));
     }
 
     public void go9(View view) {

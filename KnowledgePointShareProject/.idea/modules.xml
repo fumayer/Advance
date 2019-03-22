@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/KnowledgePointShareProject.iml" filepath="$PROJECT_DIR$/KnowledgePointShareProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apt-annotation/apt.iml" filepath="$PROJECT_DIR$/apt-annotation/apt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apt-processor/apt-processor.iml" filepath="$PROJECT_DIR$/apt-processor/apt-processor.iml" />
       <module fileurl="file://$PROJECT_DIR$/knowledgepointsharelib/knowledgepointsharelib.iml" filepath="$PROJECT_DIR$/knowledgepointsharelib/knowledgepointsharelib.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
     </modules>
